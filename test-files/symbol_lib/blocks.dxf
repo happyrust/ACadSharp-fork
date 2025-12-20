@@ -1,0 +1,17644 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1032
+  9
+$ACADMAINTVER
+ 90
+4
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  9
+$LASTSAVEDBY
+  1
+ezdxf
+  9
+$REQUIREDVERSIONS
+160
+0
+  9
+$INSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMIN
+ 10
+1e+20
+ 20
+1e+20
+ 30
+1e+20
+  9
+$EXTMAX
+ 10
+-1e+20
+ 20
+-1e+20
+ 30
+-1e+20
+  9
+$LIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$LIMMAX
+ 10
+420.0
+ 20
+297.0
+  9
+$ORTHOMODE
+ 70
+0
+  9
+$REGENMODE
+ 70
+1
+  9
+$FILLMODE
+ 70
+1
+  9
+$QTEXTMODE
+ 70
+0
+  9
+$MIRRTEXT
+ 70
+1
+  9
+$LTSCALE
+ 40
+1.0
+  9
+$ATTMODE
+ 70
+1
+  9
+$TEXTSIZE
+ 40
+2.5
+  9
+$TRACEWID
+ 40
+1.0
+  9
+$TEXTSTYLE
+  7
+Standard
+  9
+$CLAYER
+  8
+0
+  9
+$CELTYPE
+  6
+ByLayer
+  9
+$CECOLOR
+ 62
+256
+  9
+$CELTSCALE
+ 40
+1.0
+  9
+$DISPSILH
+ 70
+0
+  9
+$DIMSCALE
+ 40
+1.0
+  9
+$DIMASZ
+ 40
+2.5
+  9
+$DIMEXO
+ 40
+0.625
+  9
+$DIMDLI
+ 40
+3.75
+  9
+$DIMRND
+ 40
+0.0
+  9
+$DIMDLE
+ 40
+0.0
+  9
+$DIMEXE
+ 40
+1.25
+  9
+$DIMTP
+ 40
+0.0
+  9
+$DIMTM
+ 40
+0.0
+  9
+$DIMTXT
+ 40
+2.5
+  9
+$DIMCEN
+ 40
+2.5
+  9
+$DIMTSZ
+ 40
+0.0
+  9
+$DIMTOL
+ 70
+0
+  9
+$DIMLIM
+ 70
+0
+  9
+$DIMTIH
+ 70
+0
+  9
+$DIMTOH
+ 70
+0
+  9
+$DIMSE1
+ 70
+0
+  9
+$DIMSE2
+ 70
+0
+  9
+$DIMTAD
+ 70
+1
+  9
+$DIMZIN
+ 70
+8
+  9
+$DIMBLK
+  1
+
+  9
+$DIMASO
+ 70
+1
+  9
+$DIMSHO
+ 70
+1
+  9
+$DIMPOST
+  1
+
+  9
+$DIMAPOST
+  1
+
+  9
+$DIMALT
+ 70
+0
+  9
+$DIMALTD
+ 70
+3
+  9
+$DIMALTF
+ 40
+0.03937007874
+  9
+$DIMLFAC
+ 40
+1.0
+  9
+$DIMTOFL
+ 70
+1
+  9
+$DIMTVP
+ 40
+0.0
+  9
+$DIMTIX
+ 70
+0
+  9
+$DIMSOXD
+ 70
+0
+  9
+$DIMSAH
+ 70
+0
+  9
+$DIMBLK1
+  1
+
+  9
+$DIMBLK2
+  1
+
+  9
+$DIMSTYLE
+  2
+ISO-25
+  9
+$DIMCLRD
+ 70
+0
+  9
+$DIMCLRE
+ 70
+0
+  9
+$DIMCLRT
+ 70
+0
+  9
+$DIMTFAC
+ 40
+1.0
+  9
+$DIMGAP
+ 40
+0.625
+  9
+$DIMJUST
+ 70
+0
+  9
+$DIMSD1
+ 70
+0
+  9
+$DIMSD2
+ 70
+0
+  9
+$DIMTOLJ
+ 70
+0
+  9
+$DIMTZIN
+ 70
+8
+  9
+$DIMALTZ
+ 70
+0
+  9
+$DIMALTTZ
+ 70
+0
+  9
+$DIMUPT
+ 70
+0
+  9
+$DIMDEC
+ 70
+2
+  9
+$DIMTDEC
+ 70
+2
+  9
+$DIMALTU
+ 70
+2
+  9
+$DIMALTTD
+ 70
+3
+  9
+$DIMTXSTY
+  7
+Standard
+  9
+$DIMAUNIT
+ 70
+0
+  9
+$DIMADEC
+ 70
+0
+  9
+$DIMALTRND
+ 40
+0.0
+  9
+$DIMAZIN
+ 70
+0
+  9
+$DIMDSEP
+ 70
+44
+  9
+$DIMATFIT
+ 70
+3
+  9
+$DIMFRAC
+ 70
+0
+  9
+$DIMLDRBLK
+  1
+
+  9
+$DIMLUNIT
+ 70
+2
+  9
+$DIMLWD
+ 70
+-2
+  9
+$DIMLWE
+ 70
+-2
+  9
+$DIMTMOVE
+ 70
+0
+  9
+$DIMFXL
+ 40
+1.0
+  9
+$DIMFXLON
+ 70
+0
+  9
+$DIMJOGANG
+ 40
+0.785398163397
+  9
+$DIMTFILL
+ 70
+0
+  9
+$DIMTFILLCLR
+ 70
+0
+  9
+$DIMARCSYM
+ 70
+0
+  9
+$DIMLTYPE
+  6
+
+  9
+$DIMLTEX1
+  6
+
+  9
+$DIMLTEX2
+  6
+
+  9
+$DIMTXTDIRECTION
+ 70
+0
+  9
+$LUNITS
+ 70
+2
+  9
+$LUPREC
+ 70
+4
+  9
+$SKETCHINC
+ 40
+1.0
+  9
+$FILLETRAD
+ 40
+10.0
+  9
+$AUNITS
+ 70
+0
+  9
+$AUPREC
+ 70
+2
+  9
+$MENU
+  1
+.
+  9
+$ELEVATION
+ 40
+0.0
+  9
+$PELEVATION
+ 40
+0.0
+  9
+$THICKNESS
+ 40
+0.0
+  9
+$LIMCHECK
+ 70
+0
+  9
+$CHAMFERA
+ 40
+0.0
+  9
+$CHAMFERB
+ 40
+0.0
+  9
+$CHAMFERC
+ 40
+0.0
+  9
+$CHAMFERD
+ 40
+0.0
+  9
+$SKPOLY
+ 70
+0
+  9
+$TDCREATE
+ 40
+2461024.5254282407
+  9
+$TDUCREATE
+ 40
+2458532.153996898
+  9
+$TDUPDATE
+ 40
+2461024.5254282407
+  9
+$TDUUPDATE
+ 40
+2458532.1544311
+  9
+$TDINDWG
+ 40
+0.0
+  9
+$TDUSRTIMER
+ 40
+0.0
+  9
+$USRTIMER
+ 70
+1
+  9
+$ANGBASE
+ 50
+0.0
+  9
+$ANGDIR
+ 70
+0
+  9
+$PDMODE
+ 70
+0
+  9
+$PDSIZE
+ 40
+0.0
+  9
+$PLINEWID
+ 40
+0.0
+  9
+$SPLFRAME
+ 70
+0
+  9
+$SPLINETYPE
+ 70
+6
+  9
+$SPLINESEGS
+ 70
+8
+  9
+$HANDSEED
+  5
+28D
+  9
+$SURFTAB1
+ 70
+6
+  9
+$SURFTAB2
+ 70
+6
+  9
+$SURFTYPE
+ 70
+6
+  9
+$SURFU
+ 70
+6
+  9
+$SURFV
+ 70
+6
+  9
+$UCSBASE
+  2
+
+  9
+$UCSNAME
+  2
+
+  9
+$UCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$UCSORTHOREF
+  2
+
+  9
+$UCSORTHOVIEW
+ 70
+0
+  9
+$UCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSBASE
+  2
+
+  9
+$PUCSNAME
+  2
+
+  9
+$PUCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$PUCSORTHOREF
+  2
+
+  9
+$PUCSORTHOVIEW
+ 70
+0
+  9
+$PUCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$USERI1
+ 70
+0
+  9
+$USERI2
+ 70
+0
+  9
+$USERI3
+ 70
+0
+  9
+$USERI4
+ 70
+0
+  9
+$USERI5
+ 70
+0
+  9
+$USERR1
+ 40
+0.0
+  9
+$USERR2
+ 40
+0.0
+  9
+$USERR3
+ 40
+0.0
+  9
+$USERR4
+ 40
+0.0
+  9
+$USERR5
+ 40
+0.0
+  9
+$WORLDVIEW
+ 70
+1
+  9
+$SHADEDGE
+ 70
+3
+  9
+$SHADEDIF
+ 70
+70
+  9
+$TILEMODE
+ 70
+1
+  9
+$MAXACTVP
+ 70
+64
+  9
+$PINSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PLIMCHECK
+ 70
+0
+  9
+$PEXTMIN
+ 10
+1e+20
+ 20
+1e+20
+ 30
+1e+20
+  9
+$PEXTMAX
+ 10
+-1e+20
+ 20
+-1e+20
+ 30
+-1e+20
+  9
+$PLIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$PLIMMAX
+ 10
+420.0
+ 20
+297.0
+  9
+$UNITMODE
+ 70
+0
+  9
+$VISRETAIN
+ 70
+1
+  9
+$PLINEGEN
+ 70
+0
+  9
+$PSLTSCALE
+ 70
+1
+  9
+$TREEDEPTH
+ 70
+3020
+  9
+$CMLSTYLE
+  2
+Standard
+  9
+$CMLJUST
+ 70
+0
+  9
+$CMLSCALE
+ 40
+20.0
+  9
+$PROXYGRAPHICS
+ 70
+1
+  9
+$MEASUREMENT
+ 70
+1
+  9
+$CELWEIGHT
+370
+-1
+  9
+$ENDCAPS
+280
+0
+  9
+$JOINSTYLE
+280
+0
+  9
+$LWDISPLAY
+290
+0
+  9
+$INSUNITS
+ 70
+6
+  9
+$HYPERLINKBASE
+  1
+
+  9
+$STYLESHEET
+  1
+
+  9
+$XEDIT
+290
+1
+  9
+$CEPSNTYPE
+380
+0
+  9
+$PSTYLEMODE
+290
+1
+  9
+$FINGERPRINTGUID
+  2
+{AB0B70CD-310B-41A7-AAD0-0B1586B87EF8}
+  9
+$VERSIONGUID
+  2
+{AE75EEB2-A990-47E0-A625-926942507F7D}
+  9
+$EXTNAMES
+290
+1
+  9
+$PSVPSCALE
+ 40
+0.0
+  9
+$OLESTARTUP
+290
+0
+  9
+$SORTENTS
+280
+127
+  9
+$INDEXCTL
+280
+0
+  9
+$HIDETEXT
+280
+1
+  9
+$XCLIPFRAME
+280
+1
+  9
+$HALOGAP
+280
+0
+  9
+$OBSCOLOR
+ 70
+257
+  9
+$OBSLTYPE
+280
+0
+  9
+$INTERSECTIONDISPLAY
+280
+0
+  9
+$INTERSECTIONCOLOR
+ 70
+257
+  9
+$DIMASSOC
+280
+2
+  9
+$PROJECTNAME
+  1
+
+  9
+$CAMERADISPLAY
+290
+0
+  9
+$LENSLENGTH
+ 40
+50.0
+  9
+$CAMERAHEIGHT
+ 40
+0.0
+  9
+$STEPSPERSEC
+ 40
+24.0
+  9
+$STEPSIZE
+ 40
+100.0
+  9
+$3DDWFPREC
+ 40
+2.0
+  9
+$PSOLWIDTH
+ 40
+0.005
+  9
+$PSOLHEIGHT
+ 40
+0.08
+  9
+$LOFTANG1
+ 40
+1.570796326795
+  9
+$LOFTANG2
+ 40
+1.570796326795
+  9
+$LOFTMAG1
+ 40
+0.0
+  9
+$LOFTMAG2
+ 40
+0.0
+  9
+$LOFTPARAM
+ 70
+7
+  9
+$LOFTNORMALS
+280
+1
+  9
+$LATITUDE
+ 40
+37.795
+  9
+$LONGITUDE
+ 40
+-122.394
+  9
+$NORTHDIRECTION
+ 40
+0.0
+  9
+$TIMEZONE
+ 70
+-8000
+  9
+$LIGHTGLYPHDISPLAY
+280
+1
+  9
+$TILEMODELIGHTSYNCH
+280
+1
+  9
+$CMATERIAL
+347
+20
+  9
+$SOLIDHIST
+280
+0
+  9
+$SHOWHIST
+280
+1
+  9
+$DWFFRAME
+280
+2
+  9
+$DGNFRAME
+280
+2
+  9
+$REALWORLDSCALE
+290
+1
+  9
+$INTERFERECOLOR
+ 62
+256
+  9
+$CSHADOW
+280
+0
+  9
+$SHADOWPLANELOCATION
+ 40
+0.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+CLASS
+  1
+ACDBDICTIONARYWDFLT
+  2
+AcDbDictionaryWithDefault
+  3
+ObjectDBX Classes
+ 90
+0
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+SUN
+  2
+AcDbSun
+  3
+SCENEOE
+ 90
+1153
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+VISUALSTYLE
+  2
+AcDbVisualStyle
+  3
+ObjectDBX Classes
+ 90
+4095
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+MATERIAL
+  2
+AcDbMaterial
+  3
+ObjectDBX Classes
+ 90
+1153
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+SCALE
+  2
+AcDbScale
+  3
+ObjectDBX Classes
+ 90
+1153
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+TABLESTYLE
+  2
+AcDbTableStyle
+  3
+ObjectDBX Classes
+ 90
+4095
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+MLEADERSTYLE
+  2
+AcDbMLeaderStyle
+  3
+ACDB_MLEADERSTYLE_CLASS
+ 90
+4095
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+DICTIONARYVAR
+  2
+AcDbDictionaryVar
+  3
+ObjectDBX Classes
+ 90
+0
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+CELLSTYLEMAP
+  2
+AcDbCellStyleMap
+  3
+ObjectDBX Classes
+ 90
+1152
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+MENTALRAYRENDERSETTINGS
+  2
+AcDbMentalRayRenderSettings
+  3
+SCENEOE
+ 90
+1024
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBDETAILVIEWSTYLE
+  2
+AcDbDetailViewStyle
+  3
+ObjectDBX Classes
+ 90
+1025
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBSECTIONVIEWSTYLE
+  2
+AcDbSectionViewStyle
+  3
+ObjectDBX Classes
+ 90
+1025
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+RASTERVARIABLES
+  2
+AcDbRasterVariables
+  3
+ISM
+ 90
+0
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+LAYOUT
+  2
+AcDbLayout
+  3
+ObjectDBX Classes
+ 90
+0
+ 91
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBPLACEHOLDER
+  2
+AcDbPlaceHolder
+  3
+ObjectDBX Classes
+ 90
+0
+ 91
+0
+280
+0
+281
+0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+8
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+  0
+VPORT
+  5
+23
+330
+8
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*Active
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 11
+1.0
+ 21
+1.0
+ 12
+0.0
+ 22
+0.0
+ 13
+0.0
+ 23
+0.0
+ 14
+0.5
+ 24
+0.5
+ 15
+0.5
+ 25
+0.5
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 40
+1000.0
+ 41
+1.34
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 50
+0.0
+ 51
+0.0
+ 71
+0
+ 72
+1000
+ 73
+1
+ 74
+3
+ 75
+0
+ 76
+0
+ 77
+0
+ 78
+0
+281
+0
+ 65
+0
+146
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+2
+330
+0
+100
+AcDbSymbolTable
+ 70
+5
+  0
+LTYPE
+  5
+24
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+25
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+26
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+Continuous
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+285
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHEDX5
+ 70
+0
+  3
+Dashed (5x) ____  ____  ____  ____  ____  ___
+ 72
+65
+ 73
+2
+ 40
+6.0
+ 49
+4.0
+ 74
+0
+ 49
+-2.0
+ 74
+0
+  0
+LTYPE
+  5
+286
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DASHEDX2
+ 70
+0
+  3
+Dashed (2x) ____  ____  ____  ____  ____  ___
+ 72
+65
+ 73
+2
+ 40
+38.1
+ 49
+25.4
+ 74
+0
+ 49
+-12.7
+ 74
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+1
+330
+0
+100
+AcDbSymbolTable
+ 70
+5
+  0
+LAYER
+  5
+27
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+-3
+390
+13
+347
+21
+  0
+LAYER
+  5
+28
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Defpoints
+ 70
+0
+ 62
+7
+  6
+Continuous
+290
+0
+370
+-3
+390
+13
+347
+21
+  0
+LAYER
+  5
+282
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+DUCT
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+347
+2D2C1
+  0
+LAYER
+  5
+283
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+通风设备
+ 70
+0
+ 62
+3
+  6
+Continuous
+370
+-3
+390
+0
+347
+2D2C1
+  0
+LAYER
+  5
+284
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+05Basic
+ 70
+0
+ 62
+3
+  6
+Continuous
+370
+-3
+390
+0
+347
+2D2C1
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+5
+330
+0
+100
+AcDbSymbolTable
+ 70
+4
+  0
+STYLE
+  5
+29
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+Standard
+ 70
+0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+0
+ 42
+2.5
+  3
+txt
+  4
+
+  0
+STYLE
+  5
+287
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+HW
+ 70
+0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+0
+ 42
+3.0
+  3
+wromans.shx
+  4
+hztxtc.shx
+  0
+STYLE
+  5
+288
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+ISOCP
+ 70
+0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+0
+ 42
+4.0
+  3
+isocpeur.ttf
+  4
+
+  0
+STYLE
+  5
+289
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+HZ
+ 70
+0
+ 40
+0.0
+ 41
+0.7
+ 50
+0.0
+ 71
+0
+ 42
+150.0
+  3
+txt_____.ttf
+  4
+HZTXT
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+7
+330
+0
+100
+AcDbSymbolTable
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+6
+330
+0
+100
+AcDbSymbolTable
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+3
+330
+0
+100
+AcDbSymbolTable
+ 70
+3
+  0
+APPID
+  5
+2A
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+0
+  0
+APPID
+  5
+28A
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+HATCHBACKGROUNDCOLOR
+ 70
+0
+  0
+APPID
+  5
+28B
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+EZDXF
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+4
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+100
+AcDbDimStyleTable
+  0
+DIMSTYLE
+105
+2B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+Standard
+ 70
+0
+ 40
+1.0
+ 41
+2.5
+ 42
+0.625
+ 43
+3.75
+ 44
+1.25
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+2.5
+140
+2.5
+141
+2.5
+142
+0.0
+143
+0.03937007874
+144
+1.0
+145
+0.0
+146
+1.0
+147
+0.625
+148
+0.0
+ 69
+0
+ 70
+0
+ 71
+0
+ 72
+0
+ 73
+0
+ 74
+0
+ 75
+0
+ 76
+0
+ 77
+1
+ 78
+8
+ 79
+3
+170
+0
+171
+3
+172
+1
+173
+0
+174
+0
+175
+0
+176
+0
+177
+0
+178
+0
+179
+2
+271
+2
+272
+2
+273
+2
+274
+3
+275
+0
+276
+0
+277
+2
+278
+44
+279
+0
+280
+0
+281
+0
+282
+0
+283
+0
+284
+8
+285
+0
+286
+0
+288
+0
+289
+3
+290
+0
+371
+-2
+372
+-2
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+9
+330
+0
+100
+AcDbSymbolTable
+ 70
+38
+  0
+BLOCK_RECORD
+  5
+17
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Model_Space
+340
+1A
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1B
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space
+340
+1E
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+2F
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+房间
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+37
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+安全壳隔离阀
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+3E
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+手动阀
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+56
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+新_排风口
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+8A
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+电动阀
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+A4
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+热管
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+D2
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+循环冷却机组
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+DA
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+余压阀
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+E2
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+防火阀
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+103
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+分体柜机
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+115
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+排烟阀
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+136
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+主要设备图例
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+13E
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+风机
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+146
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+送风_新风风管
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+14F
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+排风_回风风管
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+159
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+低效_中效过滤器
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+162
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+转送风
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+16A
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+高效过滤器
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+172
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+HEPA过滤器
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+185
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+风口
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+18D
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+电加热器在线
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1AA
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+控制线
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1B1
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+其他专业管线
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1B9
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+电暖风机
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1C1
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+碘吸附器
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1C9
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+冷却_加热盘管
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1D1
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+消声器
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1D9
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+加湿器
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1E3
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms0205
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1E8
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms1821_k08
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+1FC
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms1862
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+227
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms1008_k01
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+236
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms1861
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+25F
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms1840_k01
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+26F
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms0781_k02
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+BLOCK_RECORD
+  5
+279
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+ms0421
+340
+0
+ 70
+0
+280
+1
+281
+0
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+18
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Model_Space
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Model_Space
+  1
+
+  0
+ENDBLK
+  5
+19
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1C
+330
+1B
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space
+  1
+
+  0
+ENDBLK
+  5
+1D
+330
+1B
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+30
+330
+2F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+房间
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+房间
+  1
+
+  0
+INSERT
+  5
+32
+330
+2F
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms0205
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 50
+270.000000505261
+  0
+ENDBLK
+  5
+31
+330
+2F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+38
+330
+37
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+安全壳隔离阀
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+安全壳隔离阀
+  1
+
+  0
+LINE
+  5
+3A
+330
+37
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+0.0
+ 21
+6.063556821992023
+ 31
+0.0
+  0
+ENDBLK
+  5
+39
+330
+37
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+3F
+330
+3E
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+手动阀
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+手动阀
+  1
+
+  0
+LINE
+  5
+41
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+ 11
+10.0
+ 21
+10.0
+ 31
+0.0
+  0
+LINE
+  5
+42
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+10.0
+ 30
+0.0
+ 11
+0.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+43
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+10.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+44
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+45
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.0
+  0
+CIRCLE
+  5
+46
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.25
+  0
+CIRCLE
+  5
+47
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.5
+  0
+CIRCLE
+  5
+48
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.75
+  0
+CIRCLE
+  5
+49
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.125
+  0
+CIRCLE
+  5
+4A
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.375
+  0
+CIRCLE
+  5
+4B
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.625
+  0
+CIRCLE
+  5
+4C
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.875
+  0
+CIRCLE
+  5
+4D
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.125
+  0
+CIRCLE
+  5
+4E
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.25
+  0
+LINE
+  5
+4F
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+10.0
+ 20
+10.0
+ 30
+0.0
+ 11
+0.0
+ 21
+10.0
+ 31
+0.0
+  0
+LINE
+  5
+50
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.0
+ 20
+10.0
+ 30
+0.0
+ 11
+5.0
+ 21
+13.900000000000006
+ 31
+0.0
+  0
+LINE
+  5
+51
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+5.0
+ 20
+13.900000000000006
+ 30
+0.0
+ 11
+2.9309894689999965
+ 21
+13.900000000000006
+ 31
+0.0
+  0
+LINE
+  5
+52
+330
+3E
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+5.0
+ 20
+13.900000000000006
+ 30
+0.0
+ 11
+7.069010530989999
+ 21
+13.900000000000006
+ 31
+0.0
+  0
+ENDBLK
+  5
+40
+330
+3E
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+57
+330
+56
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+新_排风口
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+新_排风口
+  1
+
+  0
+LINE
+  5
+59
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.7266666666700985
+ 20
+4.926666666666989
+ 30
+0.0
+ 11
+0.0
+ 21
+4.926666666666989
+ 31
+0.0
+  0
+LINE
+  5
+5A
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.7266666666700985
+ 20
+6.593333333333987
+ 30
+0.0
+ 11
+0.0
+ 21
+6.593333333333987
+ 31
+0.0
+  0
+LINE
+  5
+5B
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.7266666666700985
+ 20
+8.260000000000986
+ 30
+0.0
+ 11
+0.0
+ 21
+8.260000000000986
+ 31
+0.0
+  0
+LINE
+  5
+5C
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+6.1763744805300576
+ 20
+0.0
+ 30
+0.0
+ 11
+3.296374480530176
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+5D
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.296374480530176
+ 20
+11.520000000001005
+ 30
+0.0
+ 11
+6.1763744805300576
+ 21
+11.520000000001005
+ 31
+0.0
+  0
+LINE
+  5
+5E
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.569707813860077
+ 20
+4.093333333333987
+ 30
+0.0
+ 11
+3.9030411471901516
+ 21
+2.426666666666989
+ 31
+0.0
+  0
+LINE
+  5
+5F
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.296374480530176
+ 20
+0.0
+ 30
+0.0
+ 11
+3.296374480530176
+ 21
+11.520000000001005
+ 31
+0.0
+  0
+LINE
+  5
+60
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.569707813860077
+ 20
+5.760000000000986
+ 30
+0.0
+ 11
+3.9030411471901516
+ 21
+4.093333333333987
+ 31
+0.0
+  0
+LINE
+  5
+61
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.569707813860077
+ 20
+7.426666666666989
+ 30
+0.0
+ 11
+3.9030411471901516
+ 21
+5.760000000000986
+ 31
+0.0
+  0
+LINE
+  5
+62
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.569707813860077
+ 20
+9.093333333333987
+ 30
+0.0
+ 11
+3.9030411471901516
+ 21
+7.426666666666989
+ 31
+0.0
+  0
+LINE
+  5
+63
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+8.593333333333987
+ 30
+0.0
+ 11
+0.0
+ 21
+8.260000000000986
+ 31
+0.0
+  0
+LINE
+  5
+64
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+8.260000000000986
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+8.593333333333987
+ 31
+0.0
+  0
+LINE
+  5
+65
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+4.593333333333987
+ 30
+0.0
+ 11
+0.0
+ 21
+4.926666666666989
+ 31
+0.0
+  0
+LINE
+  5
+66
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+4.926666666666989
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+4.593333333333987
+ 31
+0.0
+  0
+LINE
+  5
+67
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+6.593333333333987
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+6.926666666666989
+ 31
+0.0
+  0
+LINE
+  5
+68
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+6.926666666666989
+ 30
+0.0
+ 11
+0.0
+ 21
+6.593333333333987
+ 31
+0.0
+  0
+LINE
+  5
+69
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+7.926666666666989
+ 30
+0.0
+ 11
+0.0
+ 21
+8.260000000000986
+ 31
+0.0
+  0
+LINE
+  5
+6A
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+8.260000000000986
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+7.926666666666989
+ 31
+0.0
+  0
+POINT
+  5
+6B
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbPoint
+ 10
+0.0
+ 20
+8.260000000000986
+ 30
+0.0
+ 50
+180.0
+  0
+LINE
+  5
+6C
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+6.260000000000986
+ 30
+0.0
+ 11
+0.0
+ 21
+6.593333333333987
+ 31
+0.0
+  0
+LINE
+  5
+6D
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+5.260000000000986
+ 30
+0.0
+ 11
+0.0
+ 21
+4.926666666666989
+ 31
+0.0
+  0
+LINE
+  5
+6E
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+6.593333333333987
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+6.260000000000986
+ 31
+0.0
+  0
+LINE
+  5
+6F
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+4.926666666666989
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+5.260000000000986
+ 31
+0.0
+  0
+POINT
+  5
+70
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbPoint
+ 10
+0.0
+ 20
+6.593333333333987
+ 30
+0.0
+ 50
+180.0
+  0
+POINT
+  5
+71
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbPoint
+ 10
+0.0
+ 20
+4.926666666666989
+ 30
+0.0
+ 50
+180.0
+  0
+LINE
+  5
+72
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+6.1763744805300576
+ 20
+11.520000000001005
+ 30
+0.0
+ 11
+6.1763744805300576
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+73
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.569707813860077
+ 20
+10.760000000000986
+ 30
+0.0
+ 11
+3.9030411471901516
+ 21
+9.093333333333987
+ 31
+0.0
+  0
+LINE
+  5
+74
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.569707813860077
+ 20
+2.426666666666989
+ 30
+0.0
+ 11
+3.9030411471901516
+ 21
+0.7600000000009857
+ 31
+0.0
+  0
+LINE
+  5
+75
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.7266666666700985
+ 20
+9.92666666666699
+ 30
+0.0
+ 11
+0.0
+ 21
+9.92666666666699
+ 31
+0.0
+  0
+LINE
+  5
+76
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+9.92666666666699
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+10.260000000000986
+ 31
+0.0
+  0
+LINE
+  5
+77
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+10.260000000000986
+ 30
+0.0
+ 11
+0.0
+ 21
+9.92666666666699
+ 31
+0.0
+  0
+LINE
+  5
+78
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+9.593333333333987
+ 30
+0.0
+ 11
+0.0
+ 21
+9.92666666666699
+ 31
+0.0
+  0
+LINE
+  5
+79
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+9.92666666666699
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+9.593333333333987
+ 31
+0.0
+  0
+POINT
+  5
+7A
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbPoint
+ 10
+0.0
+ 20
+9.92666666666699
+ 30
+0.0
+ 50
+180.0
+  0
+LINE
+  5
+7B
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.7266666666700985
+ 20
+3.2600000000009857
+ 30
+0.0
+ 11
+0.0
+ 21
+3.2600000000009857
+ 31
+0.0
+  0
+LINE
+  5
+7C
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+3.2600000000009857
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+3.5933333333339874
+ 31
+0.0
+  0
+LINE
+  5
+7D
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+3.5933333333339874
+ 30
+0.0
+ 11
+0.0
+ 21
+3.2600000000009857
+ 31
+0.0
+  0
+LINE
+  5
+7E
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+2.926666666666989
+ 30
+0.0
+ 11
+0.0
+ 21
+3.2600000000009857
+ 31
+0.0
+  0
+LINE
+  5
+7F
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+3.2600000000009857
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+2.926666666666989
+ 31
+0.0
+  0
+POINT
+  5
+80
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbPoint
+ 10
+0.0
+ 20
+3.2600000000009857
+ 30
+0.0
+ 50
+180.0
+  0
+LINE
+  5
+81
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.7266666666700985
+ 20
+1.5933333333339874
+ 30
+0.0
+ 11
+0.0
+ 21
+1.5933333333339874
+ 31
+0.0
+  0
+LINE
+  5
+82
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+1.5933333333339874
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+1.9266666666669892
+ 31
+0.0
+  0
+LINE
+  5
+83
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+1.9266666666669892
+ 30
+0.0
+ 11
+0.0
+ 21
+1.5933333333339874
+ 31
+0.0
+  0
+LINE
+  5
+84
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+1.2600000000009857
+ 30
+0.0
+ 11
+0.0
+ 21
+1.5933333333339874
+ 31
+0.0
+  0
+LINE
+  5
+85
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.8333333333300743
+ 20
+1.5933333333339874
+ 30
+0.0
+ 11
+0.8333333333300743
+ 21
+1.2600000000009857
+ 31
+0.0
+  0
+POINT
+  5
+86
+330
+56
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbPoint
+ 10
+0.0
+ 20
+1.5933333333339874
+ 30
+0.0
+ 50
+180.0
+  0
+ENDBLK
+  5
+58
+330
+56
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+8B
+330
+8A
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+电动阀
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+电动阀
+  1
+
+  0
+LINE
+  5
+8D
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+ 11
+10.0
+ 21
+10.0
+ 31
+0.0
+  0
+LINE
+  5
+8E
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+10.0
+ 30
+0.0
+ 11
+0.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+8F
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+10.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+90
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+91
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.0
+  0
+CIRCLE
+  5
+92
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.25
+  0
+CIRCLE
+  5
+93
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.5
+  0
+CIRCLE
+  5
+94
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.75
+  0
+CIRCLE
+  5
+95
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.125
+  0
+CIRCLE
+  5
+96
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.375
+  0
+CIRCLE
+  5
+97
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.625
+  0
+CIRCLE
+  5
+98
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.875
+  0
+CIRCLE
+  5
+99
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.125
+  0
+CIRCLE
+  5
+9A
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.25
+  0
+LINE
+  5
+9B
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+10.0
+ 20
+10.0
+ 30
+0.0
+ 11
+0.0
+ 21
+10.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+9C
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.0
+ 20
+16.69063323200001
+ 30
+0.0
+ 40
+2.56
+  0
+TEXT
+  5
+9D
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+4.016379872599828
+ 20
+15.497985755996012
+ 30
+0.0
+ 40
+2.5
+  1
+M
+  7
+ISOCP
+ 41
+0.85
+ 72
+4
+ 11
+4.9726298726000095
+ 21
+16.747985755996012
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+9E
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.0
+ 20
+10.0
+ 30
+0.0
+ 11
+5.0
+ 21
+14.130633232000008
+ 31
+0.0
+  0
+LINE
+  5
+9F
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.0
+ 20
+14.130633232000008
+ 30
+0.0
+ 11
+3.244358111499878
+ 21
+14.130633232000008
+ 31
+0.0
+  0
+LINE
+  5
+A0
+330
+8A
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+6.755641888499895
+ 20
+14.130633232000008
+ 30
+0.0
+ 11
+5.0
+ 21
+14.130633232000008
+ 31
+0.0
+  0
+ENDBLK
+  5
+8C
+330
+8A
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+A5
+330
+A4
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+热管
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+热管
+  1
+
+  0
+LINE
+  5
+A7
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+1.2973353521099398
+ 20
+10.451324470587991
+ 30
+0.0
+ 11
+12.437312666709886
+ 21
+10.451324470587991
+ 31
+0.0
+  0
+LINE
+  5
+A8
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+12.437312666709886
+ 20
+10.451324470587991
+ 30
+0.0
+ 11
+12.437312666709886
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+A9
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+11.279147116810009
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+11.279147116810009
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+AA
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+11.279118175639951
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+11.279118175639951
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+AB
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.280965940339911
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+10.280965940339911
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+AC
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.280936999159849
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+10.280936999159849
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+AD
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.282784763869813
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+9.282784763869813
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+AE
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.282755822689978
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+9.282755822689978
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+AF
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+8.284603587399943
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+8.284603587399943
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+B0
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+8.28457464621988
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+8.28457464621988
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+B1
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+7.286422410929845
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+7.286422410929845
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+B2
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+7.28639346975001
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+7.28639346975001
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+B3
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+6.288241234459974
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+6.288241234459974
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+B4
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+6.288212293279912
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+6.288212293279912
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+B5
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.290060057989876
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+5.290060057989876
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+B6
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.290031116809814
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+5.290031116809814
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+B7
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+4.291878881520006
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+4.291878881520006
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+B8
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+4.291849940339944
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+4.291849940339944
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+B9
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.293697705049908
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+3.293697705049908
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+BA
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.293668763869846
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+3.293668763869846
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+BB
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.2955165285798103
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+2.2955165285798103
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+BC
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+2.2954875873999754
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+2.2954875873999754
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+BD
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+1.2973353521099398
+ 20
+0.0
+ 30
+0.0
+ 11
+1.2973353521099398
+ 21
+10.451324470587991
+ 31
+0.0
+  0
+LINE
+  5
+BE
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+1.2973353521099398
+ 20
+0.0
+ 30
+0.0
+ 11
+12.437312666709886
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+BF
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+11.279147116810009
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+10.280936999159849
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+C0
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.282784763869813
+ 20
+9.57670412380699
+ 30
+0.0
+ 11
+8.28457464621988
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+C1
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+7.286422410929845
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+6.288212293279912
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+C2
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.290060057989876
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+4.291849940339944
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+C3
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.293697705049908
+ 20
+9.576704123807986
+ 30
+0.0
+ 11
+2.2955165285798103
+ 21
+9.576704123807986
+ 31
+0.0
+  0
+LINE
+  5
+C4
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+11.279147116810009
+ 20
+0.8746203467789826
+ 30
+0.0
+ 11
+10.280936999159849
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+C5
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.282784763869813
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+8.28457464621988
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+C6
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+7.286422410929845
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+6.288212293279912
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+C7
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.290060057989876
+ 20
+0.8746203467799774
+ 30
+0.0
+ 11
+4.291849940339944
+ 21
+0.8746203467789826
+ 31
+0.0
+  0
+LINE
+  5
+C8
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.293697705049908
+ 20
+0.8746203467789826
+ 30
+0.0
+ 11
+2.2955165285798103
+ 21
+0.8746203467799774
+ 31
+0.0
+  0
+LINE
+  5
+C9
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+1.2973353521099398
+ 20
+5.225662235293981
+ 30
+0.0
+ 11
+2.2954875873999754
+ 21
+5.225662235293981
+ 31
+0.0
+  0
+LINE
+  5
+CA
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+11.279147116810009
+ 20
+5.225662235293981
+ 30
+0.0
+ 11
+12.437312666709886
+ 21
+5.225662235293981
+ 31
+0.0
+  0
+LINE
+  5
+CB
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+1.2973353521099398
+ 20
+7.838493352940986
+ 30
+0.0
+ 11
+0.0
+ 21
+7.838493352940986
+ 31
+0.0
+  0
+LINE
+  5
+CC
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+1.2973353521099398
+ 20
+2.6128311176469765
+ 30
+0.0
+ 11
+0.0
+ 21
+2.6128311176469765
+ 31
+0.0
+  0
+LINE
+  5
+CD
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+13.734648018819826
+ 20
+7.838493352940986
+ 30
+0.0
+ 11
+12.437312666709886
+ 21
+7.838493352940986
+ 31
+0.0
+  0
+LINE
+  5
+CE
+330
+A4
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+13.734648018819826
+ 20
+2.6128311176469765
+ 30
+0.0
+ 11
+12.437312666709886
+ 21
+2.6128311176469765
+ 31
+0.0
+  0
+ENDBLK
+  5
+A6
+330
+A4
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+D3
+330
+D2
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+循环冷却机组
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+循环冷却机组
+  1
+
+  0
+INSERT
+  5
+D5
+330
+D2
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms0205
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 50
+90.0
+  0
+ENDBLK
+  5
+D4
+330
+D2
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+DB
+330
+DA
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+余压阀
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+余压阀
+  1
+
+  0
+INSERT
+  5
+DD
+330
+DA
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1821_k08
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+DC
+330
+DA
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+E3
+330
+E2
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+防火阀
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+防火阀
+  1
+
+  0
+LINE
+  5
+E5
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.803850177064305e-06
+ 20
+10.000003803846994
+ 30
+0.0
+ 11
+10.000003803850177
+ 21
+10.0
+ 31
+0.0
+  0
+LINE
+  5
+E6
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+ 11
+0.0
+ 21
+3.803846993832849e-06
+ 31
+0.0
+  0
+LINE
+  5
+E7
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+3.803846993832849e-06
+ 30
+0.0
+ 11
+10.000003803850177
+ 21
+10.0
+ 31
+0.0
+  0
+LINE
+  5
+E8
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+3.803846993832849e-06
+ 30
+0.0
+ 11
+3.803850177064305e-06
+ 21
+10.000003803846994
+ 31
+0.0
+  0
+LINE
+  5
+E9
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.000003803850177
+ 20
+10.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+EA
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+1.25
+  0
+CIRCLE
+  5
+EB
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+1.125
+  0
+CIRCLE
+  5
+EC
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+0.875
+  0
+CIRCLE
+  5
+ED
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+0.625
+  0
+CIRCLE
+  5
+EE
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+0.375
+  0
+CIRCLE
+  5
+EF
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+0.125
+  0
+CIRCLE
+  5
+F0
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+0.75
+  0
+CIRCLE
+  5
+F1
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+0.5
+  0
+CIRCLE
+  5
+F2
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+0.25
+  0
+CIRCLE
+  5
+F3
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.000001901922985
+ 30
+0.0
+ 40
+1.0
+  0
+TEXT
+  5
+F4
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+6.785466413410177
+ 20
+1.1734562805280007
+ 30
+0.0
+ 40
+2.46
+  1
+F
+  7
+HZ
+ 41
+0.8
+ 11
+-1123.62733511881
+ 21
+274.749276457406
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+F5
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803850177
+ 20
+10.000001901922985
+ 30
+0.0
+ 11
+5.000003803850177
+ 21
+13.900001901923986
+ 31
+0.0
+  0
+LINE
+  5
+F6
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803850177
+ 20
+13.900001901923986
+ 30
+0.0
+ 11
+2.930993272860178
+ 21
+13.900001901923986
+ 31
+0.0
+  0
+LINE
+  5
+F7
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803850177
+ 20
+13.900001901923986
+ 30
+0.0
+ 11
+7.069014334840176
+ 21
+13.900001901923986
+ 31
+0.0
+  0
+CIRCLE
+  5
+F8
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+10.72636628391001
+ 20
+17.14397826247199
+ 30
+0.0
+ 40
+2.7
+  0
+LINE
+  5
+F9
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803850177
+ 20
+11.950001901923997
+ 30
+0.0
+ 11
+10.72636628391001
+ 21
+11.950001901923997
+ 31
+0.0
+  0
+LINE
+  5
+FA
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.72636628391001
+ 20
+11.950001901923997
+ 30
+0.0
+ 11
+10.72636628391001
+ 21
+14.443978262472967
+ 31
+0.0
+  0
+TEXT
+  5
+FB
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+11.647046586110037
+ 20
+16.113117599333975
+ 30
+0.0
+ 40
+2.0
+  1
+5
+  7
+HW
+ 41
+0.7
+ 72
+4
+ 11
+12.113713252780144
+ 21
+17.113117599333975
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+FC
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+8.953278259310082
+ 20
+16.07985654485998
+ 30
+0.0
+ 40
+2.0
+  1
+3
+  7
+HW
+ 41
+0.7
+ 72
+4
+ 11
+9.41994492598019
+ 21
+17.07985654485998
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+FD
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+11.57702578887006
+ 20
+19.386778296412984
+ 30
+0.0
+ 11
+9.843438702780077
+ 21
+14.993022896659
+ 31
+0.0
+  0
+CIRCLE
+  5
+FE
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000003803850177
+ 20
+16.460001901922965
+ 30
+0.0
+ 40
+2.56
+  0
+TEXT
+  5
+FF
+330
+E2
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+4.016383676450005
+ 20
+15.267354425918995
+ 30
+0.0
+ 40
+2.5
+  1
+M
+  7
+ISOCP
+ 41
+0.85
+ 72
+4
+ 11
+4.972633676450187
+ 21
+16.517354425918995
+ 31
+0.0
+100
+AcDbText
+  0
+ENDBLK
+  5
+E4
+330
+E2
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+104
+330
+103
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+分体柜机
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+分体柜机
+  1
+
+  0
+LWPOLYLINE
+  5
+106
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+9.526772186510016
+ 20
+20.723898233001023
+ 10
+20.227578039980017
+ 20
+20.723898233001023
+ 10
+20.227578039980017
+ 20
+0.0
+ 10
+9.526772186510016
+ 20
+0.0
+  0
+LINE
+  5
+107
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.526772186510016
+ 20
+20.723898233001023
+ 30
+0.0
+ 11
+20.227578039980017
+ 21
+10.361949116515007
+ 31
+0.0
+  0
+LINE
+  5
+108
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+20.227578039980017
+ 20
+10.361949116515007
+ 30
+0.0
+ 11
+9.526772186510016
+ 21
+0.0
+ 31
+0.0
+  0
+LWPOLYLINE
+  5
+109
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+9.526772186510016
+ 20
+55.633812968265005
+ 10
+20.227578039980017
+ 20
+55.633812968265005
+ 10
+20.227578039980017
+ 20
+34.90991473526299
+ 10
+9.526772186510016
+ 20
+34.90991473526299
+  0
+LINE
+  5
+10A
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.526772186510016
+ 20
+55.633812968265005
+ 30
+0.0
+ 11
+20.227578039980017
+ 21
+45.27186385177899
+ 31
+0.0
+  0
+LINE
+  5
+10B
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+20.227578039980017
+ 20
+45.27186385177899
+ 30
+0.0
+ 11
+9.526772186510016
+ 21
+34.90991473526299
+ 31
+0.0
+  0
+LINE
+  5
+10C
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.526772186510016
+ 20
+10.111949116515007
+ 30
+0.0
+ 11
+0.0
+ 21
+10.111949116515007
+ 31
+0.0
+  0
+LINE
+  5
+10D
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+10.111949116515007
+ 30
+0.0
+ 11
+0.0
+ 21
+45.52186385175
+ 31
+0.0
+  0
+LINE
+  5
+10E
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+45.52186385175
+ 30
+0.0
+ 11
+9.526772186510016
+ 21
+45.52186385175
+ 31
+0.0
+  0
+LINE
+  5
+10F
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+9.526772186510016
+ 20
+10.611949116515007
+ 30
+0.0
+ 11
+0.5
+ 21
+10.611949116515007
+ 31
+0.0
+  0
+LINE
+  5
+110
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.5
+ 20
+10.611949116515007
+ 30
+0.0
+ 11
+0.5
+ 21
+45.02186385175
+ 31
+0.0
+  0
+LINE
+  5
+111
+330
+103
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.5
+ 20
+45.02186385175
+ 30
+0.0
+ 11
+9.526772186510016
+ 21
+45.02186385175
+ 31
+0.0
+  0
+ENDBLK
+  5
+105
+330
+103
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+116
+330
+115
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+排烟阀
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+排烟阀
+  1
+
+  0
+LINE
+  5
+118
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.8038401726225857e-06
+ 20
+10.000003803846994
+ 30
+0.0
+ 11
+10.000003803840173
+ 21
+10.0
+ 31
+0.0
+  0
+LINE
+  5
+119
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+ 11
+0.0
+ 21
+3.8038480170143885e-06
+ 31
+0.0
+  0
+LINE
+  5
+11A
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+3.8038480170143885e-06
+ 30
+0.0
+ 11
+10.000003803840173
+ 21
+10.0
+ 31
+0.0
+  0
+LINE
+  5
+11B
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+0.0
+ 20
+3.8038480170143885e-06
+ 30
+0.0
+ 11
+3.8038401726225857e-06
+ 21
+10.000003803846994
+ 31
+0.0
+  0
+LINE
+  5
+11C
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.000003803840173
+ 20
+10.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+11D
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+1.25
+  0
+CIRCLE
+  5
+11E
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+1.125
+  0
+CIRCLE
+  5
+11F
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+0.875
+  0
+CIRCLE
+  5
+120
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+0.625
+  0
+CIRCLE
+  5
+121
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+0.375
+  0
+CIRCLE
+  5
+122
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+0.125
+  0
+CIRCLE
+  5
+123
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+0.75
+  0
+CIRCLE
+  5
+124
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+0.5
+  0
+CIRCLE
+  5
+125
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+0.25
+  0
+CIRCLE
+  5
+126
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000001901920086
+ 20
+5.0000019019240085
+ 30
+0.0
+ 40
+1.0
+  0
+TEXT
+  5
+127
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+6.785466413410177
+ 20
+1.1734562805280007
+ 30
+0.0
+ 40
+2.46
+  1
+E
+  7
+HZ
+ 41
+0.8
+ 11
+-1123.23793121862
+ 21
+303.148751727469
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+128
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803840173
+ 20
+10.000001901924009
+ 30
+0.0
+ 11
+5.000003803840173
+ 21
+13.900001901923986
+ 31
+0.0
+  0
+LINE
+  5
+129
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803840173
+ 20
+13.900001901923986
+ 30
+0.0
+ 11
+2.9309932728501735
+ 21
+13.900001901923986
+ 31
+0.0
+  0
+LINE
+  5
+12A
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+Continuous
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803840173
+ 20
+13.900001901923986
+ 30
+0.0
+ 11
+7.069014334840176
+ 21
+13.900001901923986
+ 31
+0.0
+  0
+CIRCLE
+  5
+12B
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+10.72636628391001
+ 20
+17.143978262473013
+ 30
+0.0
+ 40
+2.7
+  0
+LINE
+  5
+12C
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+5.000003803840173
+ 20
+11.950001901923997
+ 30
+0.0
+ 11
+10.72636628391001
+ 21
+11.950001901923997
+ 31
+0.0
+  0
+LINE
+  5
+12D
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+10.72636628391001
+ 20
+11.950001901923997
+ 30
+0.0
+ 11
+10.72636628391001
+ 21
+14.443978262473024
+ 31
+0.0
+  0
+TEXT
+  5
+12E
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+11.647046586110037
+ 20
+16.113117599334032
+ 30
+0.0
+ 40
+2.0
+  1
+5
+  7
+HW
+ 41
+0.7
+ 72
+4
+ 11
+12.11371325277014
+ 21
+17.113117599334032
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+12F
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+8.953278259310082
+ 20
+16.079856544861002
+ 30
+0.0
+ 40
+2.0
+  1
+3
+  7
+HW
+ 41
+0.7
+ 72
+4
+ 11
+9.419944925970185
+ 21
+17.079856544861002
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+130
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+11.57702578887006
+ 20
+19.38677829641398
+ 30
+0.0
+ 11
+9.843438702780077
+ 21
+14.993022896659
+ 31
+0.0
+  0
+CIRCLE
+  5
+131
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbCircle
+ 10
+5.000003803840173
+ 20
+16.460001901923988
+ 30
+0.0
+ 40
+2.56
+  0
+TEXT
+  5
+132
+330
+115
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbText
+ 10
+4.016383676450005
+ 20
+15.267354425918995
+ 30
+0.0
+ 40
+2.5
+  1
+M
+  7
+ISOCP
+ 41
+0.85
+ 72
+4
+ 11
+4.972633676450187
+ 21
+16.517354425918995
+ 31
+0.0
+100
+AcDbText
+  0
+ENDBLK
+  5
+117
+330
+115
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+137
+330
+136
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+主要设备图例
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+主要设备图例
+  1
+
+  0
+INSERT
+  5
+139
+330
+136
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1862
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+138
+330
+136
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+13F
+330
+13E
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+风机
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+风机
+  1
+
+  0
+INSERT
+  5
+141
+330
+13E
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1008_k01
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 50
+270.0
+  0
+ENDBLK
+  5
+140
+330
+13E
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+147
+330
+146
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+送风_新风风管
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+送风_新风风管
+  1
+
+  0
+LWPOLYLINE
+  5
+149
+330
+146
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+0.0
+ 20
+6.939887514591987
+ 10
+6.9398875145400325
+ 20
+0.0
+ 10
+13.879775029060056
+ 20
+6.939887514591987
+ 10
+6.9398875145400325
+ 20
+13.879775029075972
+  0
+LINE
+  5
+14A
+330
+146
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbLine
+ 10
+6.9398875145400325
+ 20
+13.879775029075972
+ 30
+0.0
+ 11
+6.9398875145400325
+ 21
+10.784387863571965
+ 31
+0.0
+  0
+LINE
+  5
+14B
+330
+146
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbLine
+ 10
+6.9398875145400325
+ 20
+3.0953871655029843
+ 30
+0.0
+ 11
+6.9398875145400325
+ 21
+0.0
+ 31
+0.0
+  0
+ENDBLK
+  5
+148
+330
+146
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+150
+330
+14F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+排风_回风风管
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+排风_回风风管
+  1
+
+  0
+LWPOLYLINE
+  5
+152
+330
+14F
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+13.87977502907006
+ 20
+6.939887514483075
+ 10
+6.939887514530028
+ 20
+13.879775029076086
+ 10
+0.0
+ 20
+6.939887514483075
+ 10
+6.939887514530028
+ 20
+0.0
+  0
+LINE
+  5
+153
+330
+14F
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbLine
+ 10
+6.939887514530028
+ 20
+0.0
+ 30
+0.0
+ 11
+6.939887514530028
+ 21
+3.095387165503098
+ 31
+0.0
+  0
+LINE
+  5
+154
+330
+14F
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+3.469943757259898
+ 20
+3.4699437572420493
+ 30
+0.0
+ 11
+3.469943757259898
+ 21
+6.565330922745034
+ 31
+0.0
+  0
+LINE
+  5
+155
+330
+14F
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbLine
+ 10
+6.939887514530028
+ 20
+13.879775029076086
+ 30
+0.0
+ 11
+6.939887514530028
+ 21
+11.027819013723047
+ 31
+0.0
+  0
+ENDBLK
+  5
+151
+330
+14F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+15A
+330
+159
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+低效_中效过滤器
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+低效_中效过滤器
+  1
+
+  0
+LWPOLYLINE
+  5
+15C
+330
+159
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+13.87977502907006
+ 20
+6.939887514483985
+ 10
+6.939887514530028
+ 20
+13.879775029075972
+ 10
+0.0
+ 20
+6.939887514483985
+ 10
+6.939887514530028
+ 20
+0.0
+  0
+LINE
+  5
+15D
+330
+159
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByBlock
+ 62
+3
+100
+AcDbLine
+ 10
+3.4699437572699026
+ 20
+3.4699437572419356
+ 30
+0.0
+ 11
+3.4699437572699026
+ 21
+6.56533092274492
+ 31
+0.0
+  0
+LINE
+  5
+15E
+330
+159
+100
+AcDbEntity
+  8
+通风设备
+  6
+DASHEDX2
+ 62
+3
+ 48
+0.1
+100
+AcDbLine
+ 10
+6.939887514530028
+ 20
+13.879775029075972
+ 30
+0.0
+ 11
+6.939887514530028
+ 21
+0.0
+ 31
+0.0
+  0
+ENDBLK
+  5
+15B
+330
+159
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+163
+330
+162
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+转送风
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+转送风
+  1
+
+  0
+INSERT
+  5
+165
+330
+162
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1861
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 50
+269.999985470373
+  0
+ENDBLK
+  5
+164
+330
+162
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+16B
+330
+16A
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+高效过滤器
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+高效过滤器
+  1
+
+  0
+LINE
+  5
+16D
+330
+16A
+100
+AcDbEntity
+  8
+0
+  6
+DASHEDX2
+ 62
+3
+ 48
+0.1
+100
+AcDbLine
+ 10
+5.508630877729956
+ 20
+5.219096339557041
+ 30
+0.0
+ 11
+5.508630877729956
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+16E
+330
+16A
+100
+AcDbEntity
+  8
+0
+  6
+DASHEDX2
+ 62
+3
+ 48
+0.1
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+5.508630877729956
+ 21
+0.0
+ 31
+0.0
+  0
+ENDBLK
+  5
+16C
+330
+16A
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+173
+330
+172
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+HEPA过滤器
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+HEPA过滤器
+  1
+
+  0
+LINE
+  5
+175
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+8.39642529890989
+ 20
+11.968096739027942
+ 30
+0.0
+ 11
+8.39642529890989
+ 21
+1.741144516983013
+ 31
+0.0
+  0
+LINE
+  5
+176
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+1.8119443513198803
+ 20
+1.741144516983013
+ 30
+0.0
+ 11
+1.8119443513198803
+ 21
+11.676379228691985
+ 31
+0.0
+  0
+LINE
+  5
+177
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+6.2293809364100525
+ 20
+1.741144516983013
+ 30
+0.0
+ 11
+6.2293809364100525
+ 21
+6.116907172027936
+ 31
+0.0
+  0
+LINE
+  5
+178
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.9373147837700344
+ 20
+6.116907172027936
+ 30
+0.0
+ 11
+3.9373147837700344
+ 21
+1.741144516983013
+ 31
+0.0
+  0
+LINE
+  5
+179
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+8.39642529890989
+ 20
+1.741144516983013
+ 30
+0.0
+ 11
+6.2293809364100525
+ 21
+1.741144516983013
+ 31
+0.0
+  0
+LINE
+  5
+17A
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+3.9373147837700344
+ 20
+1.741144516983013
+ 30
+0.0
+ 11
+1.8119443513198803
+ 21
+1.741144516983013
+ 31
+0.0
+  0
+LINE
+  5
+17B
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+6.2293809364100525
+ 20
+6.116907172027936
+ 30
+0.0
+ 11
+3.9373147837700344
+ 21
+6.116907172027936
+ 31
+0.0
+  0
+LINE
+  5
+17C
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+9.604969270309994
+ 20
+15.29922200442104
+ 30
+0.0
+ 11
+0.27163593696991484
+ 21
+15.29922200442104
+ 31
+0.0
+  0
+LINE
+  5
+17D
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+0.27163593696991484
+ 20
+11.96588867108801
+ 30
+0.0
+ 11
+9.604969270309994
+ 21
+11.96588867108801
+ 31
+0.0
+  0
+LINE
+  5
+17E
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+9.604969270309994
+ 20
+11.96588867108801
+ 30
+0.0
+ 11
+9.604969270309994
+ 21
+15.29922200442104
+ 31
+0.0
+  0
+LINE
+  5
+17F
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+0.27163593696991484
+ 20
+15.29922200442104
+ 30
+0.0
+ 11
+0.27163593696991484
+ 21
+11.96588867108801
+ 31
+0.0
+  0
+LINE
+  5
+180
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+1.8119443513198803
+ 20
+11.676379228691985
+ 30
+0.0
+ 11
+1.8119443513198803
+ 21
+11.968096739027942
+ 31
+0.0
+  0
+LWPOLYLINE
+  5
+181
+330
+172
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+0.0
+ 20
+10.0
+ 10
+10.0
+ 20
+10.0
+ 10
+10.0
+ 20
+0.0
+ 10
+0.0
+ 20
+0.0
+  0
+ENDBLK
+  5
+174
+330
+172
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+186
+330
+185
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+风口
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+风口
+  1
+
+  0
+INSERT
+  5
+188
+330
+185
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1862
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+187
+330
+185
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+18E
+330
+18D
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+电加热器在线
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+电加热器在线
+  1
+
+  0
+INSERT
+  5
+190
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1862
+ 10
+44.36005306019001
+ 20
+12.963502118733004
+ 30
+0.0
+  0
+LINE
+  5
+192
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+39.9058381448001
+ 20
+19.93159885775799
+ 30
+0.0
+ 11
+39.9058381448001
+ 21
+9.704646635713061
+ 31
+0.0
+  0
+LINE
+  5
+193
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+33.32135719721009
+ 20
+9.704646635713061
+ 30
+0.0
+ 11
+33.32135719721009
+ 21
+19.639881347422033
+ 31
+0.0
+  0
+LINE
+  5
+194
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+37.738793782300036
+ 20
+9.704646635713061
+ 30
+0.0
+ 11
+37.738793782300036
+ 21
+14.080409290757984
+ 31
+0.0
+  0
+LINE
+  5
+195
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+35.44672762966002
+ 20
+14.080409290757984
+ 30
+0.0
+ 11
+35.44672762966002
+ 21
+9.704646635713061
+ 31
+0.0
+  0
+LINE
+  5
+196
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+39.9058381448001
+ 20
+9.704646635713061
+ 30
+0.0
+ 11
+37.738793782300036
+ 21
+9.704646635713061
+ 31
+0.0
+  0
+LINE
+  5
+197
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+35.44672762966002
+ 20
+9.704646635713061
+ 30
+0.0
+ 11
+33.32135719721009
+ 21
+9.704646635713061
+ 31
+0.0
+  0
+LINE
+  5
+198
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbLine
+ 10
+37.738793782300036
+ 20
+14.080409290757984
+ 30
+0.0
+ 11
+35.44672762966002
+ 21
+14.080409290757984
+ 31
+0.0
+  0
+LINE
+  5
+199
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+41.1143821161902
+ 20
+23.262724123150974
+ 30
+0.0
+ 11
+31.781048782860125
+ 21
+23.262724123150974
+ 31
+0.0
+  0
+LINE
+  5
+19A
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+31.781048782860125
+ 20
+19.929390789818058
+ 30
+0.0
+ 11
+41.1143821161902
+ 21
+19.929390789818058
+ 31
+0.0
+  0
+LINE
+  5
+19B
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+41.1143821161902
+ 20
+19.929390789818058
+ 30
+0.0
+ 11
+41.1143821161902
+ 21
+23.262724123150974
+ 31
+0.0
+  0
+LINE
+  5
+19C
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+31.781048782860125
+ 20
+23.262724123150974
+ 30
+0.0
+ 11
+31.781048782860125
+ 21
+19.929390789818058
+ 31
+0.0
+  0
+LINE
+  5
+19D
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+33.32135719721009
+ 20
+19.639881347422033
+ 30
+0.0
+ 11
+33.32135719721009
+ 21
+19.93159885775799
+ 31
+0.0
+  0
+LWPOLYLINE
+  5
+19E
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 10
+31.509412845880206
+ 20
+12.963502118729025
+ 10
+28.89114829348
+ 20
+12.963502118729025
+  0
+LWPOLYLINE
+  5
+19F
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+0.0
+ 20
+26.35293308837504
+ 10
+54.36005306019001
+ 20
+25.927004237464985
+ 10
+54.36005306019001
+ 20
+0.0
+ 10
+0.0
+ 20
+0.4259288509109638
+  0
+LWPOLYLINE
+  5
+1A0
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 10
+44.36005306018001
+ 20
+12.963502118731071
+ 10
+41.509412845880206
+ 20
+12.963502118729025
+  0
+INSERT
+  5
+1A1
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1861
+ 10
+9.99999989199
+ 20
+12.969475791590071
+ 30
+0.0
+ 50
+179.999985470373
+  0
+LINE
+  5
+1A3
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbLine
+ 10
+13.89123884787
+ 20
+13.001679879111975
+ 30
+0.0
+ 11
+9.999999900150215
+ 21
+13.001680231915998
+ 31
+0.0
+  0
+INSERT
+  5
+1A4
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1008_k01
+ 10
+21.39123884787
+ 20
+13.001679879115045
+ 30
+0.0
+ 50
+270.0
+  0
+LWPOLYLINE
+  5
+1A6
+330
+18D
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+31.509412845880206
+ 20
+17.963502118729025
+ 10
+41.509412845880206
+ 20
+17.963502118729025
+ 10
+41.509412845880206
+ 20
+7.963502118729025
+ 10
+31.509412845880206
+ 20
+7.963502118729025
+  0
+ENDBLK
+  5
+18F
+330
+18D
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1AB
+330
+1AA
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+控制线
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+控制线
+  1
+
+  0
+LINE
+  5
+1AD
+330
+1AA
+100
+AcDbEntity
+  8
+DUCT
+  6
+DASHEDX2
+ 62
+3
+ 48
+0.2
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+54.05818479532991
+ 21
+0.0
+ 31
+0.0
+  0
+ENDBLK
+  5
+1AC
+330
+1AA
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1B2
+330
+1B1
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+其他专业管线
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+其他专业管线
+  1
+
+  0
+INSERT
+  5
+1B4
+330
+1B1
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms0205
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 50
+270.000000505261
+  0
+ENDBLK
+  5
+1B3
+330
+1B1
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1BA
+330
+1B9
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+电暖风机
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+电暖风机
+  1
+
+  0
+INSERT
+  5
+1BC
+330
+1B9
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1862
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+1BB
+330
+1B9
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1C2
+330
+1C1
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+碘吸附器
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+碘吸附器
+  1
+
+  0
+INSERT
+  5
+1C4
+330
+1C1
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms1840_k01
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 41
+0.666666666666667
+ 42
+0.666666666666667
+ 43
+0.666666666666667
+  0
+ENDBLK
+  5
+1C3
+330
+1C1
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1CA
+330
+1C9
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+冷却_加热盘管
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+冷却_加热盘管
+  1
+
+  0
+INSERT
+  5
+1CC
+330
+1C9
+100
+AcDbEntity
+  8
+通风设备
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms0781_k02
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 50
+90.0
+  0
+ENDBLK
+  5
+1CB
+330
+1C9
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1D2
+330
+1D1
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+消声器
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+消声器
+  1
+
+  0
+INSERT
+  5
+1D4
+330
+1D1
+100
+AcDbEntity
+  8
+05Basic
+  6
+ByLayer
+ 62
+3
+100
+AcDbBlockReference
+  2
+ms0205
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 50
+5.048428659e-07
+  0
+ENDBLK
+  5
+1D3
+330
+1D1
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1DA
+330
+1D9
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+加湿器
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+加湿器
+  1
+
+  0
+POLYLINE
+  5
+1DC
+330
+1D9
+100
+AcDbEntity
+  8
+通风设备
+  6
+DASHEDX5
+ 62
+3
+100
+AcDb2dPolyline
+ 66
+1
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 70
+0
+  0
+VERTEX
+  5
+1DD
+330
+1DC
+100
+AcDbEntity
+  8
+通风设备
+  6
+DASHEDX5
+ 62
+3
+100
+AcDbVertex
+100
+AcDb2dVertex
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+0.5
+ 41
+0.5
+ 70
+0
+ 50
+0.0
+  0
+VERTEX
+  5
+1DE
+330
+1DC
+100
+AcDbEntity
+  8
+通风设备
+  6
+DASHEDX5
+ 62
+3
+100
+AcDbVertex
+100
+AcDb2dVertex
+ 10
+3.2011942765000185
+ 20
+2.8206954993947875e-08
+ 30
+0.0
+ 40
+0.5
+ 41
+0.5
+ 70
+0
+ 50
+0.0
+  0
+SEQEND
+  5
+1DF
+330
+1DC
+100
+AcDbEntity
+  8
+通风设备
+1001
+JB-AFLOWIII-07058MU04Z69U42VFK7
+1000
+PLK:ADJACENT
+  0
+ENDBLK
+  5
+1DB
+330
+1D9
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1E4
+330
+1E3
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms0205
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms0205
+  1
+
+  0
+LINE
+  5
+1E6
+330
+1E3
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-1.25
+ 20
+2.5
+ 30
+0.0
+ 11
+-1.25
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+1E7
+330
+1E3
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+1.25
+ 20
+2.5
+ 30
+0.0
+ 11
+1.25
+ 21
+-2.5
+ 31
+0.0
+  0
+ENDBLK
+  5
+1E5
+330
+1E3
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1E9
+330
+1E8
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms1821_k08
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms1821_k08
+  1
+
+  0
+LINE
+  5
+1EB
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 11
+5.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+1EC
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+-5.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+1ED
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 11
+5.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+1EE
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-5.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+-5.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+1EF
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 11
+5.0
+ 21
+-5.0
+ 31
+0.0
+  0
+CIRCLE
+  5
+1F0
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.25
+  0
+CIRCLE
+  5
+1F1
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.125
+  0
+CIRCLE
+  5
+1F2
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.875
+  0
+CIRCLE
+  5
+1F3
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.625
+  0
+CIRCLE
+  5
+1F4
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.375
+  0
+CIRCLE
+  5
+1F5
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.125
+  0
+CIRCLE
+  5
+1F6
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.75
+  0
+CIRCLE
+  5
+1F7
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.5
+  0
+CIRCLE
+  5
+1F8
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+0.25
+  0
+CIRCLE
+  5
+1F9
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-5.0
+ 20
+5.0
+ 30
+0.0
+ 40
+1.0
+  0
+INSERT
+  5
+1FA
+330
+1E8
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+100
+AcDbBlockReference
+  2
+ms0421
+ 10
+0.0
+ 20
+5.0
+ 30
+0.0
+  0
+ENDBLK
+  5
+1EA
+330
+1E8
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1FD
+330
+1FC
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms1862
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms1862
+  1
+
+  0
+LINE
+  5
+1FF
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+2.5
+ 30
+0.0
+ 11
+15.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+200
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+ 11
+15.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+201
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+15.0
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+202
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+203
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+0.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+204
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+2.5
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+205
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+5.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+206
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+7.5
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+207
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+208
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+7.5
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+209
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+20A
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+5.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+20B
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+2.5
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+20C
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+0.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+20D
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+0.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+20E
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+0.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+20F
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+210
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+2.5
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+211
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+212
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+213
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+2.5
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+214
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+215
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+2.5
+ 31
+0.0
+  0
+POINT
+  5
+216
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+10.0
+ 20
+-2.5
+ 30
+0.0
+  0
+POINT
+  5
+217
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+  0
+LINE
+  5
+218
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+-3.0
+ 30
+0.0
+ 11
+15.0
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+219
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+-2.5
+ 30
+0.0
+ 11
+13.75
+ 21
+-3.0
+ 31
+0.0
+  0
+LINE
+  5
+21A
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+3.0
+ 30
+0.0
+ 11
+15.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+21B
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+2.5
+ 30
+0.0
+ 11
+13.75
+ 21
+3.0
+ 31
+0.0
+  0
+LINE
+  5
+21C
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+0.0
+ 30
+0.0
+ 11
+13.75
+ 21
+-0.5
+ 31
+0.0
+  0
+LINE
+  5
+21D
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+-0.5
+ 30
+0.0
+ 11
+15.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+21E
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+-2.0
+ 30
+0.0
+ 11
+15.0
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+21F
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+-2.5
+ 30
+0.0
+ 11
+13.75
+ 21
+-2.0
+ 31
+0.0
+  0
+POINT
+  5
+220
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+15.0
+ 20
+-2.5
+ 30
+0.0
+  0
+LINE
+  5
+221
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+0.5
+ 30
+0.0
+ 11
+15.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+222
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+2.0
+ 30
+0.0
+ 11
+15.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+223
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+0.0
+ 30
+0.0
+ 11
+13.75
+ 21
+0.5
+ 31
+0.0
+  0
+LINE
+  5
+224
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+13.75
+ 20
+2.5
+ 30
+0.0
+ 11
+13.75
+ 21
+2.0
+ 31
+0.0
+  0
+POINT
+  5
+225
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+15.0
+ 20
+0.0
+ 30
+0.0
+  0
+POINT
+  5
+226
+330
+1FC
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+15.0
+ 20
+2.5
+ 30
+0.0
+  0
+ENDBLK
+  5
+1FE
+330
+1FC
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+228
+330
+227
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms1008_k01
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms1008_k01
+  1
+
+  0
+ARC
+  5
+22A
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-6.48592908576448
+ 20
+3.76599573744841
+ 30
+0.0
+ 40
+7.5
+100
+AcDbArc
+ 50
+329.858796805021
+ 51
+9.470158947347
+  0
+ARC
+  5
+22B
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+6.50441252205123
+ 20
+3.73398148669537
+ 30
+0.0
+ 40
+7.5
+100
+AcDbArc
+ 50
+170.281800653975
+ 51
+209.858796805022
+  0
+LINE
+  5
+22C
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+3.21757568275666
+ 20
+6.77474772414178
+ 30
+0.0
+ 11
+6.41545184017571
+ 21
+-3.88483946725478
+ 31
+0.0
+  0
+LINE
+  5
+22D
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-3.21757568276006
+ 20
+6.77474772414178
+ 30
+0.0
+ 11
+-6.41545184017911
+ 21
+-3.88483946725478
+ 31
+0.0
+  0
+CIRCLE
+  5
+22E
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+3.0695e-12
+ 20
+1.7053e-12
+ 30
+0.0
+ 40
+7.5
+  0
+ARC
+  5
+22F
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-6.51920886896345
+ 20
+3.70808787960493
+ 30
+0.0
+ 40
+7.5
+100
+AcDbArc
+ 50
+290.79203806009
+ 51
+330.369034211139
+  0
+ARC
+  5
+230
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+0.0483061312788919
+ 20
+-7.49984443289543
+ 30
+0.0
+ 40
+7.5
+100
+AcDbArc
+ 50
+90.3690342111386
+ 51
+129.980396353462
+  0
+ARC
+  5
+231
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+-0.0483061312822741
+ 20
+-7.49984443289543
+ 30
+0.0
+ 40
+7.5
+100
+AcDbArc
+ 50
+50.019603646537
+ 51
+89.6309657888614
+  0
+LINE
+  5
+232
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+3.85688096641775
+ 20
+-3.30347472364861
+ 30
+0.0
+ 11
+4.77063490389889
+ 21
+-1.75286198125639
+ 31
+0.0
+  0
+ARC
+  5
+233
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbCircle
+ 10
+6.51920886896006
+ 20
+3.70808787960493
+ 30
+0.0
+ 40
+7.5
+100
+AcDbArc
+ 50
+209.630965788861
+ 51
+249.20796193991
+  0
+LINE
+  5
+234
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-3.85688096642115
+ 20
+-3.30347472364861
+ 30
+0.0
+ 11
+-4.7706349039023
+ 21
+-1.75286198125639
+ 31
+0.0
+  0
+LINE
+  5
+235
+330
+227
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-0.887961732811846
+ 20
+5.00000000000307
+ 30
+0.0
+ 11
+0.911856628893588
+ 21
+5.00000000000307
+ 31
+0.0
+  0
+ENDBLK
+  5
+229
+330
+227
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+237
+330
+236
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms1861
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms1861
+  1
+
+  0
+LINE
+  5
+239
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+15.0
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+23A
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+ 11
+15.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+23B
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+2.5
+ 30
+0.0
+ 11
+15.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+23C
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+2.5
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+23D
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+5.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+23E
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+23F
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+7.5
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+240
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+241
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+7.5
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+242
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+5.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+243
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+2.5
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+244
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+0.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+245
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+246
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+0.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+247
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+0.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+248
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+0.0
+ 20
+2.5
+ 30
+0.0
+ 11
+0.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+249
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+-3.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+24A
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+-2.5
+ 30
+0.0
+ 11
+11.25
+ 21
+-3.0
+ 31
+0.0
+  0
+LINE
+  5
+24B
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+24C
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.0
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+24D
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+2.5
+ 20
+-5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+24E
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+24F
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+250
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+10.0
+ 20
+-2.5
+ 30
+0.0
+ 11
+2.5
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+251
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+2.5
+ 30
+0.0
+ 11
+11.25
+ 21
+3.0
+ 31
+0.0
+  0
+LINE
+  5
+252
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+3.0
+ 30
+0.0
+ 11
+10.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+253
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+5.0
+ 30
+0.0
+ 11
+10.0
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+254
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+0.0
+ 30
+0.0
+ 11
+11.25
+ 21
+-0.5
+ 31
+0.0
+  0
+LINE
+  5
+255
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+-0.5
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+256
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+-2.0
+ 30
+0.0
+ 11
+10.0
+ 21
+-2.5
+ 31
+0.0
+  0
+POINT
+  5
+257
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+10.0
+ 20
+-2.5
+ 30
+0.0
+  0
+LINE
+  5
+258
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+-2.5
+ 30
+0.0
+ 11
+11.25
+ 21
+-2.0
+ 31
+0.0
+  0
+LINE
+  5
+259
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+0.5
+ 30
+0.0
+ 11
+10.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+25A
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+2.0
+ 30
+0.0
+ 11
+10.0
+ 21
+2.5
+ 31
+0.0
+  0
+POINT
+  5
+25B
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+10.0
+ 20
+0.0
+ 30
+0.0
+  0
+POINT
+  5
+25C
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+10.0
+ 20
+2.5
+ 30
+0.0
+  0
+LINE
+  5
+25D
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+0.0
+ 30
+0.0
+ 11
+11.25
+ 21
+0.5
+ 31
+0.0
+  0
+LINE
+  5
+25E
+330
+236
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+11.25
+ 20
+2.5
+ 30
+0.0
+ 11
+11.25
+ 21
+2.0
+ 31
+0.0
+  0
+ENDBLK
+  5
+238
+330
+236
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+260
+330
+25F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms1840_k01
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms1840_k01
+  1
+
+  0
+LINE
+  5
+262
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+12.5
+ 20
+-7.5
+ 30
+0.0
+ 11
+-12.5
+ 21
+-7.5
+ 31
+0.0
+  0
+LINE
+  5
+263
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-12.5
+ 20
+7.5
+ 30
+0.0
+ 11
+12.5
+ 21
+7.5
+ 31
+0.0
+  0
+LINE
+  5
+264
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+-2.5
+ 30
+0.0
+ 11
+-7.5
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+265
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-7.5
+ 20
+2.5
+ 30
+0.0
+ 11
+7.5
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+266
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-12.5
+ 20
+-7.5
+ 30
+0.0
+ 11
+-12.5
+ 21
+7.5
+ 31
+0.0
+  0
+LINE
+  5
+267
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-7.5
+ 20
+-7.5
+ 30
+0.0
+ 11
+-7.5
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+268
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-7.5
+ 20
+-2.5
+ 30
+0.0
+ 11
+-7.5
+ 21
+2.5
+ 31
+0.0
+  0
+LINE
+  5
+269
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-7.5
+ 20
+5.0
+ 30
+0.0
+ 11
+-7.5
+ 21
+7.5
+ 31
+0.0
+  0
+POINT
+  5
+26A
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbPoint
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+LINE
+  5
+26B
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+-7.5
+ 30
+0.0
+ 11
+7.5
+ 21
+-5.0
+ 31
+0.0
+  0
+LINE
+  5
+26C
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+2.5
+ 30
+0.0
+ 11
+7.5
+ 21
+-2.5
+ 31
+0.0
+  0
+LINE
+  5
+26D
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+7.5
+ 20
+5.0
+ 30
+0.0
+ 11
+7.5
+ 21
+7.5
+ 31
+0.0
+  0
+LINE
+  5
+26E
+330
+25F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+12.5
+ 20
+7.5
+ 30
+0.0
+ 11
+12.5
+ 21
+-7.5
+ 31
+0.0
+  0
+ENDBLK
+  5
+261
+330
+25F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+270
+330
+26F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms0781_k02
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms0781_k02
+  1
+
+  0
+LINE
+  5
+272
+330
+26F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-4.99999999999989
+ 20
+7.5
+ 30
+0.0
+ 11
+5.00000000000011
+ 21
+7.5
+ 31
+0.0
+  0
+LINE
+  5
+273
+330
+26F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+1.128e-13
+ 20
+-3.75
+ 30
+0.0
+ 11
+5.00000000000011
+ 21
+-3.75
+ 31
+0.0
+  0
+LINE
+  5
+274
+330
+26F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+1.137e-13
+ 20
+3.75
+ 30
+0.0
+ 11
+5.00000000000011
+ 21
+3.75
+ 31
+0.0
+  0
+LINE
+  5
+275
+330
+26F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.00000000000011
+ 20
+-7.5
+ 30
+0.0
+ 11
+-4.99999999999989
+ 21
+-7.5
+ 31
+0.0
+  0
+LINE
+  5
+276
+330
+26F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+5.00000000000011
+ 20
+7.5
+ 30
+0.0
+ 11
+5.00000000000011
+ 21
+-7.5
+ 31
+0.0
+  0
+LINE
+  5
+277
+330
+26F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-4.99999999999989
+ 20
+0.0
+ 30
+0.0
+ 11
+1.137e-13
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+278
+330
+26F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+0
+440
+33554687
+100
+AcDbLine
+ 10
+-4.99999999999989
+ 20
+-7.5
+ 30
+0.0
+ 11
+-4.99999999999989
+ 21
+7.5
+ 31
+0.0
+  0
+ENDBLK
+  5
+271
+330
+26F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+27A
+330
+279
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+ms0421
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+ms0421
+  1
+
+  0
+LINE
+  5
+27C
+330
+279
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+100
+AcDbLine
+ 10
+0.0
+ 20
+6.25
+ 30
+0.0
+ 11
+2.5
+ 21
+6.25
+ 31
+0.0
+  0
+LINE
+  5
+27D
+330
+279
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+100
+AcDbLine
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 11
+0.0
+ 21
+6.25
+ 31
+0.0
+  0
+LINE
+  5
+27E
+330
+279
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+100
+AcDbLine
+ 10
+5.0
+ 20
+5.0
+ 30
+0.0
+ 11
+5.0
+ 21
+7.5
+ 31
+0.0
+  0
+LINE
+  5
+27F
+330
+279
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+100
+AcDbLine
+ 10
+2.5
+ 20
+7.5
+ 30
+0.0
+ 11
+2.5
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+280
+330
+279
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+100
+AcDbLine
+ 10
+2.5
+ 20
+5.0
+ 30
+0.0
+ 11
+5.0
+ 21
+5.0
+ 31
+0.0
+  0
+LINE
+  5
+281
+330
+279
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+100
+AcDbLine
+ 10
+5.0
+ 20
+7.5
+ 30
+0.0
+ 11
+2.5
+ 21
+7.5
+ 31
+0.0
+  0
+ENDBLK
+  5
+27B
+330
+279
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+INSERT
+  5
+34
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+房间
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+36
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+0.0
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+房间
+ 11
+0.0
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+3B
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+安全壳隔离阀
+ 10
+50.0
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+3D
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+50.0
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+安全壳隔离阀
+ 11
+50.0
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+53
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+手动阀
+ 10
+100.0
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+55
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+100.0
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+手动阀
+ 11
+100.0
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+87
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+新_排风口
+ 10
+160.0
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+89
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+160.0
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+新、排风口
+ 11
+160.0
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+A1
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+电动阀
+ 10
+216.17637448053006
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+A3
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+216.17637448053006
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+电动阀
+ 11
+216.17637448053006
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+CF
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+热管
+ 10
+276.17637448053006
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+D1
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+276.17637448053006
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+热管
+ 11
+276.17637448053006
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+D7
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+循环冷却机组
+ 10
+339.9110224993499
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+D9
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+339.9110224993499
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+循环冷却机组
+ 11
+339.9110224993499
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+DF
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+余压阀
+ 10
+389.9110224993499
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+E1
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+389.9110224993499
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+余压阀
+ 11
+389.9110224993499
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+100
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+防火阀
+ 10
+439.9110224993499
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+102
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+439.9110224993499
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+防火阀
+ 11
+439.9110224993499
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+112
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+分体柜机
+ 10
+503.33738878325994
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+114
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+503.33738878325994
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+分体柜机
+ 11
+503.33738878325994
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+133
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+排烟阀
+ 10
+573.56496682324
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+135
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+573.56496682324
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+排烟阀
+ 11
+573.56496682324
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+13B
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+主要设备图例
+ 10
+636.99133310715
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+13D
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+636.99133310715
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+主要设备图例
+ 11
+636.99133310715
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+143
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+风机
+ 10
+686.99133310715
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+145
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+686.99133310715
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+风机
+ 11
+686.99133310715
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+14C
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+送风_新风风管
+ 10
+736.99133310715
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+14E
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+736.99133310715
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+送风/新风风管
+ 11
+736.99133310715
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+156
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+排风_回风风管
+ 10
+800.8711081362101
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+158
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+800.8711081362101
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+排风/回风风管
+ 11
+800.8711081362101
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+15F
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+低效_中效过滤器
+ 10
+864.7508831652801
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+161
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+864.7508831652801
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+低效、中效过滤器
+ 11
+864.7508831652801
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+167
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+转送风
+ 10
+928.6306581943502
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+169
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+928.6306581943502
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+转送风
+ 11
+928.6306581943502
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+16F
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+高效过滤器
+ 10
+978.6306581943502
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+171
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+978.6306581943502
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+高效过滤器
+ 11
+978.6306581943502
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+182
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+HEPA过滤器
+ 10
+1034.1392890720801
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+184
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1034.1392890720801
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+HEPA过滤器
+ 11
+1034.1392890720801
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+18A
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+风口
+ 10
+1094.1392890720801
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+18C
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1094.1392890720801
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+风口
+ 11
+1094.1392890720801
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1A7
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+电加热器在线
+ 10
+1144.1392890720801
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1A9
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1144.1392890720801
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+电加热器在线
+ 11
+1144.1392890720801
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1AE
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+控制线
+ 10
+1248.4993421322702
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1B0
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1248.4993421322702
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+控制线
+ 11
+1248.4993421322702
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1B6
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+其他专业管线
+ 10
+1352.5575269276
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1B8
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1352.5575269276
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+其他专业管线
+ 11
+1352.5575269276
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1BE
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+电暖风机
+ 10
+1402.5575269276
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1C0
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1402.5575269276
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+电暖风机
+ 11
+1402.5575269276
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1C6
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+碘吸附器
+ 10
+1452.5575269276
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1C8
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1452.5575269276
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+碘吸附器
+ 11
+1452.5575269276
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1CE
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+冷却_加热盘管
+ 10
+1502.5575269276
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1D0
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1502.5575269276
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+冷却/加热盘管
+ 11
+1502.5575269276
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1D6
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+消声器
+ 10
+1552.5575269276
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1D8
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1552.5575269276
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+消声器
+ 11
+1552.5575269276
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+INSERT
+  5
+1E0
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockReference
+  2
+加湿器
+ 10
+1602.5575269276
+ 20
+0.0
+ 30
+0.0
+  0
+TEXT
+  5
+1E2
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+1602.5575269276
+ 20
+-15.0
+ 30
+0.0
+ 40
+10.0
+  1
+加湿器
+ 11
+1602.5575269276
+ 21
+-15.0
+ 31
+0.0
+100
+AcDbText
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+A
+330
+0
+100
+AcDbDictionary
+280
+0
+281
+1
+  3
+ACAD_COLOR
+350
+B
+  3
+ACAD_GROUP
+350
+C
+  3
+ACAD_LAYOUT
+350
+D
+  3
+ACAD_MATERIAL
+350
+E
+  3
+ACAD_MLEADERSTYLE
+350
+F
+  3
+ACAD_MLINESTYLE
+350
+10
+  3
+ACAD_PLOTSETTINGS
+350
+11
+  3
+ACAD_PLOTSTYLENAME
+350
+12
+  3
+ACAD_SCALELIST
+350
+14
+  3
+ACAD_TABLESTYLE
+350
+15
+  3
+ACAD_VISUALSTYLE
+350
+16
+  3
+EZDXF_META
+350
+2D
+  0
+DICTIONARY
+  5
+B
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  0
+DICTIONARY
+  5
+C
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  0
+DICTIONARY
+  5
+D
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  3
+Model
+350
+1A
+  3
+Layout1
+350
+1E
+  0
+DICTIONARY
+  5
+E
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  3
+ByBlock
+350
+1F
+  3
+ByLayer
+350
+20
+  3
+Global
+350
+21
+  0
+DICTIONARY
+  5
+F
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  3
+Standard
+350
+2C
+  0
+DICTIONARY
+  5
+10
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  3
+Standard
+350
+22
+  0
+DICTIONARY
+  5
+11
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  0
+ACDBDICTIONARYWDFLT
+  5
+12
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  3
+Normal
+350
+13
+100
+AcDbDictionaryWithDefault
+340
+13
+  0
+ACDBPLACEHOLDER
+  5
+13
+330
+12
+  0
+DICTIONARY
+  5
+14
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  0
+DICTIONARY
+  5
+15
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  0
+DICTIONARY
+  5
+16
+330
+A
+100
+AcDbDictionary
+280
+0
+281
+1
+  0
+LAYOUT
+  5
+1A
+330
+D
+100
+AcDbPlotSettings
+  1
+
+  4
+A3
+  6
+
+ 40
+7.5
+ 41
+20.0
+ 42
+7.5
+ 43
+20.0
+ 44
+420.0
+ 45
+297.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+1024
+ 72
+1
+ 73
+0
+ 74
+5
+  7
+
+ 75
+16
+ 76
+0
+ 77
+2
+ 78
+300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Model
+ 70
+1
+ 71
+0
+ 10
+0.0
+ 20
+0.0
+ 11
+420.0
+ 21
+297.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+1e+20
+ 24
+1e+20
+ 34
+1e+20
+ 15
+-1e+20
+ 25
+-1e+20
+ 35
+-1e+20
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+1
+330
+17
+  0
+LAYOUT
+  5
+1E
+330
+D
+100
+AcDbPlotSettings
+  1
+
+  4
+A3
+  6
+
+ 40
+7.5
+ 41
+20.0
+ 42
+7.5
+ 43
+20.0
+ 44
+420.0
+ 45
+297.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+0
+ 72
+1
+ 73
+0
+ 74
+5
+  7
+
+ 75
+16
+ 76
+0
+ 77
+2
+ 78
+300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout1
+ 70
+1
+ 71
+1
+ 10
+0.0
+ 20
+0.0
+ 11
+420.0
+ 21
+297.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+1e+20
+ 24
+1e+20
+ 34
+1e+20
+ 15
+-1e+20
+ 25
+-1e+20
+ 35
+-1e+20
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+1
+330
+1B
+  0
+MATERIAL
+  5
+1F
+102
+{ACAD_REACTORS
+330
+E
+102
+}
+330
+E
+100
+AcDbMaterial
+  1
+ByBlock
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MATERIAL
+  5
+20
+102
+{ACAD_REACTORS
+330
+E
+102
+}
+330
+E
+100
+AcDbMaterial
+  1
+ByLayer
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MATERIAL
+  5
+21
+102
+{ACAD_REACTORS
+330
+E
+102
+}
+330
+E
+100
+AcDbMaterial
+  1
+Global
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MLINESTYLE
+  5
+22
+102
+{ACAD_REACTORS
+330
+10
+102
+}
+330
+10
+100
+AcDbMlineStyle
+  2
+Standard
+ 70
+0
+  3
+
+ 62
+256
+ 51
+90.0
+ 52
+90.0
+ 71
+2
+ 49
+0.5
+ 62
+256
+  6
+BYLAYER
+ 49
+-0.5
+ 62
+256
+  6
+BYLAYER
+  0
+MLEADERSTYLE
+  5
+2C
+102
+{ACAD_REACTORS
+330
+F
+102
+}
+330
+F
+100
+AcDbMLeaderStyle
+179
+2
+170
+2
+171
+1
+172
+0
+ 90
+2
+ 40
+0.0
+ 41
+0.0
+173
+1
+ 91
+-1056964608
+ 92
+-2
+290
+1
+ 42
+2.0
+291
+1
+ 43
+8.0
+  3
+Standard
+ 44
+4.0
+300
+
+342
+29
+174
+1
+175
+1
+176
+0
+178
+1
+ 93
+-1056964608
+ 45
+4.0
+292
+0
+297
+0
+ 46
+4.0
+ 94
+-1056964608
+ 47
+1.0
+ 49
+1.0
+140
+1.0
+294
+1
+141
+0.0
+177
+0
+142
+1.0
+295
+0
+296
+0
+143
+3.75
+271
+0
+272
+9
+273
+9
+  0
+DICTIONARY
+  5
+2D
+330
+A
+100
+AcDbDictionary
+281
+1
+  3
+CREATED_BY_EZDXF
+350
+2E
+  3
+WRITTEN_BY_EZDXF
+350
+28C
+  0
+DICTIONARYVAR
+  5
+2E
+330
+2D
+100
+DictionaryVariables
+280
+0
+  1
+1.3.4 @ 2025-12-14T04:36:37.801060+00:00
+  0
+DICTIONARYVAR
+  5
+28C
+330
+2D
+100
+DictionaryVariables
+280
+0
+  1
+1.3.4 @ 2025-12-14T04:36:37.815873+00:00
+  0
+ENDSEC
+  0
+EOF

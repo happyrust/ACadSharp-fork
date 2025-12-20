@@ -1,0 +1,393 @@
+<ToolPaletteExport>
+    <DependentFilesPath>HVAC阀门1907</DependentFilesPath>
+    <PaletteSets>
+        <PaletteSetData>
+            <PaletteSetContent>
+                <Palettes>
+                    <PaletteData>
+                        <PaletteContent>
+                            <Palette Revision="20.1.1" option="0">
+                                <ItemID idValue="{78A5354E-6108-4FCF-A5E1-A5DE9E182925}" />
+                                <Properties>
+                                    <ItemName>HVAC阀门1907</ItemName>
+                                    <Images option="0" />
+                                </Properties>
+                                <Tools>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{BCC722C6-2930-46B8-8467-B01D308240A3}" />
+                                        <Properties>
+                                            <ItemName>安全壳隔离阀(气动）</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src="Images\安全壳隔离阀(气动）32.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src="Images\安全壳隔离阀(气动）64.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:24:07"
+                                                modifiedUniversalDateTime="2019-10-15T08:24:07" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="安全壳隔离阀(气动）" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{925BBFD5-F0CA-4D0F-A9BC-26320071F121}" />
+                                        <Properties>
+                                            <ItemName>安全壳隔离阀(手动）</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src="Images\安全壳隔离阀(手动）32.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src="Images\安全壳隔离阀(手动）64.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:24:10"
+                                                modifiedUniversalDateTime="2019-10-15T08:24:10" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="安全壳隔离阀(手动）" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{A80C953B-8FA6-4FA9-B053-246E888CAC62}" />
+                                        <Properties>
+                                            <ItemName>防火阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src="Images\防火阀32.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src="Images\防火阀64.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:24:20"
+                                                modifiedUniversalDateTime="2019-10-15T08:24:20" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="防火阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{30A964E6-F400-4BD5-970F-B9FDFFB8E7A2}" />
+                                        <Properties>
+                                            <ItemName>余压阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\2C64E19B-6ED3-411E-A65D-5414036A758D.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\2C64E19B-6ED3-411E-A65D-5414036A758D_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:24:27"
+                                                modifiedUniversalDateTime="2019-10-15T08:24:27" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="余压阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{594B20EF-3E2C-47CE-88B1-56E382C2FEFD}" />
+                                        <Properties>
+                                            <ItemName>止回阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\E499F917-0BE3-4E04-8E39-3B907D8D2F23.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\E499F917-0BE3-4E04-8E39-3B907D8D2F23_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:24:33"
+                                                modifiedUniversalDateTime="2019-10-15T08:24:33" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="止回阀_H" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{6DD37D2F-5ECE-48CB-950F-4C6183B944D4}" />
+                                        <Properties>
+                                            <ItemName>排烟隔离阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\FA03577E-6B19-40EF-A719-8A6F527B85B1.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\FA03577E-6B19-40EF-A719-8A6F527B85B1_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:24:39"
+                                                modifiedUniversalDateTime="2019-10-15T08:24:39" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="排烟隔离阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{8015A76D-4048-4929-A26D-2D8EB52CD0F8}" />
+                                        <Properties>
+                                            <ItemName>防火隔离阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src="Images\防火隔离阀32.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src="Images\防火隔离阀64.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:24:45"
+                                                modifiedUniversalDateTime="2019-10-15T08:24:45" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="防火隔离阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{C604C34C-2DFE-4C69-88D2-07569F4E71F6}" />
+                                        <Properties>
+                                            <ItemName>排烟阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\D0733D72-1120-45D9-87C8-89146B987621.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\D0733D72-1120-45D9-87C8-89146B987621_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:03"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:03" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="排烟阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{5CB319DE-A108-4744-A78B-E3E5F435DA79}" />
+                                        <Properties>
+                                            <ItemName>防火阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\5B236016-98D2-4CAE-890E-5902346C74F8.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\5B236016-98D2-4CAE-890E-5902346C74F8_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:10"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:10" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="防火阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{EA6C8ED9-BBA8-4C03-8B8C-056D36CDD193}" />
+                                        <Properties>
+                                            <ItemName>防冲击波阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src="Images\防冲击波阀32.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src="Images\防冲击波阀64.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:21"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:21" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="防冲击波阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{52345891-F0FD-4C4F-BD96-8DC885CD5B88}" />
+                                        <Properties>
+                                            <ItemName>重力泄压阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\4C522D39-8626-4E99-B368-70D452B60FF0.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\4C522D39-8626-4E99-B368-70D452B60FF0_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:29"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:29" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="重力泄压阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{847D168C-52D7-476B-9A10-EE72A35B609E}" />
+                                        <Properties>
+                                            <ItemName>截断阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src="Images\截断阀32.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src="Images\截断阀64.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:36"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:36" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="截断阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{E056F2E7-5346-4101-BCBC-BE634F8249A1}" />
+                                        <Properties>
+                                            <ItemName>密闭隔离阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\61049F66-DAEB-4651-96D4-71F0A5C832B6.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\61049F66-DAEB-4651-96D4-71F0A5C832B6_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:45"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:45" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="密闭隔离阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{9B5003BC-DCED-4EE1-9250-64F5450265CB}" />
+                                        <Properties>
+                                            <ItemName>隔离阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src="Images\隔离阀32.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src="Images\隔离阀64.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:52"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:52" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="隔离阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                    <Tool Revision="20.1.1" option="0">
+                                        <ItemID idValue="{C088B9B4-4D3F-4B58-9F77-B7E4DB53587A}" />
+                                        <Properties>
+                                            <ItemName>调节阀</ItemName>
+                                            <Images option="0">
+                                                <Image cx="32" cy="32" IsDark="false"
+                                                    src=".\Images\FA3576FC-C7A9-4019-BF60-0BDBF82A03F5.PNG" />
+                                                <Image cx="64" cy="64" IsDark="false"
+                                                    src=".\Images\FA3576FC-C7A9-4019-BF60-0BDBF82A03F5_2.PNG" />
+                                            </Images>
+                                            <Time createdUniversalDateTime="2019-10-15T08:25:56"
+                                                modifiedUniversalDateTime="2019-10-15T08:25:56" />
+                                        </Properties>
+                                        <ToolType>1</ToolType>
+                                        <StockToolRef
+                                            idValue="{538F8891-A6A2-4B9A-9906-8A131C5B93A8}" />
+                                        <Data>
+                                            <Asset>
+                                                <StyleName Value="调节阀" />
+                                            </Asset>
+                                        </Data>
+                                    </Tool>
+                                </Tools>
+                            </Palette>
+                        </PaletteContent>
+                        <PaletteUI>
+                            <CAdUiPalette PaletteStyle="1" />
+                            <CAcTcUiToolPalette>
+                                <CatalogView ID="{78A5354E-6108-4FCF-A5E1-A5DE9E182925}">
+                                    <ToolSource>
+                                        <Palette ID="{78A5354E-6108-4FCF-A5E1-A5DE9E182925}">
+                                            HVAC阀门1907</Palette>
+                                    </ToolSource>
+                                    <Image SizeCX="32" SizeCY="32" />
+                                    <Style>493570</Style>
+                                    <ToolOrder>
+                                        <Tool ID="{BCC722C6-2930-46B8-8467-B01D308240A3}" />
+                                        <Tool ID="{925BBFD5-F0CA-4D0F-A9BC-26320071F121}" />
+                                        <Tool ID="{A80C953B-8FA6-4FA9-B053-246E888CAC62}" />
+                                        <Tool ID="{30A964E6-F400-4BD5-970F-B9FDFFB8E7A2}" />
+                                        <Tool ID="{594B20EF-3E2C-47CE-88B1-56E382C2FEFD}" />
+                                        <Tool ID="{6DD37D2F-5ECE-48CB-950F-4C6183B944D4}" />
+                                        <Tool ID="{8015A76D-4048-4929-A26D-2D8EB52CD0F8}" />
+                                        <Tool ID="{C604C34C-2DFE-4C69-88D2-07569F4E71F6}" />
+                                        <Tool ID="{5CB319DE-A108-4744-A78B-E3E5F435DA79}" />
+                                        <Tool ID="{EA6C8ED9-BBA8-4C03-8B8C-056D36CDD193}" />
+                                        <Tool ID="{52345891-F0FD-4C4F-BD96-8DC885CD5B88}" />
+                                        <Tool ID="{847D168C-52D7-476B-9A10-EE72A35B609E}" />
+                                        <Tool ID="{E056F2E7-5346-4101-BCBC-BE634F8249A1}" />
+                                        <Tool ID="{9B5003BC-DCED-4EE1-9250-64F5450265CB}" />
+                                        <Tool ID="{C088B9B4-4D3F-4B58-9F77-B7E4DB53587A}" />
+                                    </ToolOrder>
+                                </CatalogView>
+                            </CAcTcUiToolPalette>
+                        </PaletteUI>
+                    </PaletteData>
+                </Palettes>
+            </PaletteSetContent>
+            <PaletteSetUI>
+                <CAdUiDockControlBar Orientation="-1" AllowDocking="1">
+                    <FloatInfo Left="1465" Top="217" Width="190" Height="598" />
+                    <DockInfo Left="0" Top="0" Width="0" Height="0" MRUDockID="0" />
+                </CAdUiDockControlBar>
+                <CAdUiPaletteSet ActivePaletteIndex="12" TitleBarLocation="1" AutoRollup="0"
+                    Name="工具选项板 - P&amp;ID PIP" Style="126" Opacity="100" RolloverOpacity="100"
+                    Visible="1" />
+            </PaletteSetUI>
+        </PaletteSetData>
+    </PaletteSets>
+</ToolPaletteExport>

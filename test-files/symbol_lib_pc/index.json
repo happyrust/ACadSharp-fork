@@ -1,0 +1,1895 @@
+{
+  "schema": 3,
+  "created_at": "2025-12-14T05:22:02.932335+00:00",
+  "symbols": [
+    {
+      "name": "房间",
+      "block_name": "房间",
+      "bbox": [
+        -2.5000000110230856,
+        -1.250000022046171,
+        2.5000000110230856,
+        1.250000022046171
+      ],
+      "norm": 5.000000022046171,
+      "descriptor": {
+        "counts": {
+          "LINE": 2
+        },
+        "lengths_q": [
+          100,
+          100
+        ],
+        "angles_q": [
+          0,
+          0
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          50
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 62,
+        "scale": 32767,
+        "data_b64": "eNoNzSFSQgEARdHHjIFA+cFAYOYNgWCg/EAgSIAlwBJkCbgEXQIuAZag4QcDAQKBQIB5QyAQJBAMBrzhxjvn/ix/9uVZTy5L+dqVF0/yS0dut+VjS5435fGjXBTypiG/1eXhgyzJX3/y6y/vjfdHXl7k6Zn3xHuQP/byZMe75V3L7yt59M1b0UDBDnawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnawgx3s1CrlH1f1WeQ="
+      }
+    },
+    {
+      "name": "安全壳隔离阀",
+      "block_name": "安全壳隔离阀",
+      "bbox": [
+        0.0,
+        0.0,
+        0.0,
+        6.063556821992023
+      ],
+      "norm": 6.063556821992023,
+      "descriptor": {
+        "counts": {
+          "LINE": 1
+        },
+        "lengths_q": [
+          100
+        ],
+        "angles_q": [
+          0
+        ],
+        "radii_q": [],
+        "size_q": [
+          0,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 31,
+        "scale": 32767,
+        "data_b64": "eNody6EZAQEYANAXBEG5IAjKBUFQLgiKwAiMwAiMwAiMwAguCIJAEC4IBEEQCIKg+D+vP2zp75jvOR5ITgwLlmeuF9Ib4zvrB68n2Zvph/zrr1diVo5biZswqLKoxa3HTRk1WDXjtuJmTNpsOhG7PxciHPM="
+      }
+    },
+    {
+      "name": "手动阀",
+      "block_name": "手动阀",
+      "bbox": [
+        0.0,
+        0.0,
+        10.0,
+        13.900000000000006
+      ],
+      "norm": 13.900000000000006,
+      "descriptor": {
+        "counts": {
+          "LINE": 8,
+          "CIRCLE": 10
+        },
+        "lengths_q": [
+          15,
+          15,
+          28,
+          72,
+          72,
+          72,
+          72,
+          102
+        ],
+        "angles_q": [
+          0,
+          9,
+          9,
+          9,
+          9,
+          27,
+          27,
+          27
+        ],
+        "radii_q": [
+          1,
+          2,
+          3,
+          4,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "size_q": [
+          72,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 307,
+        "scale": 32767,
+        "data_b64": "eNollG1oU2cYhp9zkjRpX12zth5XPenMtrLWuUM6OhRaZ+p+TJxh+MGw86M62GQFhcgGU1K31W82G3QMIcOVjukPqdpRhh+49p06qLWzPaxYjK2rSZs2Ocl7kpO8SU7OSTqDP25ueLi5nx8P14MEwEhw3EPCniEkeEeQMDiGBDKOhJrHSHBNIaHjGRJ6Z5EwGUYCIkhoUpDQnkaCL4eE+wUkqCwS6sxI2I6QcLIcCdcrkRBaigSOp2JRoaVUvF5JxZPlVNyOqFhnpqLKUvF+gYq+HBXb01RsUqiICBUnw1TsnaVixzMquqaoWPOYimScioNjVPSOUHHPEBUd96gIuNhNxm3VoYla7j//25UTU43W0enmxUPB98tw6EPzzfAW4+/RT5jL8qeFX5UvNB91Z3/Mfk2/175VjhVOyh7GG/3KeD683/xL6POyS8Hdi69Mf2z9Y+qjytv+D7h7E87qkfE1/L9iw6tPHta/Fnhgr40MLatL/F3xlnoHCcX9gGsfAd7mB3zsKeD+AOBgCHCFBHi9DNidBNyTATymAQYA7DACbrMA9i4CPGAFTKoA26oBu2yAPXbAvbWAn9QXbwH43VJEOi1nE0dLulInDGfSAC2Zw/qZdIfalTqSOZt4kEbkSOZ4pEM9NXdYPz0L8GjmhOH07NGSU3OdluMRF4vICjZGepheOQCr4gCt8ZqFVfG2Qq88nY+R/jwi0/mVsbZCe7RmQZIABqQASFIP0x5dwa6M/WxEpMX4UG4xuBJ3mU0KwCVlbWGTMqi7EoPaQ/kzDZFBbUN0UB+OrC0MhwHc4bvMcLjFMBxpMW6IzpcgsrekLx4wxpSL7P4UQDK1I78/VaPFlG61L/6Kiki3uk+q0erDO/KX5wBen7vIXp4LGOvDe0v2SW8yiFgZDxmDSeKG5TLAO7J3YbnsWJgk8YKHPC6g5+6LORaaYt4FLQowG3WDFh2DppiV8cW+NCDSYNglu1lPfAvTnAD4JnG10Jzw5j3xUX2X/IOOyKh+M+rN+6SrBX8E4HxkC+OPuFmf1GC4Gf3LhMhm07p4hdGmNLI7kwD/JEfyO5NEsynXcuvi63KIXMtNSERTwyP5W/MAG+cb2VvzFUY1vNk0IZVbEDlotif6TQPJJYYOCrAsLekd1JUbSHZl7YlEBpGubDriyrXOS7ovBJCfXWLwhfpNrfMHzenIzjJEzpWyylbzbpoxXMgA7MuW6hcyV7K76YE0q/xGETmQropcyd4IleqHZgCuBTOGQzNbzTdC50qrIkcRIrfLGpVOywi1m1qzVuY71a/bVKvalFmdXpbqS9XH+1JEWp3W56zq5IxfVwNW5qeA3fRnsNOyMXS7LBgu8vuknuN7azneY+d4l43jbdXPmavi+AErx3sXcXybheMdRo4H4PgxjeN7MhzvTnL8epnjKySOD4Y4vj/A8ceecvw2P8fXPnrxE4p5gMoVAC+/AfBSHcCiVQClDgBzI4BxDQDb/JwZZ1ENOjj3ZsF5LgXOO3FwJqMv5qMGcHabwXkAgfO9cnAurgTn/88IY8g="
+      }
+    },
+    {
+      "name": "新_排风口",
+      "block_name": "新_排风口",
+      "bbox": [
+        0.0,
+        0.0,
+        6.1763744805300576,
+        11.520000000001005
+      ],
+      "norm": 11.520000000001005,
+      "descriptor": {
+        "counts": {
+          "LINE": 40,
+          "POINT": 6
+        },
+        "lengths_q": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          25,
+          25,
+          100,
+          100
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "radii_q": [],
+        "size_q": [
+          54,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 260,
+        "scale": 32767,
+        "data_b64": "eNpFkl2IG1UYhoeju+1J4jTd0DTdYbt4oBVSO21TsYwKjhOV4Fx4kFYC3om0BO8WpSULXggLFWUvAlIUMRfBGxWJhPHCn1GhzBS1P9O6oZaJTnYmU1MyNc6ms+kmgX6nudiLBz6+fO9JeN6MR3qUG+pRaaBH1b4eNXt6lOjqUb6jR+W2HtVbejQeKTg3VHBpoOBqX8HNnoITXQXnOwoutxVcbyl4PDKF3NAUSgNTqPZNodkzhUTXFPIdUyi3TaHeMgVKuF/ofmAeSANzAA/EgFkAPUSGWYadDJ/JcCPDrQwZGbIyvCFXhOUgyDTvFNLH/q2lPupMkv56kX/BacQ/a/F489b0nZcuUvTBJYou/0HRboui19co+vQviv5uUUTWKTrjU/TVHYr+u0vR8Q2Kzm1S9OMIshxFLz5K0fmdkE1AdjdFp/ZQ9Mk+yC5AllB0+iBFX2YhK0L2OEVnT1D0w7Pst1cEjgsyb0wK6e+2aqnkcJJ8+16RN8JG/PE+j5eDirAyF2T+2VVIP/NYLfVxbJLs7yjyr8w04l8gHnNcRcAHgsxbpJD+ebGWml+YJN+ZL/JX9zbi2T08XpkL/eVF231+v+E8ssCchj5jeTH0Yxu2+/LAcN6/xzoLfUZsI/QVHPpRgmG738cN570Y6yv0UxnbfXWf4Xw4v/1OKjOdV2ds97dZw5ndOb1d2rLdp+8bztbm9G22W52ZfsfSFrthe9YNJeCBgA8CXgj4IeCJgC8C3gj4I+CRgE8CXgn4JeCZgG8C3gn4J9ADgT4I9EKgHwI9EeiLQG8E+iPQI4E+CfRKoF8CPcP/qiKsnggy3acK6Xyulvr8yCR5/8kifzLbiH/zBI/xgYqweSvIvHazkP56rZbacWOSfPNakf/pciO+93ceL10aj1QxN1TF0kAVq31VbPZUMdFVxXxHFcttVay3VDH0GVyOYbsXjxrO+SPT/YWs7d44ZDi7Dm/fXciyeTySvNxQ8koDyav2Ja/Zk7xEV/LyHckrtyWv3pK80GcEtxm2+61vOO92pvsVx3Z/bRvOZH37bsVh83ikWbmhZpUGmlXta1azp1mJrmblO5pVbmtWvaVZoc8orTFs9/CfhvP/9emeu2K7z101nHPXtu+4K2x+AOjCA54="
+      }
+    },
+    {
+      "name": "电动阀",
+      "block_name": "电动阀",
+      "bbox": [
+        0.0,
+        0.0,
+        10.0,
+        19.25063323200001
+      ],
+      "norm": 19.25063323200001,
+      "descriptor": {
+        "counts": {
+          "LINE": 8,
+          "CIRCLE": 11,
+          "TEXT": 1
+        },
+        "lengths_q": [
+          9,
+          9,
+          21,
+          52,
+          52,
+          52,
+          52,
+          73
+        ],
+        "angles_q": [
+          0,
+          9,
+          9,
+          9,
+          9,
+          27,
+          27,
+          27
+        ],
+        "radii_q": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          5,
+          5,
+          6,
+          6,
+          13
+        ],
+        "size_q": [
+          52,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 294,
+        "scale": 32767,
+        "data_b64": "eNolk1toFGcUx898e0lik7q7pK5oNmYMwdWS5CEgNVU/asUHFU1sTWiqeEHxgvpQkLgo81CQsKiVCI1YhQS04qXGKCGKUJmpGreNLd4a12z2m/nmks02zW7SzSZ7mZntLj78OQ+Hc/hx/uePWeAx632K2aYAZk+8wGzPS8wG3mI2HsSsO4xZTDF7QMPs+ShmH0xilkxj1j6L2boMZltMzHJIIAW1mAKpywjEPisQMi2QB5MCOR8VyAFNIJgKxB0WSDwokMBbgfS8FMiJFwJpCgjE+1QgwBd2/Ex/yvnVAf1Y5HV62z+x2ZWTJTOLpmqmzf++iMnJnRODKd/4reyP2g/mPfk75k+xxRodbSyyjVTOY9+hsjVvx+Z/8+oP1/G/ej/pHLqw8E6gffHvz76t1H7DbGE/8FEZeGcE+FUTwO+JA+9PAN83B3wwCzwA8F4r8E3FwLeXAt/tAP55OfDxhcC7PYUbAX/djmmNfUjptya0M2hfBECLHDf2RTZnE1ooPaS0pTENpfvJ5uzZ0ePG4hDApZEzaHGo33p2tMbeT24xmPoZmdYyR+SrEJABovLOXEB+Yx6R202Z5q9J280r0hvTJe3MDYgAXeJVGBBrGZfkZ65IX1kwdVlOy23okrKBaVYBLqiPzGb1unFJiemn5Ts6pjE9LV43NPLIrCUA/4Y3MLWkDWnEZUmLhhXTy1av0mEZVKNMSANYPeY2Q5pPH1T3Z72KJYvp/myr6NMfht3mtVGAL0ejzLXRDsvD8GVrq/g3YPoMOmkXDNNmsOb5y+W7Oat8ODdMP8910k9zOF9j0uHcTelu7qQEcFhqhpNSF9yUnkFM4hCmW1CD/IRBygycUwB+VUpz55Q1JlLuGw3y9wam941N0hrzlFiam87zC2QGpskT5pS4BW2SvHn+d5ZheQrVqxeZBXn+A9ohc4HmMOrV5fqwHMzzL9dviA5jKzlkHgwDuMMXmYPhKbSVvLPcEF/ZMN1t8yke6w6tEXWPATgig0b3mJLdofVkfEp9BtOejE1UskvDg4aY9+9YqBGJIY91aXi3zSaeLMI0aq9QN9r8Y2HkHQd4NF5teMcHMv4xd7pCPZ3C1J3eSwYyyVC10TIC8PR9GLWMbLQlQ1H7XtJUjGlv0VFVslVF6iyT+fnz0df65HhVpiqyLXVU7ZvDdFvKSaoyu0Kv9c73APFgnaXzvWTbFeotcpJC1tweDsUXcuh5OYe6HRxqL+VQUzGHvFYOAXAomOVQ3xyH/AkO7YlzaNUEh5wRDkXlDzm1OTN1HY6yBtd8ZeXj0vWNt0v01SV2dW0ZknDCkPBcWl27fVZfvS6xvjE2paz0xcsasrFMnS8eWRGbci5bl7hXvX02VTWXdixJGOWVZai8ssTuWHK7JFX1uPRetWu+c1mHI7KiwJL33w7QOi//Rx8D1LsAKhYAFC8CSHoKqtCTns9SSc/XM0nPLx8lPYGipEe1fOj9D2TEXPs="
+      }
+    },
+    {
+      "name": "热管",
+      "block_name": "热管",
+      "bbox": [
+        0.0,
+        0.0,
+        13.734648018819826,
+        10.451324470587991
+      ],
+      "norm": 13.734648018819826,
+      "descriptor": {
+        "counts": {
+          "LINE": 40
+        },
+        "lengths_q": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          9,
+          9,
+          9,
+          9,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          76,
+          76,
+          81,
+          81
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          36,
+          36,
+          36
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          76
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 584,
+        "scale": 32767,
+        "data_b64": "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"
+      }
+    },
+    {
+      "name": "循环冷却机组",
+      "block_name": "循环冷却机组",
+      "bbox": [
+        -2.5,
+        -1.2500000000000002,
+        2.5,
+        1.2500000000000002
+      ],
+      "norm": 5.0,
+      "descriptor": {
+        "counts": {
+          "LINE": 2
+        },
+        "lengths_q": [
+          100,
+          100
+        ],
+        "angles_q": [
+          0,
+          0
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          50
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 62,
+        "scale": 32767,
+        "data_b64": "eNoNzSGWgQEAReEXBEH5wwTBOe8IgqD8YYIisASWwBJYAktgCWYJM0EQBIIgCJx3BEEYQRCmzA033vNpowy2ymKnHPZKcVRGJ2V1Vq4XpXlTJnfl66E8f5Xypczeys+fIin9ijKv8tZ4C2X4oSzrvA3epjJuKes2b4e3VKafyneXt0cbGdvYxja2sY1tbGMb29jGNraxjW1sYxvb2MY2trGNbWxjG9vYxja2sY3tfy/RWOU="
+      }
+    },
+    {
+      "name": "余压阀",
+      "block_name": "余压阀",
+      "bbox": [
+        -6.25,
+        -5.0,
+        5.0,
+        12.5
+      ],
+      "norm": 17.5,
+      "descriptor": {
+        "counts": {
+          "LINE": 11,
+          "CIRCLE": 10
+        },
+        "lengths_q": [
+          14,
+          14,
+          14,
+          14,
+          14,
+          36,
+          57,
+          57,
+          57,
+          57,
+          81
+        ],
+        "angles_q": [
+          0,
+          9,
+          9,
+          9,
+          9,
+          9,
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "radii_q": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          4,
+          5,
+          6,
+          6,
+          7
+        ],
+        "size_q": [
+          64,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 304,
+        "scale": 32767,
+        "data_b64": "eNolU1tMFGcUPrAzO/Pv7FXXlRLUbnsgnQZKtsWtF0LA+NKCCWqMRlMvGC/xoVaw0aj1ghqDREzmQRI0Gu9Go1ZWaWIiTgSL8dJQWcsyM7v7z87usgIqJBtEA6a78eHLeTpfznc5QJG8ic0zK4lqU09qLdwd3jF1/u2Rjy1jre/3pq+nt75/MLbiY+/bRVPGcCmMpwpMJEnMBcY4X0oNYVG4175CeeDa2n/dvTd4ambLv4fzz//z26y7z375sufJz18rj38sevMIRZCzcBeCzHhBTheAbOSB3OcGucsJcsAK8gUeZIkBuRFArp8EuW4C5KVpkKtGQfaNgOxNgeyMgww0CyTOOBJvColvBEnVKJKlaSR1E0jqJ5E0AhKJQXKBRxKwIulyIulzIzHykKQLkDBeJO5CJCgi+czn6gbqfQLU9xxoVS/QZUGgdSGg9RrQRgpUigO9mAIaGAHaNQq0Lw00PgE0PQmUyQHqZrM3ZflQdLMoMjkopidRjE+g2JdGsWsUxcAIihdTKEpxFBspivUainUhFJcFUazqRdH3HEXvExRd3VmvCl8jaUhdsu5KnnYcNFpdQH+adkhrdTUNnHa09F+yav8haem/zDYN3Mo9pLVDRgccNNphV/JWbkPqMrsw403bYLX1ZWLcXmQ8dAJd51K0h85SZdy+OVRt/bsfyebQJ7ZUWW5StOMZDUNQZBzPeZlYbmob/MRuSSIZSrQKx+I3bA0xuwNos+NE2O7Yo96wzVRahbYBJDOVdvMe9SxzIrzQBLQztyG20HQsfpYZSrSbMyrJ/HjcUm6st8r6WhvQv2yVkbW2x9p6a48at/yqIulRN3GPtddsZWSYyXjMyPowU268ZufHN3GdMSRNMZ9lTJ8h2PSbAmTalo7cFJyRGcLusM+yKIxkdziPd0bKuHTkjBnoZrNNP2Me08u4plgeP5TJI0T3kyv0KVlNpzI5OyxXo1NkTfQp+Sa6n3iimJnP+DXRA/zVaA0PdAG/mtbwV+gBPkSf8X8kkExLVAi6wdryY3470PP2wbDfPkdjbe+UCuGIguSdInBztMXsYHh65v5rpvzYdEY3FrPTEgJ3zUCywWi2nIrdF7boR61AX1jbIket28L3hXNas2WVhuSc1sltC580t0W6M/3Zx27Ru9lTsZPmDUYnF9SR3NFDpFrfbgnQVxagHyxLoq8s9yLbLbWRECmOIKmN7ODvRRRuSXQnB7SWC9CdXLWucHf0HfzSQSSPkmNCcaLW/iKWzOT3u7MsnHQElVp7xcCY8GcIScXAKnNQ+WAqC2/MBRrMeRHbmFuc+GB6lFxllhjVv4BX/Yag+psdqv+H6apf9aj+7F9JTI1NYna6JObMDInp/kJiRmZJjPsriSkvkpiN30pM83cSE/g+y4FiRwmK63wocnNRvD0PxZXlmX5Xqp4sVparntvzVA83V/Ws86mejpIsDud3lBTP7igJejtK9hVm97OAyn2FUBn0QmXxbKg8nP+Z439auAdd"
+      }
+    },
+    {
+      "name": "防火阀",
+      "block_name": "防火阀",
+      "bbox": [
+        0.0,
+        0.0,
+        13.42636628391001,
+        19.84397826247199
+      ],
+      "norm": 19.84397826247199,
+      "descriptor": {
+        "counts": {
+          "LINE": 11,
+          "CIRCLE": 12,
+          "TEXT": 4
+        },
+        "lengths_q": [
+          10,
+          10,
+          13,
+          20,
+          24,
+          29,
+          50,
+          50,
+          50,
+          50,
+          71
+        ],
+        "angles_q": [
+          0,
+          5,
+          9,
+          9,
+          9,
+          9,
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "radii_q": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          6,
+          6,
+          13,
+          14
+        ],
+        "size_q": [
+          68,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 343,
+        "scale": 32767,
+        "data_b64": "eNo1k21ME3ccx++GdRTpkLETjlJEUZSHwaDKBihwmmkY08TFh5gsGgyKwnzBlglIcBbjMFET2GbUzGXJJCGNEiOnENS4i7gIAsrkjLXt9f7ttTyWttf//3rtleIgZi8+b34vfvl+fg80a8AemgzYgNWADQMDNu40YJYpAya4Ddisz4BBZMDCQQMWFTFgK3ADlqAyYFq1AUvXGLDseAOmJ5bAmOx4nEnX4IxWjTMJKpxZgeNMVARnwkGcgQhnZn04I7hxxjKFM+NOnBkGODNgxZmHJpyh2ff89cb7pN1s++cnbmTwJHg4/K1gfPHVxLV/i6Z/Zje4f3yzylttVvm/4SCigEPOE8aU1Im/I7HT3Vh49kbUtOficpPYpH6Gjsfel/fHdSpffvxLZCnf+/7qpzQbP0iz5AjNrhmj2UyWZvNNNFtkpVkK0GyFk2b3TNHsQTfNVvlo9gSi2fogzTbN0+z/nk3zeqI+qCdOID1R5dMTB916Ys+Unqhw6gkK6Ikiq57IN+mJTFZPrBnTE+SInogf1BPqp0sziopQ4Nj8AaFLQS518N4kRHumOPHeZLkXuc7OHRAENwXOzmVz5d7LZk58YYIo36QOvjB1KZfNx+azuc3zFOgKRwuEcsT1QJYmIGqdzPFLE6+8R1xlnmihZ44CZZ7T3CvvakuO/9JbiN6ZHsiX3hLKaktX+DR3TaFAllLrEIOlzhS50QWRy/Xc3+iSfKXOR95ax24vBR55k2ySb7v1uT/GAtENc4ocYxGD261ZSpItHKRAd3DEPionC2cCigBRhfM4VATSnywUiyP2WR8FisVeG+mv4Y7DNitERdYzgTbrqFzDdQd7bYdkCuTJuXZjQLYDqcUB0W3HctTi2Aple58/137BT4E+/15+K7xoW45UNohec0BS2YyBi7Y8eS//RKJAj9QOzkvjYJv0DkAUZ+9E70AVGgebUDtYv3gXm5Cfr0J3+E7UykP0Pb9NauXPS3f4HsnPPw9RoC6kdRwO3hZGA/1OiBJdJOx3tom3hWaf1qFbzN/sq7G1ia+tJBxa9K+1jAaGLIeDr611oRrbp4v+HrnFXiJfcOQFShb9Twt9sES45b/gCIot9gciBYKiir/lD3F9cMfinX7I5QV2cCVyiPPIKr49QIH6AA8SA0ftHdJjO0ScfR96bH8Jj9pPQR7shxQ4BW/yL6GO34cGFv07bR3SgC0xoOPrAzf5Y2EKTCv9jnOhMWedXLi4/3sTzf7CiWrfmHPB0+8466HAgmeIq/bdtTT7K80Qjb6tkyvN50J3LdPKELf0yxD1LINIiIaI0EC0Ix6iBgIiI7nEH6KR3OkxkuKMkfx98n2tImgk/wwbSWnBSH79gZHclX0ldziLKdid2V3ozlhb/Cx9ZsvKNFvpvJYvG0rky3oTbKULcTNbzLFrixtiuguVaKagMfpKrhJdm9UQ05JhjlWnL8SVp/Um7EodSqzUzWsrdSvTdqU+Sy9Pc2eo03dntmQMZ9VmLeX7KERoNkYIzXac0BxSEZpGNaH5VUNouuMJzSBBaATyf5LjBTKNEMj1pEBm6w6v1mxVdK1Fv6XIm3O13xUMkvbcI0n7s+dXDW+4SpSvy//kftopVU6WuGxnbl1UWkEEa9o8EtF9oVFAUUTqKraI1cWzc7qikzOuwquTQH/dVf5Zh7M0p8OZvPG6K2nd1cmGtJMzP+hm50q0FhGSEekuqVEak0ciJSkRzJZaF/X5WnFZfMZ/SYMdjw=="
+      }
+    },
+    {
+      "name": "分体柜机",
+      "block_name": "分体柜机",
+      "bbox": [
+        0.0,
+        0.0,
+        20.227578039980017,
+        55.633812968265005
+      ],
+      "norm": 55.633812968265005,
+      "descriptor": {
+        "counts": {
+          "LWPOLYLINE": 2,
+          "LINE": 10
+        },
+        "lengths_q": [
+          16,
+          16,
+          17,
+          17,
+          19,
+          19,
+          19,
+          19,
+          27,
+          27,
+          27,
+          27,
+          37,
+          37,
+          37,
+          37,
+          62,
+          64
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          9,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          27,
+          27
+        ],
+        "radii_q": [],
+        "size_q": [
+          36,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 187,
+        "scale": 32767,
+        "data_b64": "eNo1zzFsElEcx/GDkEsh1DvKtY9IDaSiXElN0dSGmDYy3JsaF0IiLg5laCKLDo7aRCfioAsSFweHZ1xIGtPp3QASU0MxpDbmSK8WQyU8Cu3VEqlifPVdWobv8ln+vz+iOaNgzRk6nzN6jpwhCjkj5M4ZEAxabUOgNiEo7kJQqkGwoUOgaRDsbELQqEDQWYeguwZBvwgBlzcLubm8KHD5noPL6zyXL1i5PKKD+kVEu2uIdtYRbVQQ3dlEVNMQ3dARLdUQLe4iqjYRXW0jts0saRna99kW93RebWbtY424835dFEq1sivwLS093jrdo2lp6erXsuvZF1FoVOLOm5+z9lclne+u+Wy3PiYtbz+cbYiyPVG2K8r2RdnOKNsbZbvP4ucgGI5AIM1A4A1DMDEFwaQMwXQAglk/BPPjECgeCBYkCGKiWcgdE0UhJvYcMVHnY2LBGhMRHbQgIap4EJ0fR3TWj+h0ANFJGdGJKUS9YUSlGUSHI4jyc+Y2s6TlzrzP9v6Gzg9Hsval63Fn4ZooeMNl18MraakSOt0zKaelJ5fKru0JUZj1x50vLmTte+d1XvH4bK9Hk5bfI6f3Fe2kr2iJY0Vb6Sqa41DRFjuKhsmg2zom92qYPNrF5HkTkzdtTFYNTD51Mdk6xmT/LyYch4nbhsnlIUwiTkwWREzuSpg88GDydByTl35M3gUwUWWzxY4qOw5VeaWryoljVT7pq+xfs1R1uZ+qJnqpavgoVbUfpKr11qDMdr2V/15vtX/UW6Oteiu6z/wn81/M/zD/x9zKnGfuYH6O+QjzMeZe5j7mF5kHzewHmWD4KBNM9DLB5X4miGgm+B/Dc3uQ"
+      }
+    },
+    {
+      "name": "排烟阀",
+      "block_name": "排烟阀",
+      "bbox": [
+        0.0,
+        0.0,
+        13.42636628391001,
+        19.843978262473012
+      ],
+      "norm": 19.843978262473012,
+      "descriptor": {
+        "counts": {
+          "LINE": 11,
+          "CIRCLE": 12,
+          "TEXT": 4
+        },
+        "lengths_q": [
+          10,
+          10,
+          13,
+          20,
+          24,
+          29,
+          50,
+          50,
+          50,
+          50,
+          71
+        ],
+        "angles_q": [
+          0,
+          5,
+          9,
+          9,
+          9,
+          9,
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "radii_q": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          6,
+          6,
+          13,
+          14
+        ],
+        "size_q": [
+          68,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 343,
+        "scale": 32767,
+        "data_b64": "eNo1k21ME3ccx++GdRTpkLETjlJEUZSHwaDKBihwmmkY08TFh5gsGgyKwnzBlglIcBbjMFET2GbUzGXJJCGNEiOnENS4i7gIAsrkjLXt9f7ttTyWttf//3rtleIgZi8+b34vfvl+fg80a8AemgzYgNWADQMDNu40YJYpAya4Ddisz4BBZMDCQQMWFTFgK3ADlqAyYFq1AUvXGLDseAOmJ5bAmOx4nEnX4IxWjTMJKpxZgeNMVARnwkGcgQhnZn04I7hxxjKFM+NOnBkGODNgxZmHJpyh2ff89cb7pN1s++cnbmTwJHg4/K1gfPHVxLV/i6Z/Zje4f3yzylttVvm/4SCigEPOE8aU1Im/I7HT3Vh49kbUtOficpPYpH6Gjsfel/fHdSpffvxLZCnf+/7qpzQbP0iz5AjNrhmj2UyWZvNNNFtkpVkK0GyFk2b3TNHsQTfNVvlo9gSi2fogzTbN0+z/nk3zeqI+qCdOID1R5dMTB916Ys+Unqhw6gkK6Ikiq57IN+mJTFZPrBnTE+SInogf1BPqp0sziopQ4Nj8AaFLQS518N4kRHumOPHeZLkXuc7OHRAENwXOzmVz5d7LZk58YYIo36QOvjB1KZfNx+azuc3zFOgKRwuEcsT1QJYmIGqdzPFLE6+8R1xlnmihZ44CZZ7T3CvvakuO/9JbiN6ZHsiX3hLKaktX+DR3TaFAllLrEIOlzhS50QWRy/Xc3+iSfKXOR95ax24vBR55k2ySb7v1uT/GAtENc4ocYxGD261ZSpItHKRAd3DEPionC2cCigBRhfM4VATSnywUiyP2WR8FisVeG+mv4Y7DNitERdYzgTbrqFzDdQd7bYdkCuTJuXZjQLYDqcUB0W3HctTi2Aple58/137BT4E+/15+K7xoW45UNohec0BS2YyBi7Y8eS//RKJAj9QOzkvjYJv0DkAUZ+9E70AVGgebUDtYv3gXm5Cfr0J3+E7UykP0Pb9NauXPS3f4HsnPPw9RoC6kdRwO3hZGA/1OiBJdJOx3tom3hWaf1qFbzN/sq7G1ia+tJBxa9K+1jAaGLIeDr611oRrbp4v+HrnFXiJfcOQFShb9Twt9sES45b/gCIot9gciBYKiir/lD3F9cMfinX7I5QV2cCVyiPPIKr49QIH6AA8SA0ftHdJjO0ScfR96bH8Jj9pPQR7shxQ4BW/yL6GO34cGFv07bR3SgC0xoOPrAzf5Y2EKTCv9jnOhMWedXLi4/3sTzf7CiWrfmHPB0+8466HAgmeIq/bdtTT7K80Qjb6tkyvN50J3LdPKELf0yxD1LINIiIaI0EC0Ix6iBgIiI7nEH6KR3OkxkuKMkfx98n2tImgk/wwbSWnBSH79gZHclX0ldziLKdid2V3ozlhb/Cx9ZsvKNFvpvJYvG0rky3oTbKULcTNbzLFrixtiuguVaKagMfpKrhJdm9UQ05JhjlWnL8SVp/Um7EodSqzUzWsrdSvTdqU+Sy9Pc2eo03dntmQMZ9VmLeX7KERoNkYIzXac0BxSEZpGNaH5VUNouuMJzSBBaATyf5LjBTKNEMj1pEBm6w6v1mxVdK1Fv6XIm3O13xUMkvbcI0n7s+dXDW+4SpSvy//kftopVU6WuGxnbl1UWkEEa9o8EtF9oVFAUUTqKraI1cWzc7qikzOuwquTQH/dVf5Zh7M0p8OZvPG6K2nd1cmGtJMzP+hm50q0FhGSEekuqVEak0ciJSkRzJZaF/X5WnFZfMZ/SYMdjw=="
+      }
+    },
+    {
+      "name": "主要设备图例",
+      "block_name": "主要设备图例",
+      "bbox": [
+        0.0,
+        -5.0,
+        15.0,
+        5.0
+      ],
+      "norm": 15.0,
+      "descriptor": {
+        "counts": {
+          "LINE": 35,
+          "POINT": 5
+        },
+        "lengths_q": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          17,
+          17,
+          24,
+          24,
+          24,
+          24,
+          33,
+          33,
+          33,
+          47,
+          47,
+          47,
+          47,
+          67,
+          67,
+          67,
+          67,
+          71,
+          71,
+          71,
+          71,
+          94,
+          94
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          23,
+          23,
+          23,
+          27,
+          27,
+          27,
+          27,
+          27,
+          31,
+          31,
+          31
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          67
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 422,
+        "scale": 32767,
+        "data_b64": "eNqVVV9IU20Yf9Q1p83cmRx1pakna3bgU2hoSrIKzEAqvHnPjRgImRB6oRUZ2EUkpCQRJIF64YUIcQ5EaRSlF6eRNWZKU09u2tb+6PKsuaPzz5Zr6zuvu/iuP14eOLy8v/d9nuf3e34HkYgc0CHSmY9IikLk9ROIZGlESqWINBgQeec0IifOIBLOIfkkwIAOwJkPQFEA108AsDSAVApgMADcOQ0wcQYAzgEgkvMP6Di/M5/zUxTnv36C87M055dKOb/BwPnvnOb8E2c4P5yTg2fpCx9ZutfM0jNfWJqwsjQjsPSgnaWdDpamPCzd4sNolpaCLG3YYunOMEtPRvHrLF2jYOkelYxVy1gCZ4+DEQiCEWbUjNCjYoQaBSMAMMJklBE6w4xg2GIEKcgInJ8RWnyMQHkYwelghEE7I+BFWGXsF0boNTPChY8ylschV2WCXGaKPQxmlM9ZoJCZYSn4io5zc1CCcwYewG6yJb+aenmg19yjappuOlg1W3WIsBKEf17MMn37kD1oH9B1fO/Iq/tRV0B5KCq6slc8/3NOj+sDnvOLpv71uamujQlz89bI9JXdvtmK37etBX8aF1R/axc3ksqW7IpchykVXFy66HmaMbfapXm/1pw18utydl+wQndrsyCvcVtVUBveKCrbsxfnxEz6fabkGkKmizbvVOXygvmk89P0EffbWfXKc2vMN7AgiY8WXYGuJavU5jCFrrpe79R7RyPnfc+ip8SH8WOBu0mkdEOhDDWkhrcvpYthY8bSXplmOlaYNQlE9ouUFN2wcvvIk7TVo/fVi0U3M83F17Tv9JgL3DfR1Kqdm+rOnDAPqUemx9L6Zi3K21Z3SuNCBGoXNfGyJX0012GMgAvtiJ620Nxqt/R+bSgw8mtc7AtafLc23d7G7YirNqxxlu3pl3NiRhvmE2snZHqn906ZixfMi0WfplePvp3dPvLcmqIbWCCyHy0WZnUtlWnaHMaMq65L6fXehtTzvhuKU+LdpGOBh3FSehZVhkYj4e3XO2LYFFras0rTMVdgEiTxRUrMN6xUrzxJO+K+rz7pvJlZuXxNe9GGtZXguST2aqp+r9fcGW6aHt6umv28SViloH8+J2D6dlYctLf4Or4/9tb9eOOiPE5HdEW5PP+z1IY1h3mWtbTGTDGrYOY8spZczAzjgK/ckqwlG9ZgQnODduCdDuApD/AtPowDXgoCb9gCvjMM/GQU5wJ8jQL4HhXwM2rgCQL3HHh5Wnl5Wnl5Wnl5WvkEF/9nPzFL2BWwO2CXwG6BF0EgckaNyB4VImsU2BsQORlFZGdYdo4t2UGC2AMQ2eKTsR4Z60DkoB33Di+jzWjTL+uXNU6NM+KKuNxet9fis/jGxXFxKDAU6Ja6pbZQWwjtoB1jxBjRR/VRTVwTj0AE3CnuFIvSohxLG0sbUg+puzO7M1u1rVqcFe7tg/VSW8OGctmw5XQc3H3jWok89k5GW3z98bNia1JOoEYhBfNSP2/upA1vz6g7w6OZ9Xv3tCUxXAPWFJcMNnSAWwIV4+DSZUVmcB7QMKucFtYSNXH+Vm3/endm18aQunlrLO3KrkVZ8dudUvAnAqq/mvhGkj5qVxgjplS0w6W3hZ5mdEtdmqFAc9a4eDnb4qvQub0FeRGXqkDj3CjSL9uLjTaTHvsH9oAH63P6ho29YsMWRR3crStYiXTkTUYHdP3xD9mtSWJWjYIg8lKrDu2kNR2cUfeoRjNfHrintSUn8pfvSIYSdAAdBxVLyfkXogyUDxr2sJx/boI7XIPMV3mLz1s5/7O9+qyIfRiV45D5Kh/QeSv/yW2v/pC97/vlOGTeyzFG5lgOb2VJrL26P77v9eVS0Fv5YL29Oifw3z2yRve/axTeSltye3VrUuIsQXgr72nbq8WsxN14T9bP/huybs/h/wci/wUlPhny"
+      }
+    },
+    {
+      "name": "风机",
+      "block_name": "风机",
+      "bbox": [
+        -14.99984443289543,
+        -14.01920886896006,
+        11.265995737448412,
+        14.01920886896345
+      ],
+      "norm": 28.03841773792351,
+      "descriptor": {
+        "counts": {
+          "ARC": 6,
+          "LINE": 5,
+          "CIRCLE": 1
+        },
+        "lengths_q": [
+          6,
+          6,
+          6,
+          40,
+          40
+        ],
+        "angles_q": [
+          0,
+          3,
+          15,
+          27,
+          29
+        ],
+        "radii_q": [
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27
+        ],
+        "size_q": [
+          94,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 182,
+        "scale": 32767,
+        "data_b64": "eNoB2AIn/YYIAADoCT3/UguL/sQM6v0+Dlr9vQ/b/EIRbvzMEhT8WRTL++oVlft8F3L7EBlh+6QaYvs3HHb7yR2d+1kf1vtZHw4Eyh1JBDgccQSlGocEEhmLBH4XewTsFVoEXBQlBM8S3wNFEYYDwA8bA0AOnwLGDBECUwtxAegJwQCGCAAAcydQ8WUjGPBXH+HuSRup7TsXcuwtEzvrHg8D6hALzOgCB5Tn9AJd5ub+JeXY+u7jyva34nMnsA5lI+gPVx8fEUkbVxI7F44TLRPFFB4P/RUQCzQXAgdsGPQCoxnm/tsa2PoSHMr2SR3DKgAAgCo1BLopWghzKF4MsCYzEHgkyBPTIREXzB4AGm8bihzJF6Ye5xNLINkPciGuCxcieAc5IkUD1SEn/+4gLfuIH2f3px3k81MbsPCUGNntdxVq6wYSa+lPDuXnYQre5ksGWuYcAlrm5P3e5rX55eef9WvpsfFq6/rt2e2J6rDwbOfk863kZ/dZ4i37eOAn/xLfRQMr3ngHx92uC+nd2Q+O3ucTtd/JF1rhbxt248weAObTIe/oeCQ47LAmze9zKKLzuimm94Aqy/tx+ZsRCfolELL6tw5s+1ENNvzzCw/9nwr5/VYJ8f4YCPf/5QYMAb8FLQKmBFwDmwOWBJ0C2wWvASwH0ACGCAAAhggAAHoIlAFbCCcDKgi3BOcHRgaRB9AHKQdXCbAG2AokBlMMiAXIDdoENA8cBJkQTQP0EW8CRROCAYwUhQDHFYUAOeqCAXTrbwK77E0DDO4cBGfv2gTM8IgFOPIkBq3zsAYo9SkHqfaRBzD45we6+SoISftbCNn8eghs/oYIAABx+WXu+/xP7IUAOeqGCAAALAcw/9sFUf6WBGP9XANl/C0CWvsMAUH69/8b+fH+6Pf5/ar2D/1h9Tb8DfRs+6/ysvpJ8Qn62+9x+WXucfmbEfv8sROFAMcVWR8OBFkf8v9ZH9b7cuFC3Q=="
+      }
+    },
+    {
+      "name": "送风_新风风管",
+      "block_name": "送风_新风风管",
+      "bbox": [
+        0.0,
+        0.0,
+        13.879775029060056,
+        13.879775029075972
+      ],
+      "norm": 13.879775029075972,
+      "descriptor": {
+        "counts": {
+          "LWPOLYLINE": 1,
+          "LINE": 2
+        },
+        "lengths_q": [
+          22,
+          22,
+          71,
+          71,
+          71,
+          71
+        ],
+        "angles_q": [
+          0,
+          0,
+          18,
+          18,
+          27,
+          27
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 108,
+        "scale": 32767,
+        "data_b64": "eNod0NFmK0EAxvGvIYQQwjIRQqTiLMuMaFjSRnuTue4LzN15hAl9hJJ5hN7NC/R6clPRsKSis5ZUNEQIO3KEEEKI091efLc/n//VG+Am5BJP2Xkc8ZOeiaOay8PQqr1I9I4vTMqW8ba2chussXab2iresqVJ+ULvRKL2QysPai6OesZP44id4ym5uAmAt3yu4Ca2GE9NaRzpsp6pSqZXh1Z4IuGEL2idLUmjtkIT67TlNrYdb41vUh3o3YiqvezIg+iK4yDkJ9pjZ9Inl//3QD7SdwXas8VBaEqiq8uyoyojKqs6EJ7xObFtWk9bpJHZTdJIW7Ru25wYX3g6kNVMr8iOLouuKQ1CW6Q9VyD97PNDPnIhfXamPX4ahOIouvKQ6fsR1TsdmNT48da23SZtZU2atRVpsCWt8wUnIhFeVqSq5qqiZ7o8jkwpntqim7jCVV7k1/93C3yFwPsN8MqAlwB4/gPIa0B9A09fwN8EePwE7j4APwK897znDzohuKg="
+      }
+    },
+    {
+      "name": "排风_回风风管",
+      "block_name": "排风_回风风管",
+      "bbox": [
+        0.0,
+        0.0,
+        13.87977502907006,
+        13.879775029076086
+      ],
+      "norm": 13.879775029076086,
+      "descriptor": {
+        "counts": {
+          "LWPOLYLINE": 1,
+          "LINE": 3
+        },
+        "lengths_q": [
+          21,
+          22,
+          22,
+          71,
+          71,
+          71,
+          71
+        ],
+        "angles_q": [
+          0,
+          0,
+          18,
+          18,
+          27,
+          27,
+          27
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 116,
+        "scale": 32767,
+        "data_b64": "eNolkNGmG0EAhv+GEEIIy0QIEZat6GzDaiqStjeZ6/MCc3ceYcO56Btk3mIeoXeTmyMallR01pKKE0Y0zEhFw5IjGqcb5+K7/Xy+l88AGbkSHejyuK8qPJLVuCdqUxrXZZd7KmBE+7RpO6SFNtqkZTu0qX1GVMA92Y3rUypqcU9WeaQq474u04ErkRGALzfIlYzCCx2w87jPcx7Fp8J+nFJ5kF1lVZDute92tgODdmNLWuGGNtmaEZ5xb6LjuliJmlzK6ixRlXShy27uSm8egRtuTq7pIrzMEnaWS56LVXyaaHHkmTywtbLhJt03tm5XuI3bNbbpPtwoy9bywDNxLOwnseK5XLLzLAkv6YJc3bxofrzhSm6uy+lCVWaJrMqlqBX2+kRzj2eMsDVthhvSamyLJ8Z23E776V4FysquPBRHjnEvPvGI5+M+O9NBeCEjcn0pXr/6ve9AkADDH8DdT+A+Ax5+AeLp1grj/YYJLMzwD8zdX5j7HObhGUb8e/36aQh8/QioCHh+D3x4B0zeAt/8/zcRyEw="
+      }
+    },
+    {
+      "name": "低效_中效过滤器",
+      "block_name": "低效_中效过滤器",
+      "bbox": [
+        0.0,
+        0.0,
+        13.87977502907006,
+        13.879775029075972
+      ],
+      "norm": 13.879775029075972,
+      "descriptor": {
+        "counts": {
+          "LWPOLYLINE": 1,
+          "LINE": 2
+        },
+        "lengths_q": [
+          22,
+          71,
+          71,
+          71,
+          71,
+          100
+        ],
+        "angles_q": [
+          0,
+          0,
+          9,
+          9,
+          27,
+          27
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 131,
+        "scale": 32767,
+        "data_b64": "eNolkEGrElEYht8kQfAiDBjHBEEGjCHhDHIFwZLbIs+6Te3OLuoPjHR/QuH8gdqeXf2DY4uLXGHAEs5gSMLEIBlzMqakAcOS27E+eJfPw/u9V2cA6ekc7ap8vyMLvC2KXssvDalniSYvS4cR1aDVxCY11FEntcSmVdVgRDq8LJqeNaR+yWuJIm/LQr+j8rSrc6QH4N4x5EB67p522a7f4Rlve1tjT4dUbERTJtIJ16qhV4mNGPVKRGruklbZghE+5+WB8ix/5pfEVBRHgSyEE5XXY527dgEco8fkEE7c/ShgOzHlmT/ztgPlp3wuNmwhE3cZriuRXhl3rFeVKFy7S5mwhdjwuZ8a+9af8UxM2W4UuPtwQg56bDpfHKNzeqzy4UQWRoEoiqlfMnZroHiZzxlhC1p1l6RWicwmcWLrlWqEa+nIRDTFxiySei1vy9s863fYjnbdPemRw5XZ+tgFcfkzYidBfPcb4gc/ED/OEJ//Quz/+b/b6A7wrAOcngLfKfD6NvDkFmDbwKca8PIm8PAGYFnA+xPgeQG4fx3/7u1v4Hxn2J+GTYE3X4GnXwy7MmwEvPoIPPpgWGXYd8CLAOhfHn/+C+HE10E="
+      }
+    },
+    {
+      "name": "转送风",
+      "block_name": "转送风",
+      "bbox": [
+        -5.000002535898141,
+        -15.000000633974093,
+        4.999999999999839,
+        1.2679491510373237e-06
+      ],
+      "norm": 15.000001901923245,
+      "descriptor": {
+        "counts": {
+          "LINE": 35,
+          "POINT": 3
+        },
+        "lengths_q": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          17,
+          17,
+          24,
+          24,
+          24,
+          24,
+          33,
+          33,
+          33,
+          47,
+          47,
+          47,
+          47,
+          67,
+          67,
+          67,
+          67,
+          71,
+          71,
+          71,
+          71,
+          94,
+          94
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          23,
+          23,
+          23,
+          27,
+          27,
+          27,
+          27,
+          27,
+          31,
+          31,
+          31,
+          36,
+          36
+        ],
+        "radii_q": [],
+        "size_q": [
+          67,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 420,
+        "scale": 32767,
+        "data_b64": "eNqVVF9IU20Yf6dTjzp1x7XN6dbmabp51PWZ/2qh57uYRZEWwTkE4oUXKoRBhKGB0UVCRrUbJVADIfHmvDdSIWRCNQJFMlgfh7ZkYzqd7eTcyemcTj3feZMuv4uPl/fm4Xne53l/v9/zgzyUTlcI8sQK5P0+yI96Ic9wkMfdkF/8DPnH85Bv+gR52QcAIA9AVwgAYgUAvw+AUS8ADAcA7gZg8TMAj+cBaPoEgOwDrYY8re4K0WpihVb7fbR61EurGY5W425avfiZVj+ep9VNn2g1+AB5kQI/6AZmjbXDFXAWBOhaxseegd/BX8BDVzIcSwIgUtZDS8O1/av2vt3e+vHt8Zq5X3NV0c2oTbuhqaDCjWVdoc5SZ9B5ajowbfL7/Ib0pbQim6eyAHVlSZF6a8ltmDcb7N+KK+rXTtprtosuVaXqbthwTVe5SXXXelo5UNKYM0RcyXppbM2Y0t+Uv9fdk33RPDryqZ4nfyonE/s5b3Yys11bWswdLU0LbNSmRMMO8TB0/UCx2r5XtHw7XuZ/EDu79Ey46HkRQSjSapHqztc2DOTZ7GOKpvpXmW01C+k9VcupT2wJMFGuPJqxWpLuksbED4LeAaZbW1rDQNRWOLZxQfs63HZiIdSDLwef5iYCE9lK/wxmWXKnNXrCKQh1hhOpi57chrNLBnuZv6K+aNleo1i9VHUYumGLhrvKAxt3re7oQIlra4h4s/PSOJmY0j9Pvtc9OvqiuSfzqW7KfypbM/ZzrmRlZjfmaLHTytI0k6o2Bdc4xFTd9YPtova9tZO349+KH8Tmzc+Et5YXEZZEehGp4Yi2oV+w2TtiTfUt8baaur2eKuPBExsmTpQLshmrV+4ucWX8IGAWMA3laA39Slthh+qCtlnTdqJO14Mb9U9zMeNEtlA8g3nN7jSXJZyCWEY8e1IsDVNpV+2DWG99e/Z4zbncuSocj9rCKk3FR01j2Yius/SO3nnqsnHaRBB+w745reirpbKAJWk1whsU0A1sIWunDZKWTHQtS7Bn6BJJS1a6kiVZEvHCcNFNhquOMVzfLsPNJo/xdMgZbhBjuEUFw+E40g3DjegYzm9gOIJguM5SpEWp1ibVVjNcbz3DvTsv1f6N9MWS786zZG89S1ZXs2TUhnqxZGcpSxIES/oNLDmiQzOyJI6z5KKCJQcxlnTI0b9ZcjbJkn27Um1Mqt1EOCN+R70i5feJFLEiUl0hkULYRzdFqjomUn27IjWblP4rYeaQi9QgJlKLCpHCcZFCOIzopFqDVEuIVGcpmu//x6VtD/yz7gxSYcM6/O0VIIBiCC9pNw/hd7jP+EBC2tkduAK3mDUgSLscQZkIP5vnfn760mSe37eomA7sZDqD+oyukENOhbtl2o3ho+jmbHLu12pifDs73rdbHbu23ypYDx9GkNcgrBs9LotlyWtW+oXiRAAzLgeN+oVQne51uFkzttGhGoj2K29tDeVI3bMaE64MS9IrVx4JsgTAxOVU48FCet3eq8yW+JiiIzaQ1y905w9HkDchfDtLJdcjJNczQH5Eh3ZVcj1ccj0F5AcxyDvkyO8gP5uEfN8u5KtjkI9uwv90TMTtV8v9/H3zZB5BLCouG3cy7+j1GSM6h/yjplsWVg0f4fhs8lzuaqI9Ozs+iFXHptJaBU/K8X/RGY4MR/qFfqEj1hFribfE6/bq9owHxgNMxERBJsi8cq/cleHKgFkwayhnKKdf2a/sUHWomjXNmjpdnc6oN+oxI2YUioVir9lrdllcFqRCyWcDI7rjW1ngDH7UGNaPcZB4tNKHdAncZwmJRxO9QxvgFlso8VhA/8ZKygjMJo+v9dAZHD4yrKN5o5sg8DDiDGo3/mjjWB8o7pCDgCfFGeyWHefiOAjcz3cGw6rjvij2522Ui+ZDOf8CJI0QFw=="
+      }
+    },
+    {
+      "name": "高效过滤器",
+      "block_name": "高效过滤器",
+      "bbox": [
+        0.0,
+        0.0,
+        5.508630877729956,
+        5.219096339557041
+      ],
+      "norm": 5.508630877729956,
+      "descriptor": {
+        "counts": {
+          "LINE": 2
+        },
+        "lengths_q": [
+          95,
+          100
+        ],
+        "angles_q": [
+          0,
+          18
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          95
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 61,
+        "scale": 32767,
+        "data_b64": "eNoNzdEqAwAchfGTJElqSiMtNWU1NWqK4uJcbN6AO+fSXmDiEYgX4JI73sBcrM6KMmmLopAkmULS0pLyv/99feD+AlieA4szYHIafJ0EjzPg9ji4MgbmRkEkwcYgeDAQtg9c7AnbBbb+wnbAnXbYL3DqPWwLbD6HfQTX7sLegMNXYS/BynnYU1BGVS7W5K0z+aIuJxry8rW8dys/3MvpJ7n0Ih+9yZ8fcv5b3viRT36jhVzoljd7o+2PNiEvDcm7I9Gmok3LqxPyYTbaXLR5eX1WrsxHG+9/pdhkZA=="
+      }
+    },
+    {
+      "name": "HEPA过滤器",
+      "block_name": "HEPA过滤器",
+      "bbox": [
+        0.0,
+        0.0,
+        10.0,
+        15.29922200442104
+      ],
+      "norm": 15.29922200442104,
+      "descriptor": {
+        "counts": {
+          "LINE": 12,
+          "LWPOLYLINE": 1
+        },
+        "lengths_q": [
+          2,
+          14,
+          14,
+          15,
+          22,
+          22,
+          29,
+          29,
+          61,
+          61,
+          65,
+          65,
+          65,
+          65,
+          65,
+          67
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "radii_q": [],
+        "size_q": [
+          65,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 223,
+        "scale": 32767,
+        "data_b64": "eNo1kVFoU1ccxv92cU2TdG04NTbZP7LIMXi8ljoV6YOD+yJ4QWTIfZkPZbi3IwihsD74tKeshQy8b4PtRVmg52V78KFMH86KStnkYovnGDPNTOZpU1Ma2qB3Sde6XUoffk9/+L7v/30cc5TjR59w3P6YY/MwR0U4Lgxx/DnO8Yd+jjMfcPz6Pcevtjl+HnD8rMPxRJvj4RbHyCrHzQbHWo3jH1WO85rjT8scPd81Ib8uu6auXTPwp2s+/cs1X/ztmm9WXTPXcs1S2zXdjmty/7jG+dc1BXDN9xHX/BZ1zVrCNcmkayYOuebLtGu+zbrml5wT83wndmfZid3VTuxR1Yk9qzmxZsOJdVecWLzlxLDtxMY6GIRgG4N4C4PuCgbNBgbPahg8qmJwV2NwZxkDzw9z/j7q+ScOef5s0vPXBkN9zw9v33U8/33b8wvrnt9o7v0Tak99ONb5sW+ss7g71tnq7XkV82BfPwr25SNgn86AnUqB3UuCXRsEe2EA7PJBsGcPgH1jB+wrXbDPvQU7swn2zjrY9SbYD1+DPfcK7NILsAuVEKSlF0jnXiF9+BppvYl0Zx1pZhPpubdIr3SR3thBOnsAafkg0oUBpLVBpL0k0lQK6ekM0stHkF4/irSY32f0eDE/crKYHz5VzCfOFvPRiWI+cj7MvucZOV+oRCcKlcTZQmX4VKEycrJQGT0eZgm7/38namlBrlYFmakJMt8QZHVFkFRLkAttQaY6gtwOBFnaFgRAkPGIIJNRQUoJQe4NC/JmRJB0WpCLWUGmc4KUjwmi2D43hxS7FFcs26/YRp9iclexWz3Frr1T7MyWYpENxdSaYmWj2HRdMeelYpnnirWeKnb/iWKlx4pNLio2/kAxkCHlYyCncyAvZkGm0yDfjIC8NwyylAA5GQU5HgEJAHJpG+TtAORUB+SFNshUC+TqCsj5BsiZGsirVZCW3mf8gaUnFy1demzp+08s3Xpq6cxzSzsvLT1dt3TZWFqtWTqyYekzW5a+9s7St3qWlruW3uizdLbf0pfilr45FHb5H9ofkuw="
+      }
+    },
+    {
+      "name": "风口",
+      "block_name": "风口",
+      "bbox": [
+        0.0,
+        -5.0,
+        15.0,
+        5.0
+      ],
+      "norm": 15.0,
+      "descriptor": {
+        "counts": {
+          "LINE": 35,
+          "POINT": 5
+        },
+        "lengths_q": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          17,
+          17,
+          24,
+          24,
+          24,
+          24,
+          33,
+          33,
+          33,
+          47,
+          47,
+          47,
+          47,
+          67,
+          67,
+          67,
+          67,
+          71,
+          71,
+          71,
+          71,
+          94,
+          94
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          23,
+          23,
+          23,
+          27,
+          27,
+          27,
+          27,
+          27,
+          31,
+          31,
+          31
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          67
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 422,
+        "scale": 32767,
+        "data_b64": "eNqVVV9IU20Yf9Q1p83cmRx1pakna3bgU2hoSrIKzEAqvHnPjRgImRB6oRUZ2EUkpCQRJIF64YUIcQ5EaRSlF6eRNWZKU09u2tb+6PKsuaPzz5Zr6zuvu/iuP14eOLy8v/d9nuf3e34HkYgc0CHSmY9IikLk9ROIZGlESqWINBgQeec0IifOIBLOIfkkwIAOwJkPQFEA108AsDSAVApgMADcOQ0wcQYAzgEgkvMP6Di/M5/zUxTnv36C87M055dKOb/BwPnvnOb8E2c4P5yTg2fpCx9ZutfM0jNfWJqwsjQjsPSgnaWdDpamPCzd4sNolpaCLG3YYunOMEtPRvHrLF2jYOkelYxVy1gCZ4+DEQiCEWbUjNCjYoQaBSMAMMJklBE6w4xg2GIEKcgInJ8RWnyMQHkYwelghEE7I+BFWGXsF0boNTPChY8ylschV2WCXGaKPQxmlM9ZoJCZYSn4io5zc1CCcwYewG6yJb+aenmg19yjappuOlg1W3WIsBKEf17MMn37kD1oH9B1fO/Iq/tRV0B5KCq6slc8/3NOj+sDnvOLpv71uamujQlz89bI9JXdvtmK37etBX8aF1R/axc3ksqW7IpchykVXFy66HmaMbfapXm/1pw18utydl+wQndrsyCvcVtVUBveKCrbsxfnxEz6fabkGkKmizbvVOXygvmk89P0EffbWfXKc2vMN7AgiY8WXYGuJavU5jCFrrpe79R7RyPnfc+ip8SH8WOBu0mkdEOhDDWkhrcvpYthY8bSXplmOlaYNQlE9ouUFN2wcvvIk7TVo/fVi0U3M83F17Tv9JgL3DfR1Kqdm+rOnDAPqUemx9L6Zi3K21Z3SuNCBGoXNfGyJX0012GMgAvtiJ620Nxqt/R+bSgw8mtc7AtafLc23d7G7YirNqxxlu3pl3NiRhvmE2snZHqn906ZixfMi0WfplePvp3dPvLcmqIbWCCyHy0WZnUtlWnaHMaMq65L6fXehtTzvhuKU+LdpGOBh3FSehZVhkYj4e3XO2LYFFras0rTMVdgEiTxRUrMN6xUrzxJO+K+rz7pvJlZuXxNe9GGtZXguST2aqp+r9fcGW6aHt6umv28SViloH8+J2D6dlYctLf4Or4/9tb9eOOiPE5HdEW5PP+z1IY1h3mWtbTGTDGrYOY8spZczAzjgK/ckqwlG9ZgQnODduCdDuApD/AtPowDXgoCb9gCvjMM/GQU5wJ8jQL4HhXwM2rgCQL3HHh5Wnl5Wnl5Wnl5WvkEF/9nPzFL2BWwO2CXwG6BF0EgckaNyB4VImsU2BsQORlFZGdYdo4t2UGC2AMQ2eKTsR4Z60DkoB33Di+jzWjTL+uXNU6NM+KKuNxet9fis/jGxXFxKDAU6Ja6pbZQWwjtoB1jxBjRR/VRTVwTj0AE3CnuFIvSohxLG0sbUg+puzO7M1u1rVqcFe7tg/VSW8OGctmw5XQc3H3jWok89k5GW3z98bNia1JOoEYhBfNSP2/upA1vz6g7w6OZ9Xv3tCUxXAPWFJcMNnSAWwIV4+DSZUVmcB7QMKucFtYSNXH+Vm3/endm18aQunlrLO3KrkVZ8dudUvAnAqq/mvhGkj5qVxgjplS0w6W3hZ5mdEtdmqFAc9a4eDnb4qvQub0FeRGXqkDj3CjSL9uLjTaTHvsH9oAH63P6ho29YsMWRR3crStYiXTkTUYHdP3xD9mtSWJWjYIg8lKrDu2kNR2cUfeoRjNfHrintSUn8pfvSIYSdAAdBxVLyfkXogyUDxr2sJx/boI7XIPMV3mLz1s5/7O9+qyIfRiV45D5Kh/QeSv/yW2v/pC97/vlOGTeyzFG5lgOb2VJrL26P77v9eVS0Fv5YL29Oifw3z2yRve/axTeSltye3VrUuIsQXgr72nbq8WsxN14T9bP/huybs/h/wci/wUlPhny"
+      }
+    },
+    {
+      "name": "电加热器在线",
+      "block_name": "电加热器在线",
+      "bbox": [
+        -5.000000741984092,
+        -1.0175289898450162,
+        59.36005306019001,
+        27.020888748078495
+      ],
+      "norm": 64.36005380217411,
+      "descriptor": {
+        "counts": {
+          "LINE": 88,
+          "POINT": 8,
+          "LWPOLYLINE": 4,
+          "ARC": 6,
+          "CIRCLE": 1
+        },
+        "lengths_q": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          15,
+          15,
+          15,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          17,
+          17,
+          22,
+          22,
+          22,
+          22,
+          40,
+          40,
+          84,
+          84
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          6,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          27,
+          30,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          33
+        ],
+        "radii_q": [
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "size_q": [
+          100,
+          44
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 585,
+        "scale": 32767,
+        "data_b64": "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"
+      }
+    },
+    {
+      "name": "控制线",
+      "block_name": "控制线",
+      "bbox": [
+        0.0,
+        0.0,
+        54.05818479532991,
+        0.0
+      ],
+      "norm": 54.05818479532991,
+      "descriptor": {
+        "counts": {
+          "LINE": 1
+        },
+        "lengths_q": [
+          100
+        ],
+        "angles_q": [
+          0
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          0
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 31,
+        "scale": 32767,
+        "data_b64": "eNody6EZAQEYANAXBEG5IAjKBUFQLgiKwAiMwAiMwAiMwAguCIJAEC4IBEEQCIKg+D+vP1v6O+Z7jgeSE8OC5ZnrhfTG+M76wetJ9mb6If/665WYleNW4iYMqixqcetxU0YNVs24rbgZkzabTsQuP1EGHPM="
+      }
+    },
+    {
+      "name": "其他专业管线",
+      "block_name": "其他专业管线",
+      "bbox": [
+        -2.5000000110230856,
+        -1.250000022046171,
+        2.5000000110230856,
+        1.250000022046171
+      ],
+      "norm": 5.000000022046171,
+      "descriptor": {
+        "counts": {
+          "LINE": 2
+        },
+        "lengths_q": [
+          100,
+          100
+        ],
+        "angles_q": [
+          0,
+          0
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          50
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 62,
+        "scale": 32767,
+        "data_b64": "eNoNzSFSQgEARdHHjIFA+cFAYOYNgWCg/EAgSIAlwBJkCbgEXQIuAZag4QcDAQKBQIB5QyAQJBAMBrzhxjvn/ix/9uVZTy5L+dqVF0/yS0dut+VjS5435fGjXBTypiG/1eXhgyzJX3/y6y/vjfdHXl7k6Zn3xHuQP/byZMe75V3L7yt59M1b0UDBDnawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnawgx3s1CrlH1f1WeQ="
+      }
+    },
+    {
+      "name": "电暖风机",
+      "block_name": "电暖风机",
+      "bbox": [
+        0.0,
+        -5.0,
+        15.0,
+        5.0
+      ],
+      "norm": 15.0,
+      "descriptor": {
+        "counts": {
+          "LINE": 35,
+          "POINT": 5
+        },
+        "lengths_q": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          17,
+          17,
+          24,
+          24,
+          24,
+          24,
+          33,
+          33,
+          33,
+          47,
+          47,
+          47,
+          47,
+          67,
+          67,
+          67,
+          67,
+          71,
+          71,
+          71,
+          71,
+          94,
+          94
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          23,
+          23,
+          23,
+          27,
+          27,
+          27,
+          27,
+          27,
+          31,
+          31,
+          31
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          67
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 422,
+        "scale": 32767,
+        "data_b64": "eNqVVV9IU20Yf9Q1p83cmRx1pakna3bgU2hoSrIKzEAqvHnPjRgImRB6oRUZ2EUkpCQRJIF64YUIcQ5EaRSlF6eRNWZKU09u2tb+6PKsuaPzz5Zr6zuvu/iuP14eOLy8v/d9nuf3e34HkYgc0CHSmY9IikLk9ROIZGlESqWINBgQeec0IifOIBLOIfkkwIAOwJkPQFEA108AsDSAVApgMADcOQ0wcQYAzgEgkvMP6Di/M5/zUxTnv36C87M055dKOb/BwPnvnOb8E2c4P5yTg2fpCx9ZutfM0jNfWJqwsjQjsPSgnaWdDpamPCzd4sNolpaCLG3YYunOMEtPRvHrLF2jYOkelYxVy1gCZ4+DEQiCEWbUjNCjYoQaBSMAMMJklBE6w4xg2GIEKcgInJ8RWnyMQHkYwelghEE7I+BFWGXsF0boNTPChY8ylschV2WCXGaKPQxmlM9ZoJCZYSn4io5zc1CCcwYewG6yJb+aenmg19yjappuOlg1W3WIsBKEf17MMn37kD1oH9B1fO/Iq/tRV0B5KCq6slc8/3NOj+sDnvOLpv71uamujQlz89bI9JXdvtmK37etBX8aF1R/axc3ksqW7IpchykVXFy66HmaMbfapXm/1pw18utydl+wQndrsyCvcVtVUBveKCrbsxfnxEz6fabkGkKmizbvVOXygvmk89P0EffbWfXKc2vMN7AgiY8WXYGuJavU5jCFrrpe79R7RyPnfc+ip8SH8WOBu0mkdEOhDDWkhrcvpYthY8bSXplmOlaYNQlE9ouUFN2wcvvIk7TVo/fVi0U3M83F17Tv9JgL3DfR1Kqdm+rOnDAPqUemx9L6Zi3K21Z3SuNCBGoXNfGyJX0012GMgAvtiJ620Nxqt/R+bSgw8mtc7AtafLc23d7G7YirNqxxlu3pl3NiRhvmE2snZHqn906ZixfMi0WfplePvp3dPvLcmqIbWCCyHy0WZnUtlWnaHMaMq65L6fXehtTzvhuKU+LdpGOBh3FSehZVhkYj4e3XO2LYFFras0rTMVdgEiTxRUrMN6xUrzxJO+K+rz7pvJlZuXxNe9GGtZXguST2aqp+r9fcGW6aHt6umv28SViloH8+J2D6dlYctLf4Or4/9tb9eOOiPE5HdEW5PP+z1IY1h3mWtbTGTDGrYOY8spZczAzjgK/ckqwlG9ZgQnODduCdDuApD/AtPowDXgoCb9gCvjMM/GQU5wJ8jQL4HhXwM2rgCQL3HHh5Wnl5Wnl5Wnl5WvkEF/9nPzFL2BWwO2CXwG6BF0EgckaNyB4VImsU2BsQORlFZGdYdo4t2UGC2AMQ2eKTsR4Z60DkoB33Di+jzWjTL+uXNU6NM+KKuNxet9fis/jGxXFxKDAU6Ja6pbZQWwjtoB1jxBjRR/VRTVwTj0AE3CnuFIvSohxLG0sbUg+puzO7M1u1rVqcFe7tg/VSW8OGctmw5XQc3H3jWok89k5GW3z98bNia1JOoEYhBfNSP2/upA1vz6g7w6OZ9Xv3tCUxXAPWFJcMNnSAWwIV4+DSZUVmcB7QMKucFtYSNXH+Vm3/endm18aQunlrLO3KrkVZ8dudUvAnAqq/mvhGkj5qVxgjplS0w6W3hZ5mdEtdmqFAc9a4eDnb4qvQub0FeRGXqkDj3CjSL9uLjTaTHvsH9oAH63P6ho29YsMWRR3crStYiXTkTUYHdP3xD9mtSWJWjYIg8lKrDu2kNR2cUfeoRjNfHrintSUn8pfvSIYSdAAdBxVLyfkXogyUDxr2sJx/boI7XIPMV3mLz1s5/7O9+qyIfRiV45D5Kh/QeSv/yW2v/pC97/vlOGTeyzFG5lgOb2VJrL26P77v9eVS0Fv5YL29Oifw3z2yRve/axTeSltye3VrUuIsQXgr72nbq8WsxN14T9bP/huybs/h/wci/wUlPhny"
+      }
+    },
+    {
+      "name": "碘吸附器",
+      "block_name": "碘吸附器",
+      "bbox": [
+        -8.333333333333337,
+        -5.000000000000002,
+        8.333333333333337,
+        5.000000000000002
+      ],
+      "norm": 16.666666666666675,
+      "descriptor": {
+        "counts": {
+          "LINE": 12,
+          "POINT": 1
+        },
+        "lengths_q": [
+          10,
+          10,
+          10,
+          10,
+          20,
+          20,
+          60,
+          60,
+          60,
+          60,
+          100,
+          100
+        ],
+        "angles_q": [
+          0,
+          0,
+          0,
+          0,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          60
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 169,
+        "scale": 32767,
+        "data_b64": "eNpdkiF2rEAQRUsgEG0QiBEYRImImBYRMS0mSyBLqFlCWAJZwtQSwhKCaBERkRYRESUYMWLECBAtRmBS9b/6//RBwYX33gUCy/sjy8sDi/cs6z3L2x0LIUvbspwaluOOpatZqoolOZahZNkXLAAs08bS35TNyi4s45XlcFH2rOzMYuf5R9lvZb9YXj9Znj6UjXYRPn0Qvn4Spi/C6pvw+ce+THiaCdsz4eFCOF4J14XQZ8L+RjhthACE+4JwKJV1ylaEXU143CnbKNsS2nm7U/ZeWU/48kD4/qhssDs+t63Pp8bn487nrva5qnxOzueh9Hlf+Azg87T53N98trMuPo9Xnw8XZc/KztbaruROc3LtObnDJbnxmty62JuS62/JTVtyAMnti+SGMjk7VZVcVyd33CnbKNtaC33uzy6nGWJ7hni4QByvENcFouaJ/Q3itEEEgLgvIA4lRGOqCmJXQzzulG2UbW3bv+ubBbNhViyr2TJrZs8smk2zapbNtlm3fW3h/01YRlvclrf7ZsKMmJl/l7eNIWiOoHmC5gqaL2jOoHmD5g6aP+hHgvYJ2itov6A9g/YN2jto/6A76P/5C8jxMoE="
+      }
+    },
+    {
+      "name": "冷却_加热盘管",
+      "block_name": "冷却_加热盘管",
+      "bbox": [
+        -7.5,
+        -4.999999999999891,
+        7.5,
+        5.000000000000111
+      ],
+      "norm": 15.0,
+      "descriptor": {
+        "counts": {
+          "LINE": 7
+        },
+        "lengths_q": [
+          33,
+          33,
+          33,
+          67,
+          67,
+          100,
+          100
+        ],
+        "angles_q": [
+          0,
+          0,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          67
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 138,
+        "scale": 32767,
+        "data_b64": "eNotkLGKIkEURW9gYGDSgbAGskUHBi+YpAODgaUC5xN82ab6CWOwH+B8gs4fPP9gxqCCCSYYgwleYKAUssgiiy644IAT7G3YLhqK7nNe3VtI6kjzNdJ2g1TukMZ7pMUB6XREqs5IkwvS8ooEIA0aSNMm0qqFVBRIwzbSrEO3S7dEGvWQTBDIBrKBbCAbyAaygWwgG8gGsoFsJpvJZrKZbCabyWaymWwmm8lmsrF+uY/8FvkvkolkI51IN3JG5KzImZGZI7NHdojsEtkpsltkx8iukZ1j3d3k7sXk4dVk9WZSvJuom8zXJtuNSbkzGe9NFgeT09GkOptMLibLK7PAZNAwmTbptugWJsO2yaxDt0u3NBn1TOp1uqFbmdz3TZ5v/3cBz0d/DXzZAB+8ifVP4OkX8Pgb+PEH+P4X+PYBfP1E/TDv8636fV+9qtRPN3VS9VFPvSzVt131WUd92FYvCvVVS33aVB806nPUl1f1yYXume5RfXFQH+/p7uhu1Odr9XoV73Tf1B9e1e9e6jtS/wft8NnK"
+      }
+    },
+    {
+      "name": "消声器",
+      "block_name": "消声器",
+      "bbox": [
+        -1.2500000220279255,
+        -2.5000000110139626,
+        1.2500000220279255,
+        2.5000000110139626
+      ],
+      "norm": 5.000000022027925,
+      "descriptor": {
+        "counts": {
+          "LINE": 2
+        },
+        "lengths_q": [
+          100,
+          100
+        ],
+        "angles_q": [
+          0,
+          0
+        ],
+        "radii_q": [],
+        "size_q": [
+          50,
+          100
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 62,
+        "scale": 32767,
+        "data_b64": "eNoNzaFtQgEARdFHUoHAfFGBIHlBICowXyAQRcAIMEIZgY7QjkBHgBFa8UUFAgQCgYC8IBCIIhAVFfQOcHKU+7Py2VdmPaUslWtXWTwpLx2l3VaOLWXeVMaPSlEom4byVleGD4qkfP0pr7/YG/ZHWV6U6Rl7wh6Uj70y2WG32LXyvlJG39hK1kDmNre5zW1uc5vb3OY2t7nNbW5zm9vc5ja3uc1tbnOb29zmNre5zW1u16p/Y9RZ5A=="
+      }
+    },
+    {
+      "name": "加湿器",
+      "block_name": "加湿器",
+      "bbox": [
+        0.0,
+        0.0,
+        3.2011942765000185,
+        2.8206954993947875e-08
+      ],
+      "norm": 3.2011942765000185,
+      "descriptor": {
+        "counts": {
+          "POLYLINE": 1
+        },
+        "lengths_q": [
+          100
+        ],
+        "angles_q": [
+          0
+        ],
+        "radii_q": [],
+        "size_q": [
+          100,
+          0
+        ]
+      },
+      "point_cloud": {
+        "encoding": "zlib-base64-int16",
+        "n": 31,
+        "scale": 32767,
+        "data_b64": "eNody6EZAQEYANAXBEG5IAjKBUFQLgiKwAiMwAiMwAiMwAguCIJAEC4IBEEQCIKg+D+vP1v6O+Z7jgeSE8OC5ZnrhfTG+M76wetJ9mb6If/665WYleNW4iYMqixqcetxU0YNVs24rbgZkzabTsQuP1EGHPM="
+      }
+    }
+  ],
+  "base_point": "center",
+  "point_cloud": {
+    "sample_div": 30.0,
+    "max_points": 600,
+    "scale": 32767
+  }
+}

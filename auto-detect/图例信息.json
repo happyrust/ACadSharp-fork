@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "src_dxf": "图例.dxf",
+  "quant_grid": 0.02,
+  "items": [
+    {
+      "gid": 1,
+      "ref_gid": 1,
+      "desc": "电动阀",
+      "bbox": [
+        1121.0211026532602,
+        -199.965100593742,
+        1131.22110265326,
+        -180.514467361742
+      ],
+      "geom_id": "7fea32e47788dd42a82021a4ebc9751f0b47ab1c",
+      "geom_hash": "7fea32e47788dd42a82021a4ebc9751f0b47ab1c",
+      "phash": "f965f81fff700000",
+      "stats": {
+        "n_points": 104,
+        "n_primitives": 19,
+        "n_line": 8,
+        "n_arc": 0,
+        "n_circle": 11
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 2,
+      "ref_gid": 2,
+      "desc": "手动阀",
+      "bbox": [
+        1121.70983460357,
+        -170.476264180956,
+        1131.9098346035698,
+        -156.376264180956
+      ],
+      "geom_id": "f146035303a01a53ab9160e2b46679f7bf64e524",
+      "geom_hash": "f146035303a01a53ab9160e2b46679f7bf64e524",
+      "phash": "f08dfe0ffff00000",
+      "stats": {
+        "n_points": 96,
+        "n_primitives": 18,
+        "n_line": 8,
+        "n_arc": 0,
+        "n_circle": 10
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 3,
+      "ref_gid": 3,
+      "desc": "余压阀",
+      "bbox": [
+        1121.84377126989,
+        -238.029613404506,
+        1133.29377126989,
+        -220.329613404506
+      ],
+      "geom_id": "fc035a3178fbe1229caec5d238d98bad9fb86529",
+      "geom_hash": "fc035a3178fbe1229caec5d238d98bad9fb86529",
+      "phash": "f8fdf807ffe00000",
+      "stats": {
+        "n_points": 102,
+        "n_primitives": 21,
+        "n_line": 11,
+        "n_arc": 0,
+        "n_circle": 10
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 4,
+      "ref_gid": 4,
+      "desc": "排烟阀",
+      "bbox": [
+        1123.13793121862,
+        -303.248751727469,
+        1136.7642975025299,
+        -283.204773464996
+      ],
+      "geom_id": "a5844adf7ba80b54b625f65c995c522ae202f7a2",
+      "geom_hash": "a5844adf7ba80b54b625f65c995c522ae202f7a2",
+      "phash": "7dbff03fd2780000",
+      "stats": {
+        "n_points": 118,
+        "n_primitives": 23,
+        "n_line": 11,
+        "n_arc": 0,
+        "n_circle": 12
+      },
+      "text_sig": "E"
+    },
+    {
+      "gid": 5,
+      "ref_gid": 5,
+      "desc": "防火阀",
+      "bbox": [
+        1123.52733511881,
+        -274.849276457406,
+        1137.15370140272,
+        -254.805298194934
+      ],
+      "geom_id": "a5844adf7ba80b54b625f65c995c522ae202f7a2",
+      "geom_hash": "a5844adf7ba80b54b625f65c995c522ae202f7a2",
+      "phash": "7dbff03fd2780000",
+      "stats": {
+        "n_points": 118,
+        "n_primitives": 23,
+        "n_line": 11,
+        "n_arc": 0,
+        "n_circle": 12
+      },
+      "text_sig": "F"
+    },
+    {
+      "gid": 8,
+      "ref_gid": 8,
+      "desc": "排烟阀",
+      "bbox": [
+        1144.86296034594,
+        -304.165904921023,
+        1155.0629641497899,
+        -288.9659020681379
+      ],
+      "geom_id": "42f91f3b97bb60bc04415ae36ed9ac390d2d3488",
+      "geom_hash": "42f91f3b97bb60bc04415ae36ed9ac390d2d3488",
+      "phash": "e131fc3ffbf02000",
+      "stats": {
+        "n_points": 94,
+        "n_primitives": 17,
+        "n_line": 7,
+        "n_arc": 0,
+        "n_circle": 10
+      },
+      "text_sig": "E"
+    },
+    {
+      "gid": 9,
+      "ref_gid": 9,
+      "desc": "防火阀",
+      "bbox": [
+        1145.2523642461401,
+        -275.76642965096005,
+        1155.45236804998,
+        -260.56642679807595
+      ],
+      "geom_id": "42f91f3b97bb60bc04415ae36ed9ac390d2d3488",
+      "geom_hash": "42f91f3b97bb60bc04415ae36ed9ac390d2d3488",
+      "phash": "e131fc3ffbf02000",
+      "stats": {
+        "n_points": 94,
+        "n_primitives": 17,
+        "n_line": 7,
+        "n_arc": 0,
+        "n_circle": 10
+      },
+      "text_sig": "F"
+    },
+    {
+      "gid": 12,
+      "ref_gid": 12,
+      "desc": "风口",
+      "bbox": [
+        1163.252341252832,
+        -567.92046778572,
+        1193.09662486133,
+        -552.7204658837967
+      ],
+      "geom_id": "d3740cdb5e15343a3eff0fc470ba24a0bead580a",
+      "geom_hash": "d3740cdb5e15343a3eff0fc470ba24a0bead580a",
+      "phash": "1dff11bde7246400",
+      "stats": {
+        "n_points": 140,
+        "n_primitives": 70,
+        "n_line": 70,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 13,
+      "ref_gid": 13,
+      "desc": "分体柜机",
+      "bbox": [
+        1254.04237764713,
+        -297.8009959609,
+        1274.4699556871099,
+        -241.967182992635
+      ],
+      "geom_id": "38f8a4bd4d762f74d65bba0f5f1288ba8b020d33",
+      "geom_hash": "38f8a4bd4d762f74d65bba0f5f1288ba8b020d33",
+      "phash": "1271819abe6ece86",
+      "stats": {
+        "n_points": 36,
+        "n_primitives": 18,
+        "n_line": 18,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 14,
+      "ref_gid": 14,
+      "desc": "电暖风机",
+      "bbox": [
+        1256.8728909260558,
+        -619.726394657467,
+        1321.4329447282298,
+        -593.1734615690918
+      ],
+      "geom_id": "e40cd73dc837cf85077ff5c578749bcd683b8a60",
+      "geom_hash": "e40cd73dc837cf85077ff5c578749bcd683b8a60",
+      "phash": "ff9f5ff7f0000000",
+      "stats": {
+        "n_points": 246,
+        "n_primitives": 105,
+        "n_line": 98,
+        "n_arc": 6,
+        "n_circle": 1
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 15,
+      "ref_gid": 15,
+      "desc": "加湿器",
+      "bbox": [
+        1261.2395506846622,
+        -686.7830642944722,
+        1292.68955070669,
+        -676.5830630265235
+      ],
+      "geom_id": "931765188e4a1c3287df01318c98cb44ad075736",
+      "geom_hash": "931765188e4a1c3287df01318c98cb44ad075736",
+      "phash": "dfd787bf7e000000",
+      "stats": {
+        "n_points": 66,
+        "n_primitives": 27,
+        "n_line": 25,
+        "n_arc": 0,
+        "n_circle": 2
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 16,
+      "ref_gid": 16,
+      "desc": "热管",
+      "bbox": [
+        1262.0190737566602,
+        -227.23601096582598,
+        1275.9537217754798,
+        -216.584686495238
+      ],
+      "geom_id": "c3d4aa505222aaeb727a06024bb755e626a5c943",
+      "geom_hash": "c3d4aa505222aaeb727a06024bb755e626a5c943",
+      "phash": "007d924da7dff900",
+      "stats": {
+        "n_points": 80,
+        "n_primitives": 40,
+        "n_line": 40,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 17,
+      "ref_gid": 17,
+      "desc": "安全壳隔离阀",
+      "bbox": [
+        1262.76406618849,
+        -170.239319173023,
+        1273.9640661884898,
+        -157.85049955148202
+      ],
+      "geom_id": "2accb093f3b53e143a74b137503f67f1e34f294d",
+      "geom_hash": "2accb093f3b53e143a74b137503f67f1e34f294d",
+      "phash": "7ff38c3fd1b08000",
+      "stats": {
+        "n_points": 22,
+        "n_primitives": 8,
+        "n_line": 7,
+        "n_arc": 0,
+        "n_circle": 1
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 18,
+      "ref_gid": 18,
+      "desc": "新、排风口",
+      "bbox": [
+        1265.39560869355,
+        -197.493887415764,
+        1271.7719831740799,
+        -185.773887415763
+      ],
+      "geom_id": "350414bd8c2fb65b0d2d48368b6b2502b0f2f54c",
+      "geom_hash": "350414bd8c2fb65b0d2d48368b6b2502b0f2f54c",
+      "phash": "3ef5277def900000",
+      "stats": {
+        "n_points": 80,
+        "n_primitives": 40,
+        "n_line": 40,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 19,
+      "ref_gid": 19,
+      "desc": "风机",
+      "bbox": [
+        1267.0117612690017,
+        -499.1617569196631,
+        1282.2117612690017,
+        -483.96175691966306
+      ],
+      "geom_id": "23164174596fd8781b3dc5574ab8629a1371fd4b",
+      "geom_hash": "23164174596fd8781b3dc5574ab8629a1371fd4b",
+      "phash": "d5e126f5bffa0000",
+      "stats": {
+        "n_points": 60,
+        "n_primitives": 12,
+        "n_line": 5,
+        "n_arc": 6,
+        "n_circle": 1
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 20,
+      "ref_gid": 20,
+      "desc": "消声器",
+      "bbox": [
+        1269.8665922208402,
+        -665.5478225739489,
+        1285.06659222084,
+        -655.3478225739489
+      ],
+      "geom_id": "8ad3310b89f60371a5517a1b422871b5529f2a3d",
+      "geom_hash": "8ad3310b89f60371a5517a1b422871b5529f2a3d",
+      "phash": "8261804491348102",
+      "stats": {
+        "n_points": 14,
+        "n_primitives": 7,
+        "n_line": 7,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 21,
+      "ref_gid": 21,
+      "desc": "碘吸附器",
+      "bbox": [
+        1269.9405422367868,
+        -644.205534550141,
+        1286.807208903453,
+        -634.005534550141
+      ],
+      "geom_id": "ea1ff65588614d8574ed3747ccbf8d2fd6bcc0f7",
+      "geom_hash": "ea1ff65588614d8574ed3747ccbf8d2fd6bcc0f7",
+      "phash": "00d188d8aaf4ea41",
+      "stats": {
+        "n_points": 24,
+        "n_primitives": 12,
+        "n_line": 12,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 22,
+      "ref_gid": 22,
+      "desc": "电加热器在线",
+      "bbox": [
+        1270.84746424046,
+        -587.880265696092,
+        1281.04746424046,
+        -572.3810436916709
+      ],
+      "geom_id": "674a820dd75152c46252688d087a7ccbd76fca27",
+      "geom_hash": "674a820dd75152c46252688d087a7ccbd76fca27",
+      "phash": "3071861ce67a0900",
+      "stats": {
+        "n_points": 32,
+        "n_primitives": 16,
+        "n_line": 16,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    },
+    {
+      "gid": 23,
+      "ref_gid": 23,
+      "desc": "高效过滤器",
+      "bbox": [
+        1272.30147062335,
+        -541.2244281483829,
+        1272.5014706233499,
+        -537.92904098288
+      ],
+      "geom_id": "c40bff43521814c3d31ae2b7109037b96b4a3cf6",
+      "geom_hash": "c40bff43521814c3d31ae2b7109037b96b4a3cf6",
+      "phash": "0001000000000001",
+      "stats": {
+        "n_points": 2,
+        "n_primitives": 1,
+        "n_line": 1,
+        "n_arc": 0,
+        "n_circle": 0
+      },
+      "text_sig": ""
+    }
+  ]
+}

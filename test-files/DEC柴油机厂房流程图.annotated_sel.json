@@ -1,0 +1,134 @@
+{
+  "input": "/Volumes/DPC/work/cad-code/ACadSharp/test-files/DEC柴油机厂房流程图.dxf",
+  "output": "/Volumes/DPC/work/cad-code/ACadSharp/test-files/DEC柴油机厂房流程图.annotated_sel.dxf",
+  "lib_dir": "/Volumes/DPC/work/cad-code/ACadSharp/test-files/symbol_lib_pc2",
+  "base_point": "center",
+  "symbol_filter": {
+    "include_symbol": [
+      "余压阀",
+      "分体柜机",
+      "安全壳隔离阀",
+      "手动阀",
+      "排烟阀",
+      "新_排风口",
+      "热管",
+      "电动阀",
+      "防火阀"
+    ],
+    "include_regex": [],
+    "exclude_symbol": [],
+    "exclude_regex": []
+  },
+  "pipe_filter": {
+    "enabled": true,
+    "median": 2.7266666666700132,
+    "quantile": 0.995,
+    "q_value": 26.933952372094,
+    "auto_threshold": 68.16666666675033,
+    "threshold": 12.0,
+    "removed": 61
+  },
+  "clusters_total": 61,
+  "replacements": [
+    {
+      "symbol": "新_排风口",
+      "coarse_score": 59.0,
+      "chamfer": 0.011682738068482766,
+      "similarity": 0.8052876988586206,
+      "angle_deg": 0.0,
+      "scale": 0.9999999999999136,
+      "insert_point": [
+        223.663913283413,
+        255.876861700819
+      ],
+      "bbox": [
+        220.605084328242,
+        250.116861700819,
+        226.722742238584,
+        261.636861700819
+      ],
+      "entity_count": 46,
+      "flat_entity_count": 46
+    },
+    {
+      "symbol": "新_排风口",
+      "coarse_score": 59.0,
+      "chamfer": 0.011682738068486177,
+      "similarity": 0.8052876988585638,
+      "angle_deg": 180.0,
+      "scale": 1.0,
+      "insert_point": [
+        584.9298714954971,
+        190.4897462136015
+      ],
+      "bbox": [
+        581.871042540327,
+        184.729746213601,
+        587.988700450667,
+        196.249746213602
+      ],
+      "entity_count": 46,
+      "flat_entity_count": 46
+    },
+    {
+      "symbol": "新_排风口",
+      "coarse_score": 59.0,
+      "chamfer": 0.011682738068453474,
+      "similarity": 0.8052876988591088,
+      "angle_deg": 0.0,
+      "scale": 0.9999999999999112,
+      "insert_point": [
+        223.6639132834115,
+        463.568615900224
+      ],
+      "bbox": [
+        220.605084328241,
+        457.808615900224,
+        226.722742238582,
+        469.328615900224
+      ],
+      "entity_count": 46,
+      "flat_entity_count": 46
+    },
+    {
+      "symbol": "安全壳隔离阀",
+      "coarse_score": 0.0,
+      "chamfer": 7.87574438090183e-06,
+      "similarity": 0.9998687375936517,
+      "angle_deg": 0.0,
+      "scale": 0.5918926438751354,
+      "insert_point": [
+        348.707086520165,
+        463.679711188051
+      ],
+      "bbox": [
+        348.707086520165,
+        461.885223848723,
+        348.707086520165,
+        465.474198527379
+      ],
+      "entity_count": 1,
+      "flat_entity_count": 1
+    },
+    {
+      "symbol": "安全壳隔离阀",
+      "coarse_score": 0.0,
+      "chamfer": 7.87574438090183e-06,
+      "similarity": 0.9998687375936517,
+      "angle_deg": 0.0,
+      "scale": 0.5918926438751354,
+      "insert_point": [
+        327.207412566362,
+        463.615213101824
+      ],
+      "bbox": [
+        327.207412566362,
+        461.820725762496,
+        327.207412566362,
+        465.409700441152
+      ],
+      "entity_count": 1,
+      "flat_entity_count": 1
+    }
+  ]
+}
