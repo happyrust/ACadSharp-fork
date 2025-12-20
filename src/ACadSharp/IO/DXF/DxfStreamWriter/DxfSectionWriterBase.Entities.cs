@@ -135,11 +135,12 @@ namespace ACadSharp.IO.DXF
 		{
 			switch (entity)
 			{
+				case UnknownEntity:
+					return false;
 				case Shape:
 					return this.Configuration.WriteShapes;
 				case ProxyEntity:
 				case TableEntity:
-				case UnknownEntity:
 				case Solid3D:
 				case CadBody:
 				case Region:
@@ -232,7 +233,11 @@ namespace ACadSharp.IO.DXF
 			this._writer.Write(282, image.Contrast, map);
 			this._writer.Write(283, image.Fade, map);
 
-			//this._writer.WriteHandle(360, image.DefinitionReactor, map);
+			if (image.DefinitionReactor != null)
+			{
+				this._writer.WriteHandle(360, image.DefinitionReactor, map);
+				this.Holder.Objects.Enqueue(image.DefinitionReactor);
+			}
 
 			this._writer.Write(71, (short)image.ClipType, map);
 
