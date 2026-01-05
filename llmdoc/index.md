@@ -15,11 +15,11 @@
 | 类别 | 数量 | 描述 |
 |------|------|------|
 | Overview（概述） | 2 | 项目和对象模型的高级介绍 |
-| Architecture（架构） | 7 | 系统组件、执行流和数据结构 |
+| Architecture（架构） | 8 | 系统组件、执行流和数据结构 |
 | Guides（指南） | 9 | 任务导向的操作说明 |
 | Reference（参考） | 4 | 约定、配置和兼容性查阅 |
-| Agent Reports（代理报告） | 5 | 深度侦察和分析文档 |
-| **总计** | **27** | **完整文档集** |
+| Agent Reports（代理报告） | 9 | 深度侦察和分析文档 |
+| **总计** | **28** | **完整文档集** |
 
 ---
 
@@ -178,6 +178,23 @@
   - `src/ACadSharp/Entities/Insert.cs`
 
 - **适用场景**：需要创建块、插入块引用、操作块属性的开发者
+
+#### `architecture/dwg-migration-strategy.md`
+
+- **核心内容**：
+  - ACadSharp DWG 功能到 zcad-rs 的系统性移植架构策略
+  - 架构映射关系和核心组件移植计划
+  - 分阶段实施路线图（4个阶段，17-24周）
+  - Rust 特定的内存管理、错误处理和性能优化策略
+  - 测试驱动的质量保证体系
+
+- **关键代码位置**：
+  - `src/ACadSharp/IO/DWG/DwgReader.cs` (DWG 读取主入口)
+  - `src/ACadSharp/IO/DWG/DwgWriter.cs` (DWG 写入主入口)
+  - `/Volumes/DPC/work/cad-code/zcadvelecAI/zcad-rs/zcad-io/src/dwg/mod.rs` (目标实现)
+  - 相关代理报告：`agent/scout-dwg-functionality-analysis.md`、`agent/dwg-to-rust-migration-plan.md`
+
+- **适用场景**：参与 DWG 功能移植的开发者、架构设计决策者、技术评估人员
 
 ---
 
@@ -384,6 +401,22 @@
 
 - **内容**：测试框架和示例代码的侦察，包括如何运行测试、测试覆盖的功能
 
+#### `agent/scout-dwg-functionality-analysis.md`
+
+- **内容**：ACadSharp DWG 读写功能的深度分析，包括核心组件映射、压缩算法、版本处理和测试策略
+
+#### `agent/scout-zcad-rs-analysis.md`
+
+- **内容**：zcad-rs 项目现状评估，包括架构分析、已实现功能、与 ACadSharp 的技术差距对比
+
+#### `agent/dwg-to-rust-migration-plan.md`
+
+- **内容**：DWG 功能移植的详细实施计划，包括 4 阶段开发路线图、技术挑战解决方案和风险评估
+
+#### `agent/dwg-to-rust-migration-summary.md`
+
+- **内容**：DWG 移植计划的执行摘要，包括核心差距分析、技术策略和关键成功指标
+
 ---
 
 ## 4. 快速导航
@@ -456,6 +489,13 @@
 2. **版本选择**：查看 `reference/supported-cad-versions.md`
 3. **转换示例**：在写入指南中查找"DXF 到 DWG 转换"部分
 
+### 4.11 "我想了解 DWG 功能移植到 Rust 的计划..."
+
+1. **架构策略**：阅读 `architecture/dwg-migration-strategy.md`
+2. **技术分析**：参考 `agent/scout-dwg-functionality-analysis.md` 和 `agent/scout-zcad-rs-analysis.md`
+3. **实施计划**：查看 `agent/dwg-to-rust-migration-plan.md`
+4. **执行摘要**：参考 `agent/dwg-to-rust-migration-summary.md`
+
 ---
 
 ## 5. 文档内部链接
@@ -474,7 +514,8 @@ Architecture
 ├─ dxf-codes-and-tokens.md (核心参考)
 ├─ object-hierarchy.md (引用 entity-types 和 tables)
 ├─ tables-system.md (引用 object-hierarchy)
-└─ blocks-system.md (引用 entity-types 和 tables)
+├─ blocks-system.md (引用 entity-types 和 tables)
+└─ dwg-migration-strategy.md (引用 agent 报告和 io-system)
 
 Guides
 ├─ how-to-read-cad-files.md (引用 io-system 和 entity-types)
@@ -498,7 +539,11 @@ Agent Reports
 ├─ scout-entity-model.md (详细的 entity-types)
 ├─ scout-tables-blocks.md (详细的 tables + blocks)
 ├─ scout-code-structure.md (项目级别的代码映射)
-└─ scout-testing-examples.md (测试和示例)
+├─ scout-testing-examples.md (测试和示例)
+├─ scout-dwg-functionality-analysis.md (ACadSharp DWG 功能深度分析)
+├─ scout-zcad-rs-analysis.md (zcad-rs 项目现状评估)
+├─ dwg-to-rust-migration-plan.md (DWG 移植详细实施计划)
+└─ dwg-to-rust-migration-summary.md (DWG 移植执行摘要)
 ```
 
 ---
@@ -516,12 +561,12 @@ Agent Reports
 
 | 指标 | 值 |
 |------|-----|
-| 总文档数 | 27 |
-| 总行数（估计） | ~15,000+ |
-| 代码位置引用 | 200+ |
-| 示例代码片段 | 150+ |
-| 快速导航场景 | 10+ |
-| 跨文档链接 | 60+ |
+| 总文档数 | 32 |
+| 总行数（估计） | ~18,000+ |
+| 代码位置引用 | 250+ |
+| 示例代码片段 | 180+ |
+| 快速导航场景 | 12+ |
+| 跨文档链接 | 80+ |
 
 ---
 
@@ -557,6 +602,6 @@ Agent Reports
 
 ---
 
-**最后更新**：2025-12-14
-**文档版本**：1.1（完整索引）
+**最后更新**：2026-01-02
+**文档版本**：1.2（包含 DWG 移植策略）
 **项目版本**：ACadSharp 3.3.13
