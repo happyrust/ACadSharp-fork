@@ -14,41 +14,130 @@ namespace ACadSharp.LegendAnalysis
         /// Raw clusters from connectivity phase (before identification/merge) for debugging.
         /// </summary>
         public List<LegendCandidate> RawClusters { get; private set; } = new List<LegendCandidate>();
+        public List<LegendGroup> Groups { get; private set; } = new List<LegendGroup>();
 
-        public void Run(IEnumerable<Entity> entities)
+        public void RunNew(IEnumerable<Entity> entities)
         {
             var allEntities = entities.ToList();
 
-            // 1. Filter: Only Green entities (effective color)
-            var greenEntities = allEntities.Where(IsGreen).ToList();
+            // 1. Calculate Grid/Frame extent
+            var totalBox = GetBoundingBox(allEntities);
+            double totalW = totalBox.Max.X - totalBox.Min.X;
+            double totalH = totalBox.Max.Y - totalBox.Min.Y;
             
-            // 2. Cluster
-            // Tolerance 0.1 (Strict) with Point-on-Circle logic
-            Candidates = ClusterEntities(greenEntities, 0.1);
+            // 2. Filter Grid Lines (Long Horizontal/Vertical lines)
+            // Remove anything > 50% of total dimension
+            double maxLenW = totalW * 0.5;
+            double maxLenH = totalH * 0.5;
             
-            // Save raw clusters for debugging visualization
-            RawClusters = Candidates.Select(c => new LegendCandidate
+            // Also enforce absolute max (e.g. 2000) just in case
+            maxLenW = Math.Min(maxLenW, 2000.0);
+            maxLenH = Math.Min(maxLenH, 2000.0);
+
+            var preFiltered = allEntities.Where(e =>
+            {
+                 var b = GetBoundingBox(e);
+                 double w = b.Max.X - b.Min.X;
+                 double h = b.Max.Y - b.Min.Y;
+                 if (w > maxLenW || h > maxLenH) return false;
+                 
+                 // Noise filter
+                 if (e is Line l && Distance(l.StartPoint, l.EndPoint) < 3.0) return false;
+                 if (e is Circle c && c.Radius * 2.0 < 3.0) return false;
+                 
+                 return true;
+            }).ToList();
+
+            // 3. Cluster by Bounding Box (Proximity)
+            // Use strict tolerance.
+            var rawClusters = ClusterByBoundingBoxes(preFiltered, 5.0);
+            
+            // Set RawClusters for debug
+            RawClusters = rawClusters.Select(c => new LegendCandidate
             {
                 Entities = c.Entities,
                 BoundingBox = c.BoundingBox
             }).ToList();
+            
+            Candidates = rawClusters;
 
-            // 3. Merge clusters by anchor containment/top proximity
-            Candidates = MergeClustersByAnchorProximity(Candidates);
-
-            // 4. Attach nearby text context (all colors)
+            // 4. Attach Context (Labels)
             AttachContextEntities(Candidates, allEntities);
 
-            // 5. Identify each cluster
+            // 5. Identification
+            int candidateIndex = 1;
             foreach (var candidate in Candidates)
             {
-                candidate.DetectedType = IdentifyLegend(candidate);
+                candidate.DetectedType = IdentifyLegendNew(candidate);
+                candidate.Index = candidateIndex++;
             }
 
-            // 6. Post-process: Merge adjacent candidates of the same type
-            // This handles cases where a legend is fragmented into multiple clusters
-            // Tolerance 3.0: merge only tightly connected fragments
-            Candidates = MergeSameTypeCandidates(Candidates, 3.0);
+            // 6. Grouping
+            Groups = GroupCandidatesByProximity(Candidates, 5.0);
+        }
+
+        private List<LegendGroup> GroupCandidatesByProximity(List<LegendCandidate> candidates, double tolerance)
+        {
+            int n = candidates.Count;
+            if (n == 0) return new List<LegendGroup>();
+
+            int[] parent = new int[n];
+            for (int i = 0; i < n; i++) parent[i] = i;
+
+            int Find(int x)
+            {
+                if (parent[x] != x) parent[x] = Find(parent[x]);
+                return parent[x];
+            }
+            void Unite(int x, int y)
+            {
+                int px = Find(x), py = Find(y);
+                if (px != py) parent[px] = py;
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                var bi = candidates[i].BoundingBox;
+                for (int j = i + 1; j < n; j++)
+                {
+                    var bj = candidates[j].BoundingBox;
+                    if (Intersects(bi, bj) || BoxesAreNear(bi, bj, tolerance) ||
+                        IsBoxInside(bi, bj, tolerance) || IsBoxInside(bj, bi, tolerance))
+                    {
+                        Unite(i, j);
+                    }
+                }
+            }
+
+            var groupMap = new Dictionary<int, List<int>>();
+            for (int i = 0; i < n; i++)
+            {
+                int r = Find(i);
+                if (!groupMap.ContainsKey(r)) groupMap[r] = new List<int>();
+                groupMap[r].Add(i);
+            }
+
+            var result = new List<LegendGroup>();
+            int groupIndex = 1;
+            foreach (var indices in groupMap.Values)
+            {
+                var members = indices.Select(idx => candidates[idx]).ToList();
+                var combinedBox = GetBoundingBox(members.SelectMany(m => m.Entities).ToList());
+                result.Add(new LegendGroup
+                {
+                    Index = groupIndex++,
+                    Members = members,
+                    BoundingBox = combinedBox
+                });
+            }
+
+            return result;
+        }
+
+        public void Run(IEnumerable<Entity> entities)
+        {
+            // Redirect to New Logic
+            RunNew(entities);
         }
 
         /// <summary>
@@ -179,7 +268,8 @@ namespace ACadSharp.LegendAnalysis
                 {
                     if (i == j) continue;
                     if (Find(i) == Find(j)) continue;
-                    var otherBox = candidates[j].BoundingBox;
+                    if (rectBoxes[j] == null) continue;
+                    var otherBox = rectBoxes[j]!.Value;
 
                     if (IsBoxInside(rectBox, otherBox, containmentTol) ||
                         IsTopAdjacent(rectBox, otherBox, topGap, sideTol))
@@ -274,6 +364,242 @@ namespace ACadSharp.LegendAnalysis
             }
             return color.Index == 3;
         }
+
+        private bool IsGreenOrNearGreen(Entity e)
+        {
+            var color = e.GetActiveColor();
+            if (color.IsTrueColor)
+            {
+                int idx = color.GetApproxIndex();
+                return idx == 3 || idx == 2 || idx == 4;
+            }
+            return color.Index == 3 || color.Index == 2 || color.Index == 4;
+        }
+
+        private List<Entity> FilterNoiseAndFrames(List<Entity> entities, double maxDimension)
+        {
+             return entities.Where(e =>
+            {
+                // Check Size
+                var b = GetBoundingBox(e);
+                double w = b.Max.X - b.Min.X;
+                double h = b.Max.Y - b.Min.Y;
+                if (w > maxDimension || h > maxDimension) return false;
+
+                switch (e)
+                {
+                    case Line l:
+                        return Distance(l.StartPoint, l.EndPoint) > 3.0;
+                    case Circle c:
+                        return c.Radius * 2.0 > 3.0;
+                    case LwPolyline p:
+                        return p.Vertices.Count >= 2;
+                    default:
+                        return true;
+                }
+            }).ToList();
+        }
+
+        private List<Entity> FilterNoise(List<Entity> entities)
+        {
+            return FilterNoiseAndFrames(entities, double.MaxValue);
+        }
+
+		private enum ShapeKind { Rect, Triangle, Circle }
+
+		private class ShapeFeature
+		{
+			public ShapeKind Kind { get; set; }
+			public BoundingBox Box { get; set; }
+			public HashSet<Entity> Entities { get; set; } = new HashSet<Entity>();
+		}
+
+		private List<ShapeFeature> ExtractShapeFeatures(IEnumerable<Entity> entities)
+		{
+			var shapes = new List<ShapeFeature>();
+			double minSize = 3.0;
+			double maxSize = 50000.0;
+
+            foreach (var c in entities.OfType<Circle>())
+            {
+                double d = c.Radius * 2.0;
+                if (d < minSize || d > maxSize) continue;
+                var box = new BoundingBox(
+                    new XYZ(c.Center.X - c.Radius, c.Center.Y - c.Radius, 0),
+                    new XYZ(c.Center.X + c.Radius, c.Center.Y + c.Radius, 0));
+                shapes.Add(new ShapeFeature { Kind = ShapeKind.Circle, Box = box, Entities = new HashSet<Entity> { c } });
+            }
+
+            foreach (var pl in entities.OfType<LwPolyline>().Where(p => p.IsClosed))
+            {
+                var box = GetBoundingBox(pl);
+                double w = box.Max.X - box.Min.X;
+                double h = box.Max.Y - box.Min.Y;
+                double diag = Math.Sqrt(w * w + h * h);
+                if (w < minSize || h < minSize || diag > maxSize) continue;
+
+                if (IsRectanglePolyline(pl))
+                {
+                    shapes.Add(new ShapeFeature { Kind = ShapeKind.Rect, Box = box, Entities = new HashSet<Entity> { pl } });
+                    continue;
+                }
+
+                if (pl.Vertices.Count == 3)
+                {
+                    shapes.Add(new ShapeFeature { Kind = ShapeKind.Triangle, Box = box, Entities = new HashSet<Entity> { pl } });
+                }
+            }
+
+			return shapes;
+		}
+
+		// BBOX 聚类：基于实体 BBOX 的相交/贴近/包含合并
+        private List<LegendCandidate> ClusterByBoundingBoxes(List<Entity> entities, double fixedTolerance)
+        {
+            var boxes = new List<(BoundingBox box, Entity ent)>();
+            foreach (var e in entities)
+            {
+                var b = GetBoundingBox(e);
+                if (b.Max.X < b.Min.X || b.Max.Y < b.Min.Y) continue;
+                double w = b.Max.X - b.Min.X;
+                double h = b.Max.Y - b.Min.Y;
+                if (w < 1.0 && h < 1.0) continue;
+                boxes.Add((b, e));
+            }
+
+            int n = boxes.Count;
+            if (n == 0) return new List<LegendCandidate>();
+
+            int[] parent = new int[n];
+            for (int i = 0; i < n; i++) parent[i] = i;
+
+            int Find(int x)
+            {
+                if (parent[x] != x) parent[x] = Find(parent[x]);
+                return parent[x];
+            }
+            void Unite(int x, int y)
+            {
+                int px = Find(x), py = Find(y);
+                if (px != py) parent[px] = py;
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                var a = boxes[i].box;
+                for (int j = i + 1; j < n; j++)
+                {
+                    var b = boxes[j].box;
+                    if (Intersects(a, b) || BoxesAreNear(a, b, fixedTolerance) ||
+                        IsBoxInside(a, b, fixedTolerance) || IsBoxInside(b, a, fixedTolerance))
+                    {
+                        Unite(i, j);
+                    }
+                }
+            }
+
+            var groups = new Dictionary<int, List<int>>();
+            for (int i = 0; i < n; i++)
+            {
+                int r = Find(i);
+                if (!groups.ContainsKey(r)) groups[r] = new List<int>();
+                groups[r].Add(i);
+            }
+
+            var result = new List<LegendCandidate>();
+            foreach (var g in groups.Values)
+            {
+                var ents = new HashSet<Entity>();
+                foreach (var idx in g)
+                {
+                    ents.Add(boxes[idx].ent);
+                }
+                var box = GetBoundingBox(ents.ToList());
+                result.Add(new LegendCandidate
+                {
+                    Entities = ents.ToList(),
+                    BoundingBox = box
+                });
+            }
+
+            return result;
+        }
+
+		private List<LegendCandidate> ClusterByBoundingBoxes(List<Entity> entities)
+		{
+			var boxes = new List<(BoundingBox box, Entity ent)>();
+			foreach (var e in entities)
+			{
+				var b = GetBoundingBox(e);
+				if (b.Max.X < b.Min.X || b.Max.Y < b.Min.Y) continue;
+				double w = b.Max.X - b.Min.X;
+				double h = b.Max.Y - b.Min.Y;
+				if (w < 1.0 && h < 1.0) continue;
+				boxes.Add((b, e));
+			}
+
+			int n = boxes.Count;
+			if (n == 0) return new List<LegendCandidate>();
+
+			int[] parent = new int[n];
+			for (int i = 0; i < n; i++) parent[i] = i;
+
+			int Find(int x)
+			{
+				if (parent[x] != x) parent[x] = Find(parent[x]);
+				return parent[x];
+			}
+			void Unite(int x, int y)
+			{
+				int px = Find(x), py = Find(y);
+				if (px != py) parent[px] = py;
+			}
+
+			for (int i = 0; i < n; i++)
+			{
+				var a = boxes[i].box;
+				double minDimA = Math.Min(a.Max.X - a.Min.X, a.Max.Y - a.Min.Y);
+				double tolA = Math.Min(Math.Max(minDimA * 0.2, 1.0), 20.0);
+				for (int j = i + 1; j < n; j++)
+				{
+					var b = boxes[j].box;
+					double minDimB = Math.Min(b.Max.X - b.Min.X, b.Max.Y - b.Min.Y);
+					double tol = Math.Min(Math.Max(Math.Min(minDimA, minDimB) * 0.2, 1.0), 20.0);
+
+					if (Intersects(a, b) || BoxesAreNear(a, b, tol) ||
+						IsBoxInside(a, b, tol) || IsBoxInside(b, a, tol))
+					{
+						Unite(i, j);
+					}
+				}
+			}
+
+			var groups = new Dictionary<int, List<int>>();
+			for (int i = 0; i < n; i++)
+			{
+				int r = Find(i);
+				if (!groups.ContainsKey(r)) groups[r] = new List<int>();
+				groups[r].Add(i);
+			}
+
+			var result = new List<LegendCandidate>();
+			foreach (var g in groups.Values)
+			{
+				var ents = new HashSet<Entity>();
+				foreach (var idx in g)
+				{
+					ents.Add(boxes[idx].ent);
+				}
+				var box = GetBoundingBox(ents.ToList());
+				result.Add(new LegendCandidate
+				{
+					Entities = ents.ToList(),
+					BoundingBox = box
+				});
+			}
+
+			return result;
+		}
 
         private List<LegendCandidate> ClusterEntities(IEnumerable<Entity> entities, double tolerance = 0.1)
         {
@@ -432,61 +758,214 @@ namespace ACadSharp.LegendAnalysis
             return candidate.Entities;
         }
 
-        private LegendType IdentifyLegend(LegendCandidate candidate)
+        private LegendType IdentifyLegendNew(LegendCandidate candidate)
         {
             var contextEntities = GetContextEntities(candidate);
             var rect = FindMainRectangle(candidate);
             candidate.AnchorRect = rect;
 
+            var bbox = rect != null ? GetBoundingBox(rect) : candidate.BoundingBox;
+            string text = GetTextInZone(contextEntities, bbox, Zone.Center);
+            
+            // 0. Check Block Names (Inserts)
+            foreach (var ent in candidate.Entities.OfType<Insert>())
+            {
+                string blkName = ent.Block.Name.ToUpper();
+                if (blkName.Contains("GQ") || blkName.Contains("FAN")) return LegendType.Fan;
+                if (blkName.Contains("GZ") || blkName.Contains("COOLING")) return LegendType.DirectCoolingUnit;
+                if (blkName.Contains("SPLIT")) return LegendType.SplitUnit;
+            }
+
+            // 1. Check Fan (No Rect)
             if (rect == null)
             {
-                if (IsLimitSwitch(candidate)) return LegendType.LimitSwitch;
-                return LegendType.Unknown;
+                if (IsFan(candidate.Entities, candidate.BoundingBox)) return LegendType.Fan;
             }
 
-            var bbox = GetBoundingBox(rect);
-            double w = bbox.Max.X - bbox.Min.X;
-            double h = bbox.Max.Y - bbox.Min.Y;
-            if (h == 0) h = 0.001;
-            double ratio = Math.Max(w, h) / Math.Min(w, h);
+            // 2. Check Split Unit (Two Rects linked)
+            if (IsSplitUnit(candidate)) return LegendType.SplitUnit;
 
-            string text = GetTextInZone(contextEntities, bbox, Zone.Center);
-            bool hasHatch = candidate.Entities.Any(e => e is Hatch);
-            bool hasDiagonal = HasDiagonalInRect(candidate.Entities, bbox);
-            bool hasWShape = HasWShapeInRect(candidate.Entities, bbox);
-
-            if (ratio > 2.5) // Narrow
+            // 3. Rect based
+            if (rect != null)
             {
-                bool dense = hasHatch || HasManyLines(candidate.Entities);
-                if (dense)
-                {
-                    var dir = CheckArrowDirection(candidate.Entities, bbox);
-                    if (dir == Direction.Inward) return LegendType.FreshAirLouver;
-                    if (dir == Direction.Outward) return LegendType.ExhaustLouver;
-                    return LegendType.FreshAirLouver; // Fallback
-                }
-            }
-            else // Square
-            {
+                var ents = candidate.Entities;
+                // Pre-calculate expensive checks
+                bool hasFan = HasFanInRect(ents, bbox);
+                bool hasW = HasWShapeInRect(ents, bbox);
+                bool hasM = text.Contains("M") || HasMShapeInRect(ents, bbox);
+                
+                if ((hasFan || HasAnyCircleInRect(ents, bbox)) && hasM) return LegendType.DirectCoolingUnit;
+                if (hasFan && hasW) return LegendType.CoolingUnit; // Simplified check
+                
+                if (TryDetectUnit(candidate, bbox, text, out var unitType)) return unitType;
+                if (IsSilencer(candidate, bbox)) return LegendType.Silencer;
+                if (IsAirCurtain(candidate, bbox, contextEntities)) return LegendType.AirCurtain;
+                
+                // Existing Checks
+                bool hasDiagonal = HasDiagonalInRect(candidate.Entities, bbox);
+                bool hasWShape = HasWShapeInRect(candidate.Entities, bbox);
+                
                 if (text.Contains("F")) return LegendType.FireDamper;
                 if (text.Contains("E")) return LegendType.SmokeFireDamper;
 
                 var topFeature = AnalyzeZoneTop(contextEntities, bbox);
-                switch (topFeature)
+                if (topFeature == TopFeature.CircleM) return LegendType.ElectricIsolationValve;
+                if (topFeature == TopFeature.TShape) return LegendType.ManualIsolationValve;
+                if (topFeature == TopFeature.LShape) return LegendType.GravityReliefValve;
+                if (topFeature == TopFeature.Zigzag) return LegendType.BlastValve;
+
+                double w = bbox.Max.X - bbox.Min.X;
+                double h = bbox.Max.Y - bbox.Min.Y;
+                double ratio = w > 0 ? h / w : 1.0; 
+                if (w > h) ratio = w / h; // Just max/min ratio
+
+                if (ratio > 2.5)
                 {
-                    case TopFeature.CircleM: return LegendType.ElectricIsolationValve;
-                    case TopFeature.TShape: return LegendType.ManualIsolationValve;
-                    case TopFeature.LShape: return LegendType.GravityReliefValve;
-                    case TopFeature.Zigzag: return LegendType.BlastValve;
-                    case TopFeature.None: 
-                    default:
-                         if (hasWShape) return LegendType.BlastValve;
-                         if (hasDiagonal || HasManyLines(candidate.Entities)) return LegendType.CheckValve;
-                         return LegendType.Unknown;
+                     var dir = CheckArrowDirection(candidate.Entities, bbox);
+                     if (dir == Direction.Inward) return LegendType.FreshAirLouver;
+                     if (dir == Direction.Outward) return LegendType.ExhaustLouver;
+                     if (HasManyLines(candidate.Entities)) return LegendType.FreshAirLouver;
+                }
+                
+                if (hasWShape) return LegendType.BlastValve;
+                if (hasDiagonal) return LegendType.CheckValve;
+            }
+            
+            return LegendType.Unknown;
+        }
+
+        private bool IsFan(List<Entity> entities, BoundingBox box)
+        {
+            // Find a large circle
+            var circles = entities.OfType<Circle>().OrderByDescending(c => c.Radius).ToList();
+            if (!circles.Any()) return false;
+            
+            // 1. Precise Geometry Check
+            if (circles.Any(c => IsFanLike(c, entities))) return true;
+            
+            // 2. Heuristic Fallback: 1 Circle + >= 3 Lines + Size constraint
+            if (circles.Count == 1 && entities.OfType<Line>().Count() >= 3)
+            {
+                double w = box.Max.X - box.Min.X;
+                double h = box.Max.Y - box.Min.Y;
+                if (w > 5 && w < 50 && h > 5 && h < 50) return true;
+            }
+            
+            return false;
+        }
+
+        private bool HasFanInRect(IEnumerable<Entity> entities, BoundingBox rect)
+        {
+            double minDim = Math.Min(rect.Max.X - rect.Min.X, rect.Max.Y - rect.Min.Y);
+            double tol = Math.Min(Math.Max(minDim * 0.05, 1.0), 10.0);
+            
+            foreach (var c in entities.OfType<Circle>())
+            {
+                var cbox = new BoundingBox(
+                    new XYZ(c.Center.X - c.Radius, c.Center.Y - c.Radius, 0),
+                    new XYZ(c.Center.X + c.Radius, c.Center.Y + c.Radius, 0));
+                
+                if (!IsBoxInside(rect, cbox, tol)) continue;
+                if (IsFanLike(c, entities)) return true;
+            }
+            return false;
+        }
+
+        private bool HasAnyCircleInRect(IEnumerable<Entity> entities, BoundingBox rect)
+        {
+            return entities.OfType<Circle>().Any(c => IsInside(c.Center, rect));
+        }
+
+        private bool IsFanLike(Circle circle, IEnumerable<Entity> context)
+        {
+            double r = circle.Radius;
+            double centerTol = Math.Max(r * 0.4, 3.0); // 40% or 3.0 units
+            
+            int validLines = 0;
+            
+            foreach(var e in context)
+            {
+                if (e is Line l)
+                {
+                    // Relaxed containment: 1.8x radius (lines can stick out)
+                    bool startIn = Distance(l.StartPoint, circle.Center) <= r * 1.8;
+                    bool endIn = Distance(l.EndPoint, circle.Center) <= r * 1.8;
+                    
+                    if (startIn && endIn)
+                    {
+                        if (Distance(l.StartPoint, circle.Center) < centerTol || 
+                            Distance(l.EndPoint, circle.Center) < centerTol)
+                        {
+                            validLines++;
+                        }
+                        else if (DistToSegment(circle.Center, l.StartPoint, l.EndPoint) < centerTol)
+                        {
+                            validLines++;
+                        }
+                    }
                 }
             }
+            
+            return validLines >= 3;
+        }
 
-            return LegendType.Unknown;
+        private bool HasMShapeInRect(IEnumerable<Entity> entities, BoundingBox rect)
+        {
+             // 1. Try generic ZigZag (Polyline)
+             if (HasWShapeInRect(entities, rect)) return true;
+             
+             // 2. Try M made of lines (4 lines connected or close)
+             // Look for 2 vertical-ish lines and 2 diagonal lines?
+             var lines = entities.OfType<Line>().Where(l => IsInside(l.StartPoint, rect) && IsInside(l.EndPoint, rect)).ToList();
+             if (lines.Count < 4) return false;
+             
+             // Simple heuristic: 2 verticals + 2 diagonals
+             int verts = lines.Count(l => IsVertical(l));
+             int diags = lines.Count(l => !IsVertical(l) && !IsHorizontal(l));
+             
+             if (verts >= 2 && diags >= 2) return true;
+             
+             return false;
+        }
+        
+        private bool IsSplitUnit(LegendCandidate candidate)
+        {
+            var rects = GetRectangles(candidate).OrderByDescending(Area).ToList();
+            if (rects.Count < 2) return false;
+            
+            var r1 = rects[0];
+            var r2 = rects[1]; // Largest two
+            
+            // Check if connected by a line
+            // Or just check if they exist and are roughly aligned vertically
+            var b1 = GetBoundingBox(r1);
+            var b2 = GetBoundingBox(r2);
+            
+            // Look for lines that connect the two boxes
+            var lines = candidate.Entities.OfType<Line>();
+            foreach(var l in lines)
+            {
+                 bool touch1 = IsInside(l.StartPoint, ExpandBox(b1, 5.0)) || IsInside(l.EndPoint, ExpandBox(b1, 5.0));
+                 bool touch2 = IsInside(l.StartPoint, ExpandBox(b2, 5.0)) || IsInside(l.EndPoint, ExpandBox(b2, 5.0));
+                 if (touch1 && touch2) return true;
+            }
+            
+            // Check for polyline connection
+             var plines = candidate.Entities.OfType<LwPolyline>();
+             foreach(var p in plines)
+             {
+                 if (p == r1 || p == r2) continue;
+                 bool touch1 = p.Vertices.Any(v => IsInside(new XYZ(v.Location.X, v.Location.Y, 0), ExpandBox(b1, 5.0)));
+                 bool touch2 = p.Vertices.Any(v => IsInside(new XYZ(v.Location.X, v.Location.Y, 0), ExpandBox(b2, 5.0)));
+                 if (touch1 && touch2) return true;
+             }
+             
+             return false;
+        }
+
+        private LegendType IdentifyLegend(LegendCandidate candidate)
+        {
+             return IdentifyLegendNew(candidate);
         }
 
         private Entity? FindMainRectangle(LegendCandidate candidate)
@@ -501,7 +980,7 @@ namespace ACadSharp.LegendAnalysis
             
             // Priority 2: 4 connected Lines
             var lines = candidate.Entities.OfType<Line>().ToList();
-            if (lines.Count >= 4)
+            if (lines.Count >= 4 && lines.Count <= 200)
             {
                 var rect = TryFind4LineRectangle(lines);
                 if (rect != null) return rect;
@@ -718,7 +1197,7 @@ namespace ACadSharp.LegendAnalysis
             return minY >= rect.Max.Y - tolerance;
         }
 
-        private bool IsRectanglePolyline(LwPolyline p)
+        public bool IsRectanglePolyline(LwPolyline p)
         {
             if (!p.IsClosed || p.Vertices.Count < 4) return false;
             var b = GetBoundingBox(p);
@@ -792,8 +1271,432 @@ namespace ACadSharp.LegendAnalysis
             return false;
         }
         
+        private bool TryDetectUnit(LegendCandidate candidate, BoundingBox anchor, string centerText, out LegendType type)
+        {
+            type = LegendType.Unknown;
+            bool fan = HasFanInRect(candidate.Entities, anchor);
+            bool hasW = centerText.Contains("W") || HasWShapeInRect(candidate.Entities, anchor);
+            int diamonds = CountDiamondsInRect(candidate.Entities, anchor);
+            if (fan && hasW)
+            {
+                if (diamonds >= 2)
+                {
+                    type = LegendType.AirHandlingUnit;
+                    return true;
+                }
+                type = LegendType.CoolingUnit;
+                return true;
+            }
+            if (fan && diamonds >= 2)
+            {
+                type = LegendType.AirHandlingUnit;
+                return true;
+            }
+            return false;
+        }
+        
+
+
+        private int CountDiamondsInRect(IEnumerable<Entity> entities, BoundingBox rect)
+        {
+            int count = 0;
+            double tol = Math.Min(Math.Max(Math.Min(rect.Max.X - rect.Min.X, rect.Max.Y - rect.Min.Y) * 0.05, 1.0), 8.0);
+            foreach (var pl in entities.OfType<LwPolyline>())
+            {
+                if (!LooksLikeDiamond(pl, rect, tol)) continue;
+                count++;
+            }
+            return count;
+        }
+
+        private bool LooksLikeDiamond(LwPolyline pl, BoundingBox rect, double tol)
+        {
+            if (!pl.IsClosed || pl.Vertices.Count < 4) return false;
+            var b = GetBoundingBox(pl);
+            if (!IsBoxInside(rect, b, tol)) return false;
+            double w = b.Max.X - b.Min.X;
+            double h = b.Max.Y - b.Min.Y;
+            if (w <= 0 || h <= 0) return false;
+            double ratio = w / h;
+            if (ratio < 0.5 || ratio > 1.5) return false;
+            int diagEdges = 0;
+            int cnt = pl.Vertices.Count;
+            int segCount = pl.IsClosed ? cnt : cnt - 1;
+            double minDiag = Math.Min(w, h) * 0.25;
+            for (int i = 0; i < segCount; i++)
+            {
+                var p1 = pl.Vertices[i].Location;
+                var p2 = pl.Vertices[(i + 1) % cnt].Location;
+                double dx = Math.Abs(p2.X - p1.X);
+                double dy = Math.Abs(p2.Y - p1.Y);
+                if (dx < minDiag || dy < minDiag) continue;
+                diagEdges++;
+            }
+            return diagEdges >= 3;
+        }
+
+        private bool IsSilencer(LegendCandidate candidate, BoundingBox anchor)
+        {
+            double w = anchor.Max.X - anchor.Min.X;
+            double h = anchor.Max.Y - anchor.Min.Y;
+            double margin = Math.Min(Math.Max(Math.Min(w, h) * 0.05, 1.0), 10.0);
+            var verticals = candidate.Entities.OfType<Line>()
+                .Where(IsVertical)
+                .Where(l => IsInside(l.StartPoint, anchor) && IsInside(l.EndPoint, anchor))
+                .ToList();
+            int inner = verticals.Count(l =>
+                l.StartPoint.X > anchor.Min.X + margin &&
+                l.StartPoint.X < anchor.Max.X - margin);
+            return inner >= 3 && RatioWithin(w, h, 0.7, 3.0);
+        }
+
+        private bool IsSplitCabinet(LegendCandidate candidate)
+        {
+            var rects = GetRectangles(candidate).OrderByDescending(Area).ToList();
+            if (rects.Count < 2) return false;
+            var r1 = rects[0];
+            var r2 = rects[1];
+            var b1 = GetBoundingBox(r1);
+            var b2 = GetBoundingBox(r2);
+            double cxDiff = Math.Abs((b1.Min.X + b1.Max.X) * 0.5 - (b2.Min.X + b2.Max.X) * 0.5);
+            double maxW = Math.Max(b1.Max.X - b1.Min.X, b2.Max.X - b2.Min.X);
+            if (cxDiff > maxW * 0.4) return false;
+            double hRatio = (b1.Max.Y - b1.Min.Y) / Math.Max((b2.Max.Y - b2.Min.Y), 0.001);
+            if (hRatio < 0.7 || hRatio > 1.4) return false;
+            double gapY = Math.Abs((b1.Min.Y + b1.Max.Y) * 0.5 - (b2.Min.Y + b2.Max.Y) * 0.5);
+            double minH = Math.Min(b1.Max.Y - b1.Min.Y, b2.Max.Y - b2.Min.Y);
+            if (gapY < minH * 0.3) return false;
+            bool r1Diag = HasDiagonalInRect(candidate.Entities, b1);
+            bool r2Diag = HasDiagonalInRect(candidate.Entities, b2);
+            return r1Diag && r2Diag;
+        }
+
+        private IEnumerable<LwPolyline> GetRectangles(LegendCandidate candidate)
+        {
+            foreach (var pl in candidate.Entities.OfType<LwPolyline>())
+            {
+                if (!pl.IsClosed) continue;
+                if (IsRectanglePolyline(pl)) yield return pl;
+            }
+        }
+
+        private List<LegendCandidate> MergeByBoundingBoxes(List<LegendCandidate> candidates, double tolerance)
+        {
+            int n = candidates.Count;
+            if (n <= 1) return candidates;
+
+            int[] parent = new int[n];
+            for (int i = 0; i < n; i++) parent[i] = i;
+
+            int Find(int x)
+            {
+                if (parent[x] != x) parent[x] = Find(parent[x]);
+                return parent[x];
+            }
+            void Unite(int x, int y)
+            {
+                int px = Find(x), py = Find(y);
+                if (px != py) parent[px] = py;
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                var boxA = candidates[i].BoundingBox;
+                for (int j = i + 1; j < n; j++)
+                {
+                    var boxB = candidates[j].BoundingBox;
+                    if (Intersects(boxA, boxB) || BoxesAreNear(boxA, boxB, tolerance) ||
+                        IsBoxInside(boxA, boxB, tolerance) || IsBoxInside(boxB, boxA, tolerance))
+                    {
+                        Unite(i, j);
+                    }
+                }
+            }
+
+            var merged = new Dictionary<int, List<LegendCandidate>>();
+            for (int i = 0; i < n; i++)
+            {
+                int root = Find(i);
+                if (!merged.ContainsKey(root)) merged[root] = new List<LegendCandidate>();
+                merged[root].Add(candidates[i]);
+            }
+
+            var result = new List<LegendCandidate>();
+            foreach (var group in merged.Values)
+            {
+                if (group.Count == 1)
+                {
+                    result.Add(group[0]);
+                    continue;
+                }
+                var ents = group.SelectMany(g => g.Entities).ToList();
+                var box = GetBoundingBox(ents);
+                result.Add(new LegendCandidate
+                {
+                    Entities = ents,
+                    BoundingBox = box
+                });
+            }
+
+            return result;
+        }
+
+        public class ArrowInfo
+        {
+            public XYZ Tip { get; set; }
+            public XYZ Direction { get; set; }
+        }
+
+        private bool IsAirCurtain(LegendCandidate candidate, BoundingBox anchor, IEnumerable<Entity> context)
+        {
+            double w = anchor.Max.X - anchor.Min.X;
+            double h = anchor.Max.Y - anchor.Min.Y;
+            if (h <= 0 || w <= 0) return false;
+            double ratio = Math.Max(w, h) / Math.Min(w, h);
+            if (ratio < 3.0) return false; // 竖长矩形
+
+            // 查找箭头集合
+            var arrows = DetectArrows(candidate.Entities, anchor);
+            if (arrows.Count < 3) return false;
+
+            // 箭头方向一致，且平均方向指向矩形外侧（假设矩形在左，箭头指向右）
+            var dirAvg = new XYZ(arrows.Average(a => a.Direction.X), arrows.Average(a => a.Direction.Y), 0);
+            double dirLen = Math.Sqrt(dirAvg.X * dirAvg.X + dirAvg.Y * dirAvg.Y);
+            if (dirLen < 1e-3) return false;
+            dirAvg = new XYZ(dirAvg.X / dirLen, dirAvg.Y / dirLen, 0);
+
+            // 取矩形右侧包络
+            double sideMinX = anchor.Max.X;
+            double sideMaxX = anchor.Max.X + Math.Max(w * 1.5, 10.0);
+            double yMin = anchor.Min.Y;
+            double yMax = anchor.Max.Y;
+
+            int onRight = arrows.Count(a => a.Tip.X >= sideMinX - 1.0 && a.Tip.X <= sideMaxX && a.Tip.Y >= yMin - 5 && a.Tip.Y <= yMax + 5);
+            if (onRight < 3) return false;
+
+            // 方向需朝右侧（X 正向）
+            if (dirAvg.X < 0.2) return false;
+
+            // 文本辅助：若附近文本含“热风幕”或“RQ”则直接确认
+            string t = GetTextInZone(context, ExpandBox(anchor, Math.Max(w, h)), Zone.Center);
+            if (t.Contains("热风幕") || t.Contains("RQ") || t.Contains("R Q")) return true;
+
+            return true;
+        }
+
+        public List<ArrowInfo> InvokeDetectArrows(IEnumerable<Entity> entities, BoundingBox rect)
+        {
+            return DetectArrows(entities, rect);
+        }
+
+        private List<ArrowInfo> DetectArrows(IEnumerable<Entity> entities, BoundingBox rect)
+        {
+            // 收集矩形附近的线段/多段线作为箭头候选
+            double margin = Math.Min(Math.Max(Math.Min(rect.Max.X - rect.Min.X, rect.Max.Y - rect.Min.Y) * 0.8, 5.0), 80.0);
+            var zone = ExpandBox(rect, margin);
+            var lines = entities.OfType<Line>().Where(l => Intersects(GetBoundingBox(l), zone)).ToList();
+            var polylines = entities.OfType<LwPolyline>().Where(p => Intersects(GetBoundingBox(p), zone)).ToList();
+
+            // 将多段线分解成线段
+            foreach (var pl in polylines)
+            {
+                int cnt = pl.Vertices.Count;
+                int segCount = pl.IsClosed ? cnt : cnt - 1;
+                for (int i = 0; i < segCount; i++)
+                {
+                    var p1 = pl.Vertices[i].Location;
+                    var p2 = pl.Vertices[(i + 1) % cnt].Location;
+                    lines.Add(new Line(new XYZ(p1.X, p1.Y, 0), new XYZ(p2.X, p2.Y, 0)));
+                }
+            }
+
+            if (lines.Count < 2) return new List<ArrowInfo>();
+
+            // 端点聚类
+            double tol = 2.0;
+            var nodes = new List<XYZ>();
+            int FindNode(XYZ p)
+            {
+                for (int i = 0; i < nodes.Count; i++)
+                {
+                    if (Distance(nodes[i], p) <= tol) return i;
+                }
+                nodes.Add(p);
+                return nodes.Count - 1;
+            }
+
+            var deg = new List<int>();
+            var adj = new List<List<int>>();
+
+            foreach (var l in lines)
+            {
+                int a = FindNode(l.StartPoint);
+                int b = FindNode(l.EndPoint);
+                while (deg.Count <= Math.Max(a, b))
+                {
+                    deg.Add(0);
+                    adj.Add(new List<int>());
+                }
+                if (a == b) continue;
+                deg[a]++; deg[b]++;
+                adj[a].Add(b);
+                adj[b].Add(a);
+            }
+
+            var arrows = new List<ArrowInfo>();
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                if (deg[i] < 2) continue;
+                var neighbors = adj[i];
+                for (int j = 0; j < neighbors.Count; j++)
+                {
+                    for (int k = j + 1; k < neighbors.Count; k++)
+                    {
+                        var v1 = Sub(nodes[neighbors[j]], nodes[i]);
+                        var v2 = Sub(nodes[neighbors[k]], nodes[i]);
+                        double ang = AngleBetween(v1, v2);
+                        if (ang > 20 && ang < 140)
+                        {
+                            // 箭头尖为 nodes[i]，方向取两向量平均
+                            var dir = new XYZ((v1.X + v2.X) * 0.5, (v1.Y + v2.Y) * 0.5, 0);
+                            double len = Math.Sqrt(dir.X * dir.X + dir.Y * dir.Y);
+                            if (len < 1e-3) continue;
+                            dir = new XYZ(dir.X / len, dir.Y / len, 0);
+                            arrows.Add(new ArrowInfo { Tip = nodes[i], Direction = dir });
+                        }
+                    }
+                }
+            }
+
+            return arrows;
+        }
+
+        private bool RatioWithin(double w, double h, double min, double max)
+        {
+            if (w <= 0 || h <= 0) return false;
+            double ratio = Math.Max(w, h) / Math.Min(w, h);
+            return ratio >= min && ratio <= max;
+        }
+        
         private bool HasManyLines(List<Entity> ents) => ents.OfType<Line>().Count() > 4;
-        private Direction CheckArrowDirection(List<Entity> e, BoundingBox b) => Direction.Inward; // Placeholder
+        
+        private XYZ Sub(XYZ a, XYZ b) => new XYZ(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
+
+        private double AngleBetween(XYZ a, XYZ b)
+        {
+            double dot = a.X * b.X + a.Y * b.Y + a.Z * b.Z;
+            double na = Math.Sqrt(a.X * a.X + a.Y * a.Y + a.Z * a.Z);
+            double nb = Math.Sqrt(b.X * b.X + b.Y * b.Y + b.Z * b.Z);
+            if (na < 1e-6 || nb < 1e-6) return 180.0;
+            double cos = dot / (na * nb);
+            cos = Math.Max(-1.0, Math.Min(1.0, cos));
+            return Math.Acos(cos) * 180.0 / Math.PI;
+        }
+        
+        private Direction CheckArrowDirection(List<Entity> entities, BoundingBox rect)
+        {
+            // 1) 取矩形内部的线段，构建端点图
+            double margin = Math.Min(Math.Max(Math.Min(rect.Max.X - rect.Min.X, rect.Max.Y - rect.Min.Y) * 0.05, 1.0), 8.0);
+            var innerLines = entities
+                .OfType<Line>()
+                .Where(l => IsInside(l.StartPoint, ExpandBox(rect, margin)) && IsInside(l.EndPoint, ExpandBox(rect, margin)))
+                .ToList();
+            if (innerLines.Count < 2) return Direction.Unknown;
+
+            double tol = margin * 1.2;
+            var points = new List<XYZ>();
+            foreach (var l in innerLines)
+            {
+                points.Add(l.StartPoint);
+                points.Add(l.EndPoint);
+            }
+
+            // 构建邻接：端点合并容差 tol
+            var nodes = new List<XYZ>();
+            foreach (var p in points)
+            {
+                bool found = false;
+                foreach (var n in nodes)
+                {
+                    if (Distance(n, p) <= tol)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) nodes.Add(p);
+            }
+
+            int nNodes = nodes.Count;
+            var deg = new int[nNodes];
+            var adj = new List<int>[nNodes];
+            for (int i = 0; i < nNodes; i++) adj[i] = new List<int>();
+
+            int FindNode(XYZ p)
+            {
+                for (int i = 0; i < nodes.Count; i++)
+                {
+                    if (Distance(nodes[i], p) <= tol) return i;
+                }
+                return -1;
+            }
+
+            foreach (var l in innerLines)
+            {
+                int a = FindNode(l.StartPoint);
+                int b = FindNode(l.EndPoint);
+                if (a < 0 || b < 0 || a == b) continue;
+                adj[a].Add(b);
+                adj[b].Add(a);
+                deg[a]++; deg[b]++;
+            }
+
+            // 2) 找“箭头”候选：度数>=2 且夹角锐（20°~140°）
+            int? headIdx = null;
+            for (int i = 0; i < nNodes; i++)
+            {
+                if (deg[i] < 2) continue;
+                var connected = adj[i];
+                for (int j = 0; j < connected.Count; j++)
+                {
+                    for (int k = j + 1; k < connected.Count; k++)
+                    {
+                        var v1 = Sub(nodes[connected[j]], nodes[i]);
+                        var v2 = Sub(nodes[connected[k]], nodes[i]);
+                        double ang = AngleBetween(v1, v2);
+                        if (ang > 20 && ang < 140)
+                        {
+                            headIdx = i;
+                            break;
+                        }
+                    }
+                    if (headIdx.HasValue) break;
+                }
+                if (headIdx.HasValue) break;
+            }
+
+            if (!headIdx.HasValue) return Direction.Unknown;
+            var head = nodes[headIdx.Value];
+
+            // 3) 根据矩形长轴确定方向，箭头尖端落在长轴哪一侧
+            bool horizontal = (rect.Max.X - rect.Min.X) >= (rect.Max.Y - rect.Min.Y);
+            double centerX = (rect.Max.X + rect.Min.X) * 0.5;
+            double centerY = (rect.Max.Y + rect.Min.Y) * 0.5;
+            double len = horizontal ? (rect.Max.X - rect.Min.X) : (rect.Max.Y - rect.Min.Y);
+            if (len <= 0) return Direction.Unknown;
+
+            double headProj = horizontal ? head.X : head.Y;
+            double minProj = horizontal ? rect.Min.X : rect.Min.Y;
+            double maxProj = horizontal ? rect.Max.X : rect.Max.Y;
+            double centerProj = horizontal ? centerX : centerY;
+            double nearTol = Math.Max(len * 0.1, 3.0);
+
+            if (Math.Abs(headProj - maxProj) < nearTol) return Direction.Outward;
+            if (Math.Abs(headProj - minProj) < nearTol) return Direction.Inward;
+
+            // 如果箭头尖在中间区域，根据相对中心判断
+            return headProj >= centerProj ? Direction.Outward : Direction.Inward;
+        }
         private bool IsZigZag(LwPolyline p) => p.Vertices.Count > 4;
 
         private bool HasDiagonalInRect(IEnumerable<Entity> entities, BoundingBox rect)
@@ -918,6 +1821,63 @@ namespace ACadSharp.LegendAnalysis
             }
             if(!valid) return new BoundingBox(new XYZ(0,0,0), new XYZ(0,0,0));
              return new BoundingBox(new XYZ(minx, miny, 0), new XYZ(maxx, maxy, 0));
+        }
+
+        public List<BoundingBox> GetEjectorValves(IEnumerable<Entity> allEntities)
+        {
+            var triangles = allEntities.OfType<LwPolyline>()
+                .Where(pl => pl.IsClosed && pl.Vertices.Count == 3)
+                .ToList();
+
+            var result = new List<BoundingBox>();
+            if (triangles.Count < 2) return result;
+
+            var used = new HashSet<int>();
+            for (int i = 0; i < triangles.Count; i++)
+            {
+                if (used.Contains(i)) continue;
+                var b1 = GetBoundingBox(triangles[i]);
+                double h1 = b1.Max.Y - b1.Min.Y;
+
+                for (int j = i + 1; j < triangles.Count; j++)
+                {
+                    if (used.Contains(j)) continue;
+                    var b2 = GetBoundingBox(triangles[j]);
+                    double h2 = b2.Max.Y - b2.Min.Y;
+
+                    // 1. 尺寸相近
+                    if (Math.Abs(h1 - h2) > Math.Max(h1, h2) * 0.3) continue;
+
+                    // 2. 距离极近 (通常小于三角形高度)
+                    double gap = Math.Max(b1.Min.X - b2.Max.X, b2.Min.X - b1.Max.X);
+                    if (gap > h1 * 1.5) continue;
+
+                    // 3. Y 轴重叠/对齐
+                    double yOverlap = Math.Min(b1.Max.Y, b2.Max.Y) - Math.Max(b1.Min.Y, b2.Min.Y);
+                    if (yOverlap < h1 * 0.5) continue;
+
+                    // 构成一个整体
+                    used.Add(i);
+                    used.Add(j);
+                    
+                    var combined = new BoundingBox(
+                        new XYZ(Math.Min(b1.Min.X, b2.Min.X), Math.Min(b1.Min.Y, b2.Min.Y), 0),
+                        new XYZ(Math.Max(b1.Max.X, b2.Max.X), Math.Max(b1.Max.Y, b2.Max.Y), 0));
+                    result.Add(combined);
+                    break;
+                }
+            }
+            return result;
+        }
+
+        public BoundingBox PublicGetBoundingBox(Entity e)
+        {
+             return GetBoundingBox(e);
+        }
+
+        public BoundingBox PublicGetBoundingBox(List<Entity> entities)
+        {
+             return GetBoundingBox(entities);
         }
 
         private bool Intersects(BoundingBox a, BoundingBox b)

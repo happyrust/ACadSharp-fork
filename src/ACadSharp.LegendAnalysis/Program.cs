@@ -20,10 +20,21 @@ namespace ACadSharp.LegendAnalysis
             }
             else
             {
-                file = Path.Combine(Environment.CurrentDirectory, "../../input-files/2416流程图图例-通风.dwg");
+                // 优先默认使用 dxf，再回退 dwg
+                var dxfDefault = Path.Combine(Environment.CurrentDirectory, "../../input-files/2416流程图图例-通风.dxf");
+                var dwgDefault = Path.Combine(Environment.CurrentDirectory, "../../input-files/2416流程图图例-通风.dwg");
+                file = File.Exists(dxfDefault) ? dxfDefault : dwgDefault;
                 if (!File.Exists(file))
                 {
-                     file = "/Volumes/DPC/work/cad-code/ACadSharp/input-files/2416流程图图例-通风.dwg";
+                    var baseDir = "/Volumes/DPC/work/cad-code/ACadSharp/input-files/";
+                    if (File.Exists(Path.Combine(baseDir, "2416流程图图例-通风.dxf")))
+                    {
+                        file = Path.Combine(baseDir, "2416流程图图例-通风.dxf");
+                    }
+                    else
+                    {
+                        file = Path.Combine(baseDir, "2416流程图图例-通风.dwg");
+                    }
                 }
             }
 
@@ -37,9 +48,20 @@ namespace ACadSharp.LegendAnalysis
             CadDocument doc;
             try
             {
-                using (DwgReader reader = new DwgReader(file))
+                string ext = Path.GetExtension(file).ToLowerInvariant();
+                if (ext == ".dxf")
                 {
-                    doc = reader.Read();
+                    using (DxfReader reader = new DxfReader(file))
+                    {
+                        doc = reader.Read();
+                    }
+                }
+                else
+                {
+                    using (DwgReader reader = new DwgReader(file))
+                    {
+                        doc = reader.Read();
+                    }
                 }
                 Console.WriteLine("File loaded successfully.");
             }
@@ -98,107 +120,89 @@ namespace ACadSharp.LegendAnalysis
             foreach (var u in unknowns.Where(c => c.Entities.Count > 1).Take(5))
             {
                 var types = u.Entities.GroupBy(e => e.GetType().Name).Select(g => $"{g.Key}:{g.Count()}");
-                Console.WriteLine($"    @ ({u.BoundingBox.Min.X:F0},{u.BoundingBox.Min.Y:F0}) [{string.Join(", ", types)}]");
+                double w = u.BoundingBox.Max.X - u.BoundingBox.Min.X;
+                double h = u.BoundingBox.Max.Y - u.BoundingBox.Min.Y;
+                Console.WriteLine($"    @ ({u.BoundingBox.Min.X:F0},{u.BoundingBox.Min.Y:F0}) Size: {w:F0}x{h:F0} [{string.Join(", ", types)}]");
+                
+                // Debug Inserts
+                var inserts = u.Entities.OfType<Insert>().ToList();
+                if (inserts.Any())
+                {
+                    Console.WriteLine($"      Block Names: {string.Join(", ", inserts.Select(i => i.Block.Name))}");
+                }
             }
-
-            // Create BBOX layer for debug (raw clusters)
-            var debugLayer = new Layer("CLUSTER_DEBUG");
-            debugLayer.Color = new Color(51); // Brown
-            doc.Layers.Add(debugLayer);
-
-            // Draw brown BBOX for ALL raw connectivity clusters (Step 1 result)
-            int debugCount = 0;
-            foreach (var cluster in recognizer.RawClusters)
-            {
-                var box = cluster.BoundingBox;
-                
-                var polyline = new LwPolyline();
-                polyline.Layer = debugLayer;
-                polyline.Color = new Color(51); // Brown
-                
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Min.X, box.Min.Y)));
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Max.X, box.Min.Y)));
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Max.X, box.Max.Y)));
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Min.X, box.Max.Y)));
-                polyline.IsClosed = true;
-                
-                doc.Entities.Add(polyline);
-                debugCount++;
-            }
-            Console.WriteLine($"Added {debugCount} brown debug BBOX for raw connectivity clusters.");
-
-            // Create BBOX layer for identified legends
-            var bboxLayer = new Layer("LEGEND_BBOX");
-            bboxLayer.Color = new Color(1); // Red
-            doc.Layers.Add(bboxLayer);
-
-            // Add BBOX rectangles for identified legends
-            int addedCount = 0;
-            foreach (var candidate in identified)
-            {
-                var box = candidate.BoundingBox;
-                
-                // Create a closed polyline as the bounding box
-                var polyline = new LwPolyline();
-                polyline.Layer = bboxLayer;
-                polyline.Color = GetColorForType(candidate.DetectedType);
-                
-                // Add 4 corners
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Min.X, box.Min.Y)));
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Max.X, box.Min.Y)));
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Max.X, box.Max.Y)));
-                polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Min.X, box.Max.Y)));
-                polyline.IsClosed = true;
-                
-                // Add to document
-                doc.Entities.Add(polyline);
-                addedCount++;
-                
-                // Optionally add a text label
-                var label = new TextEntity();
-                label.Layer = bboxLayer;
-                label.Value = candidate.DetectedType.ToString();
-                label.InsertPoint = new XYZ(box.Min.X, box.Max.Y + 5, 0); // Above the box
-                label.Height = 10;
-                label.Color = GetColorForType(candidate.DetectedType);
-                doc.Entities.Add(label);
-            }
-
-            Console.WriteLine($"Added {addedCount} BBOX rectangles and labels to layer 'LEGEND_BBOX'.");
-
-            // Save to new DWG file
-            string outputFile = Path.Combine(Path.GetDirectoryName(file)!, 
-                Path.GetFileNameWithoutExtension(file) + "_annotated.dwg");
             
+            Console.WriteLine("\n   Identified Clusters Sizes:");
+            foreach (var c in identified)
+            {
+                double w = c.BoundingBox.Max.X - c.BoundingBox.Min.X;
+                double h = c.BoundingBox.Max.Y - c.BoundingBox.Min.Y;
+                Console.WriteLine($"    [{c.DetectedType}] Size: {w:F0}x{h:F0} @ ({c.BoundingBox.Min.X:F0},{c.BoundingBox.Min.Y:F0})");
+            }
+
+            // --- Legend Grouping & Annotation ---
+            var legendLayer = new Layer("LEGEND_BBOX");
+            legendLayer.Color = new Color(1); // Red
+            doc.Layers.Add(legendLayer);
+
+            var annotationLayer = new Layer("FEATURE_ANNOTATIONS");
+            annotationLayer.Color = new Color(1); // Red
+            doc.Layers.Add(annotationLayer);
+
+            int totalFeatures = 0;
+            foreach (var group in recognizer.Groups)
+            {
+                // 1. Draw Group BBOX (Consolidated)
+                DrawBox(doc, legendLayer, group.BoundingBox, new Color(1));
+                
+                // 2. Add Group Label at top-left
+                var groupLabel = new MText();
+                groupLabel.Layer = legendLayer;
+                groupLabel.Color = new Color(1);
+                groupLabel.Value = $"GROUP-{group.Index}";
+                groupLabel.InsertPoint = new XYZ(group.BoundingBox.Min.X, group.BoundingBox.Max.Y + 2.0, 0);
+                groupLabel.Height = 5.0;
+                doc.Entities.Add(groupLabel);
+
+                // 3. Draw individual features within the group
+                foreach (var member in group.Members)
+                {
+                    if (member.DetectedType == LegendType.Unknown) continue;
+
+                    // Draw individual wavy line (cloud) for the feature with its ID
+                    string label = $"{member.DetectedType} (ID:{member.Index})";
+                    DrawCloudBox(doc, annotationLayer, member.BoundingBox, new Color(1), label);
+                    
+                    totalFeatures++;
+                }
+            }
+
+            Console.WriteLine($"\nAdded {recognizer.Groups.Count} group boxes and {totalFeatures} wavy annotations.");
+            // --- Final Output Save ---
+            string outputFile = Path.Combine(Path.GetDirectoryName(file)!,
+                Path.GetFileNameWithoutExtension(file) + "_annotated.dwg");
+
             try
             {
-                using (DwgWriter writer = new DwgWriter(outputFile, doc))
-                {
-                    writer.Write();
-                }
+                using var writer = new DwgWriter(outputFile, doc);
+                writer.Write();
                 Console.WriteLine($"\nSaved annotated DWG to: {outputFile}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Failed to save DWG: {ex.Message}");
-                
+                Console.WriteLine($"Failed to save annotated DWG: {ex.Message}");
                 // Fallback: try DXF
                 string dxfOutput = Path.ChangeExtension(outputFile, ".dxf");
                 try
                 {
-                    using (DxfWriter writer = new DxfWriter(dxfOutput, doc, false))
-                    {
-                        writer.Write();
-                    }
+                    using var writer = new DxfWriter(dxfOutput, doc, false);
+                    writer.Write();
                     Console.WriteLine($"Saved annotated DXF instead: {dxfOutput}");
                 }
-                catch (Exception dxfEx)
-                {
-                    Console.WriteLine($"Failed to save DXF: {dxfEx.Message}");
-                }
+                catch (Exception dxfEx) { Console.WriteLine($"Failed to save DXF: {dxfEx.Message}"); }
             }
 
-            // === Generate Markdown Report ===
+            // --- Generate Markdown Report ---
             string mdReportPath = Path.Combine(Path.GetDirectoryName(file)!, 
                 Path.GetFileNameWithoutExtension(file) + "_图例识别报告.md");
             
@@ -206,7 +210,7 @@ namespace ACadSharp.LegendAnalysis
             Console.WriteLine($"Generated report: {mdReportPath}");
 
             Console.WriteLine("------------------------------------------------");
-            Console.WriteLine($"Summary: Identified {identified.Count} / {recognizer.Candidates.Count} legends.");
+            Console.WriteLine($"Summary: Identified {identified.Count} / {recognizer.Candidates.Count} legends across {recognizer.Groups.Count} groups.");
         }
 
         static void GenerateMdReport(System.Collections.Generic.List<LegendCandidate> candidates, System.Collections.Generic.List<Entity> allEntities, string path)
@@ -269,19 +273,80 @@ namespace ACadSharp.LegendAnalysis
             sw.WriteLine("| 文字内容 | 位置 |");
             sw.WriteLine("| :--- | :--- |");
             
-            var greenTexts = allEntities.OfType<TextEntity>().Where(t => t.Color.Index == 3).Take(30);
-            foreach (var t in greenTexts)
-            {
-                sw.WriteLine($"| {t.Value.Replace("|", "\\|").Trim()} | ({t.InsertPoint.X:F0}, {t.InsertPoint.Y:F0}) |");
-            }
-            sw.WriteLine();
-            
-            // Unknown clusters
-            sw.WriteLine("---\n");
-            sw.WriteLine("## 未识别集群\n");
-            sw.WriteLine($"- 单实体噪声: {unknowns.Count(c => c.Entities.Count == 1)}");
-            sw.WriteLine($"- 多实体集群: {unknowns.Count(c => c.Entities.Count > 1)}");
-        }
+	            var greenTexts = allEntities.OfType<TextEntity>().Where(t => t.Color.Index == 3).Take(30);
+	            foreach (var t in greenTexts)
+	            {
+	                sw.WriteLine($"| {t.Value.Replace("|", "\\|").Trim()} | ({t.InsertPoint.X:F0}, {t.InsertPoint.Y:F0}) |");
+	            }
+	            sw.WriteLine();
+	            
+	            // Unknown clusters
+	            sw.WriteLine("---\n");
+	            sw.WriteLine("## 未识别集群\n");
+	            sw.WriteLine($"- 单实体噪声: {unknowns.Count(c => c.Entities.Count == 1)}");
+	            sw.WriteLine($"- 多实体集群: {unknowns.Count(c => c.Entities.Count > 1)}");
+	        }
+
+	        static void SaveBboxDebug(List<Entity> allEntities, string path)
+	        {
+	            // 1) 噪声过滤
+	            var filtered = allEntities.Where(e =>
+	            {
+	                switch (e)
+	                {
+	                    case Line l:
+	                        return Math.Sqrt(Math.Pow(l.StartPoint.X - l.EndPoint.X, 2) + Math.Pow(l.StartPoint.Y - l.EndPoint.Y, 2)) > 3.0;
+	                    case Circle c:
+	                        return c.Radius * 2.0 > 3.0;
+	                    case LwPolyline p:
+	                        return p.Vertices.Count >= 2;
+	                    default:
+	                        return true;
+	                }
+	            }).ToList();
+
+	            // 2) 原始 BBOX 列表
+	            var rawBoxes = new List<BoundingBox>();
+	            foreach (var e in filtered)
+	            {
+	                var b = e.GetBoundingBox();
+	                if (b.Max.X < b.Min.X || b.Max.Y < b.Min.Y) continue;
+	                double w = b.Max.X - b.Min.X;
+	                double h = b.Max.Y - b.Min.Y;
+	                if (w < 1.0 && h < 1.0) continue;
+	                rawBoxes.Add(b);
+	            }
+
+	            // 3) 合并
+	            var merged = MergeByBoundingBoxes(rawBoxes, 1.0);
+
+	            // 4) 输出 DWG
+	            var bboxDoc = new CadDocument();
+	            var rawLayer = new Layer("RAW_BBOX") { Color = new Color(51) };
+	            var mergedLayer = new Layer("MERGED_BBOX") { Color = new Color(140) };
+	            bboxDoc.Layers.Add(rawLayer);
+	            bboxDoc.Layers.Add(mergedLayer);
+
+	            foreach (var box in rawBoxes)
+	            {
+	                DrawBox(bboxDoc, rawLayer, box, new Color(51));
+	            }
+	            foreach (var box in merged)
+	            {
+	                DrawBox(bboxDoc, mergedLayer, box, new Color(140));
+	            }
+
+	            try
+	            {
+	                using var writer = new DwgWriter(path, bboxDoc);
+	                writer.Write();
+	                Console.WriteLine($"Saved bbox debug DWG to: {path} (raw {rawBoxes.Count}, merged {merged.Count})");
+	            }
+	            catch (Exception ex)
+	            {
+	                Console.WriteLine($"Failed to save bbox DWG: {ex.Message}");
+	            }
+	        }
 
         /// <summary>
         /// Find the nearest text label to the RIGHT of the given bounding box.
@@ -315,11 +380,11 @@ namespace ACadSharp.LegendAnalysis
                 }
             }
             
-            foreach (var t in mtexts)
-            {
-                var pt = t.InsertPoint;
-                if (pt.X <= box.Max.X) continue;
-                if (Math.Abs(pt.Y - boxCenterY) > yTolerance) continue;
+			foreach (var t in mtexts)
+			{
+				var pt = t.InsertPoint;
+				if (pt.X <= box.Max.X) continue;
+				if (Math.Abs(pt.Y - boxCenterY) > yTolerance) continue;
                 double dx = pt.X - box.Max.X;
                 if (dx > maxSearchX) continue;
                 
@@ -329,15 +394,184 @@ namespace ACadSharp.LegendAnalysis
                     bestLabel = t.Value.Trim();
                 }
             }
-            
-            return bestLabel ?? "-";
-        }
+			
+			return bestLabel ?? "-";
+		}
 
-        static Color GetColorForType(LegendType type)
-        {
-            return type switch
-            {
-                LegendType.CheckValve => new Color(3),        // Green
+		static void SaveBboxDebug(List<BoundingBox> rawBoxes, List<BoundingBox> mergedBoxes, string path)
+		{
+			var bboxDoc = new CadDocument();
+			var rawLayer = new Layer("RAW_BBOX") { Color = new Color(51) };
+			var mergedLayer = new Layer("MERGED_BBOX") { Color = new Color(140) };
+			bboxDoc.Layers.Add(rawLayer);
+			bboxDoc.Layers.Add(mergedLayer);
+
+			foreach (var box in rawBoxes)
+			{
+				DrawBox(bboxDoc, rawLayer, box, new Color(51));
+			}
+			foreach (var box in mergedBoxes)
+			{
+				DrawBox(bboxDoc, mergedLayer, box, new Color(140));
+			}
+
+			try
+			{
+				using var writer = new DwgWriter(path, bboxDoc);
+				writer.Write();
+				Console.WriteLine($"Saved bbox debug DWG to: {path}");
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine($"Failed to save bbox DWG: {ex.Message}");
+			}
+		}
+
+		static void DrawCloudBox(CadDocument doc, Layer layer, BoundingBox box, Color color, string id)
+		{
+			var cloud = new LwPolyline();
+			cloud.Layer = layer;
+			cloud.Color = color;
+			
+			double w = box.Max.X - box.Min.X;
+			double h = box.Max.Y - box.Min.Y;
+			
+			double margin = Math.Max(Math.Min(w, h) * 0.2, 2.0);
+			double minX = box.Min.X - margin;
+			double minY = box.Min.Y - margin;
+			double maxX = box.Max.X + margin;
+			double maxY = box.Max.Y + margin;
+			
+			double arcSize = Math.Max(Math.Min(w, h) * 0.3, 5.0);
+			if (arcSize > 30) arcSize = 30;
+
+			void AddWavyEdge(XYZ start, XYZ end)
+			{
+				double dist = Math.Sqrt(Math.Pow(end.X - start.X, 2) + Math.Pow(end.Y - start.Y, 2));
+				int segments = (int)Math.Max(Math.Ceiling(dist / arcSize), 1);
+				double dx = (end.X - start.X) / segments;
+				double dy = (end.Y - start.Y) / segments;
+				
+				for (int i = 0; i < segments; i++)
+				{
+					var v = new LwPolyline.Vertex(new XY(start.X + i * dx, start.Y + i * dy));
+					v.Bulge = 0.5;
+					cloud.Vertices.Add(v);
+				}
+			}
+
+			AddWavyEdge(new XYZ(minX, minY, 0), new XYZ(minX, maxY, 0));
+			AddWavyEdge(new XYZ(minX, maxY, 0), new XYZ(maxX, maxY, 0));
+			AddWavyEdge(new XYZ(maxX, maxY, 0), new XYZ(maxX, minY, 0));
+			AddWavyEdge(new XYZ(maxX, minY, 0), new XYZ(minX, minY, 0));
+
+			cloud.IsClosed = true;
+			doc.Entities.Add(cloud);
+
+			// Add ID Label
+			var label = new MText();
+			label.Layer = layer;
+			label.Color = color;
+			label.Value = id;
+			label.InsertPoint = new XYZ(minX, maxY + 2.0, 0);
+			label.Height = Math.Max(arcSize * 0.8, 8.0);
+			doc.Entities.Add(label);
+		}
+
+		static void DrawBox(CadDocument doc, Layer layer, BoundingBox box, Color color)
+		{
+			var polyline = new LwPolyline();
+			polyline.Layer = layer;
+			polyline.Color = color;
+			
+			polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Min.X, box.Min.Y)));
+			polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Max.X, box.Min.Y)));
+			polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Max.X, box.Max.Y)));
+			polyline.Vertices.Add(new LwPolyline.Vertex(new XY(box.Min.X, box.Max.Y)));
+			polyline.IsClosed = true;
+			
+			doc.Entities.Add(polyline);
+		}
+
+		static List<BoundingBox> MergeByBoundingBoxes(List<BoundingBox> boxes, double tolerance)
+		{
+			int n = boxes.Count;
+			if (n <= 1) return boxes;
+
+			int[] parent = new int[n];
+			for (int i = 0; i < n; i++) parent[i] = i;
+
+			int Find(int x)
+			{
+				if (parent[x] != x) parent[x] = Find(parent[x]);
+				return parent[x];
+			}
+			void Unite(int x, int y)
+			{
+				int px = Find(x), py = Find(y);
+				if (px != py) parent[px] = py;
+			}
+
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = i + 1; j < n; j++)
+				{
+					var a = boxes[i];
+					var b = boxes[j];
+					if (Intersects(a, b) || BoxesAreNear(a, b, tolerance) ||
+						IsBoxInside(a, b, tolerance) || IsBoxInside(b, a, tolerance))
+					{
+						Unite(i, j);
+					}
+				}
+			}
+
+			var merged = new Dictionary<int, List<BoundingBox>>();
+			for (int i = 0; i < n; i++)
+			{
+				int root = Find(i);
+				if (!merged.ContainsKey(root)) merged[root] = new List<BoundingBox>();
+				merged[root].Add(boxes[i]);
+			}
+
+			var result = new List<BoundingBox>();
+			foreach (var g in merged.Values)
+			{
+				double minx = g.Min(b => b.Min.X);
+				double miny = g.Min(b => b.Min.Y);
+				double maxx = g.Max(b => b.Max.X);
+				double maxy = g.Max(b => b.Max.Y);
+				result.Add(new BoundingBox(new XYZ(minx, miny, 0), new XYZ(maxx, maxy, 0)));
+			}
+			return result;
+		}
+
+		static bool BoxesAreNear(BoundingBox a, BoundingBox b, double tolerance)
+		{
+			double gapX = Math.Max(a.Min.X - b.Max.X, b.Min.X - a.Max.X);
+			double gapY = Math.Max(a.Min.Y - b.Max.Y, b.Min.Y - a.Max.Y);
+			return gapX <= tolerance && gapY <= tolerance;
+		}
+
+		static bool IsBoxInside(BoundingBox outer, BoundingBox inner, double tolerance)
+		{
+			return inner.Min.X >= outer.Min.X - tolerance &&
+				   inner.Min.Y >= outer.Min.Y - tolerance &&
+				   inner.Max.X <= outer.Max.X + tolerance &&
+				   inner.Max.Y <= outer.Max.Y + tolerance;
+		}
+
+		static bool Intersects(BoundingBox a, BoundingBox b)
+		{
+			return (a.Min.X <= b.Max.X && a.Max.X >= b.Min.X) &&
+				   (a.Min.Y <= b.Max.Y && a.Max.Y >= b.Min.Y);
+		}
+
+		static Color GetColorForType(LegendType type)
+		{
+			return type switch
+			{
+				LegendType.CheckValve => new Color(3),        // Green
                 LegendType.LimitSwitch => new Color(5),       // Blue  
                 LegendType.FreshAirLouver => new Color(4),    // Cyan
                 LegendType.ExhaustLouver => new Color(6),     // Magenta
@@ -345,9 +579,12 @@ namespace ACadSharp.LegendAnalysis
                 LegendType.SmokeFireDamper => new Color(30),  // Orange
                 LegendType.ElectricIsolationValve => new Color(2), // Yellow
                 LegendType.ManualIsolationValve => new Color(51),  // Brown
+                LegendType.CoolingUnit => new Color(141),     // Teal-ish
+                LegendType.AirHandlingUnit => new Color(143), // Aqua
+                LegendType.SplitCabinet => new Color(171),    // Light green
+                LegendType.Silencer => new Color(140),        // Light blue-green
                 _ => new Color(7) // White
             };
         }
     }
 }
-
