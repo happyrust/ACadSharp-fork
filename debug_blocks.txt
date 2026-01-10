@@ -1,0 +1,81 @@
+Loading file: input-files/2416流程图图例-通风.dwg...
+File loaded successfully.
+Analyzing 1127 entities in ModelSpace...
+Analysis Complete. Found 57 candidate clusters.
+
+=== Type Distribution ===
+  Unknown: 28
+  FreshAirLouver: 7
+  CheckValve: 4
+  SplitUnit: 3
+  FireDamper: 3
+  ElectricIsolationValve: 3
+  Silencer: 2
+  ManualIsolationValve: 2
+  SmokeFireDamper: 2
+  GravityReliefValve: 2
+  BlastValve: 1
+
+Identified 29 legends.
+
+=== Unknown Cluster Analysis (28 total) ===
+  Has Anchor Rect: 1
+  Has Circles: 4
+  Has >=4 Lines: 4
+  Has Text: 0
+  Single Entity (noise): 12
+
+  Top Unknown cluster sizes:
+    1 entities: 12 clusters
+    2 entities: 7 clusters
+    6 entities: 3 clusters
+    3 entities: 3 clusters
+    10 entities: 2 clusters
+
+  Sample Unknown clusters (>1 entity):
+    @ (1103,-546) Size: 25x16 [Insert:2]
+      Block Names: ms1861, ms1862
+    @ (1070,-547) Size: 17x10 [LwPolyline:6, Solid:2, Line:2]
+    @ (974,-593) Size: 11x12 [Line:5, Circle:1]
+    @ (1077,-462) Size: 3x12 [Line:2]
+    @ (1375,-323) Size: 24x3 [LwPolyline:1, Solid:1]
+
+   Identified Clusters Sizes:
+    [FreshAirLouver] Size: 4x10 @ (1085,-624)
+    [FreshAirLouver] Size: 4x10 @ (1100,-627)
+    [FreshAirLouver] Size: 10x4 @ (1065,-621)
+    [FreshAirLouver] Size: 10x4 @ (1115,-622)
+    [SplitUnit] Size: 59x26 @ (1488,-338)
+    [Silencer] Size: 11x10 @ (1182,-614)
+    [FreshAirLouver] Size: 62x24 @ (1486,-265)
+    [FireDamper] Size: 180x68 @ (1540,-728)
+    [ManualIsolationValve] Size: 10x14 @ (972,-281)
+    [ElectricIsolationValve] Size: 10x19 @ (962,-248)
+    [FireDamper] Size: 13x20 @ (973,-387)
+    [FireDamper] Size: 10x15 @ (973,-415)
+    [SmokeFireDamper] Size: 13x20 @ (973,-459)
+    [SmokeFireDamper] Size: 10x15 @ (973,-488)
+    [CheckValve] Size: 20x56 @ (1268,-348)
+    [ManualIsolationValve] Size: 42x50 @ (1155,-355)
+    [SplitUnit] Size: 75x50 @ (1153,-427)
+    [CheckValve] Size: 17x50 @ (1272,-563)
+    [GravityReliefValve] Size: 10x15 @ (1181,-542)
+    [FreshAirLouver] Size: 61x12 @ (1379,-557)
+    [BlastValve] Size: 95x200 @ (1454,-641)
+    [FreshAirLouver] Size: 13x26 @ (1593,-339)
+    [CheckValve] Size: 75x60 @ (1567,-282)
+    [SplitUnit] Size: 81x37 @ (1568,-414)
+    [GravityReliefValve] Size: 13x37 @ (1590,-632)
+    [Silencer] Size: 10x9 @ (1178,-475)
+    [CheckValve] Size: 10x19 @ (1078,-329)
+    [ElectricIsolationValve] Size: 19x22 @ (979,-248)
+    [ElectricIsolationValve] Size: 13x24 @ (969,-563)
+Saved bbox debug DWG to: input-files/2416流程图图例-通风_bbox.dwg
+Added 57 brown debug BBOX for raw connectivity clusters.
+Added 726 wavy cloud annotations with IDs to layer 'FEATURE_ANNOTATIONS'.
+Added 29 BBOX rectangles and labels to layer 'LEGEND_BBOX'.
+
+Saved annotated DWG to: input-files/2416流程图图例-通风_annotated.dwg
+Generated report: input-files/2416流程图图例-通风_图例识别报告.md
+------------------------------------------------
+Summary: Identified 29 / 57 legends.

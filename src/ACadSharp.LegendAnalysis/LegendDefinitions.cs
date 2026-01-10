@@ -51,5 +51,6 @@ namespace ACadSharp.LegendAnalysis
         public int Index { get; set; }
         public BoundingBox BoundingBox { get; set; }
         public List<LegendCandidate> Members { get; set; } = new List<LegendCandidate>();
+        public List<Entity> AdditionalEntities { get; set; } = new List<Entity>();
     }
 }

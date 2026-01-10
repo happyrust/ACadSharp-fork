@@ -16,17 +16,60 @@ namespace ACadSharp.LegendAnalysis
         public List<LegendCandidate> RawClusters { get; private set; } = new List<LegendCandidate>();
         public List<LegendGroup> Groups { get; private set; } = new List<LegendGroup>();
 
+        public List<Entity> FrameEntities { get; private set; } = new List<Entity>();
+
+
+        private void IdentifyAndExcludeFrames(List<Entity> entities)
+        {
+            FrameEntities.Clear();
+            var toRemove = new List<Entity>();
+
+            foreach(var e in entities)
+            {
+                var bbox = GetBoundingBox(e);
+                double w = bbox.Max.X - bbox.Min.X;
+                double h = bbox.Max.Y - bbox.Min.Y;
+
+                // Heuristic: Extremely large size (likely frame border)
+                // NOW HANDLED BY DYNAMIC CLUSTERING (See Step 3 in RunNew)
+                /*
+                if (w > 300 || h > 300)
+                {
+                    toRemove.Add(e);
+                    continue;
+                }
+                */
+            }
+
+            foreach(var e in toRemove)
+            {
+                FrameEntities.Add(e);
+                entities.Remove(e);
+            }
+        }
+
         public void RunNew(IEnumerable<Entity> entities)
         {
             var allEntities = entities.ToList();
+            
+            // 0. Exclude Frames
+            IdentifyAndExcludeFrames(allEntities);
+            
+            // 1. Pre-filter (Exclude text/dims from clustering candidates, but keep for context)
+            var preFiltered = allEntities.Where(e => 
+                !(e is TextEntity) && 
+                !(e is MText) && 
+                !(e is Dimension) &&
+                !(e is Hatch) // Exclude hatches from primary shape
+            ).ToList();
 
-            // 1. Calculate Grid/Frame extent
-            var totalBox = GetBoundingBox(allEntities);
+            // 1.1. Calculate Grid/Frame extent (using the remaining entities)
+            var totalBox = GetBoundingBox(preFiltered);
             double totalW = totalBox.Max.X - totalBox.Min.X;
             double totalH = totalBox.Max.Y - totalBox.Min.Y;
             
-            // 2. Filter Grid Lines (Long Horizontal/Vertical lines)
-            // Remove anything > 50% of total dimension
+            // 2. Filter Grid Lines (Long Horizontal/Vertical lines and Noise)
+            // Remove anything > 50% of total dimension OR too small
             double maxLenW = totalW * 0.5;
             double maxLenH = totalH * 0.5;
             
@@ -34,7 +77,8 @@ namespace ACadSharp.LegendAnalysis
             maxLenW = Math.Min(maxLenW, 2000.0);
             maxLenH = Math.Min(maxLenH, 2000.0);
 
-            var preFiltered = allEntities.Where(e =>
+            // Re-assign to filtered list
+            preFiltered = preFiltered.Where(e =>
             {
                  var b = GetBoundingBox(e);
                  double w = b.Max.X - b.Min.X;
@@ -59,7 +103,53 @@ namespace ACadSharp.LegendAnalysis
                 BoundingBox = c.BoundingBox
             }).ToList();
             
-            Candidates = rawClusters;
+            // Dynamic Frame Exclusion (Outlier Detection)
+            if (RawClusters.Any())
+            {
+                // Calculate diagonal lengths
+                var diagonals = RawClusters.Select(c => 
+                {
+                    double w = c.BoundingBox.Max.X - c.BoundingBox.Min.X;
+                    double h = c.BoundingBox.Max.Y - c.BoundingBox.Min.Y;
+                    return Math.Sqrt(w*w + h*h);
+                }).OrderBy(x => x).ToList();
+
+                // Calculate Median
+                double median = 0;
+                int count = diagonals.Count;
+                if (count > 0)
+                {
+                    if (count % 2 == 0) median = (diagonals[count/2 - 1] + diagonals[count/2]) / 2.0;
+                    else median = diagonals[count/2];
+                }
+
+                // Threshold: If Median is very small (e.g. < 1), might be noise. 
+                // Assumed valid legend size > 5.
+                median = Math.Max(median, 5.0);
+
+                // Define Outlier Threshold (e.g. 10x Median)
+                double threshold = median * 10.0;
+                
+                Console.WriteLine($"[FrameExclusion] Median Size: {median:F2}, Threshold: {threshold:F2}");
+
+                Candidates = RawClusters.Where(c => 
+                {
+                    double w = c.BoundingBox.Max.X - c.BoundingBox.Min.X;
+                    double h = c.BoundingBox.Max.Y - c.BoundingBox.Min.Y;
+                    double diag = Math.Sqrt(w*w + h*h);
+                    
+                    if (diag > threshold)
+                    {
+                        Console.WriteLine($"[FrameExclusion] Excluding Cluster Size: {w:F1}x{h:F1} (Diag: {diag:F1})");
+                        return false;
+                    }
+                    return true;
+                }).ToList();
+            }
+            else
+            {
+                Candidates = new List<LegendCandidate>();
+            }
 
             // 4. Attach Context (Labels)
             AttachContextEntities(Candidates, allEntities);
@@ -798,17 +888,20 @@ namespace ACadSharp.LegendAnalysis
                 if (hasFan && hasW) return LegendType.CoolingUnit; // Simplified check
                 
                 if (TryDetectUnit(candidate, bbox, text, out var unitType)) return unitType;
-                if (IsSilencer(candidate, bbox)) return LegendType.Silencer;
-                if (IsAirCurtain(candidate, bbox, contextEntities)) return LegendType.AirCurtain;
-                
-                // Existing Checks
-                bool hasDiagonal = HasDiagonalInRect(candidate.Entities, bbox);
-                bool hasWShape = HasWShapeInRect(candidate.Entities, bbox);
-                
-                if (text.Contains("F")) return LegendType.FireDamper;
-                if (text.Contains("E")) return LegendType.SmokeFireDamper;
+        // IsSilencer moved down
+        if (IsAirCurtain(candidate, bbox, contextEntities)) return LegendType.AirCurtain;
+        
+        // Existing Checks
+        bool hasDiagonal = HasDiagonalInRect(candidate.Entities, bbox);
+        bool hasWShape = HasWShapeInRect(candidate.Entities, bbox);
+        
+        if (text.Contains("F")) return LegendType.FireDamper;
+        if (text.Contains("E")) return LegendType.SmokeFireDamper;
+        
+        // Check Silencer after F/E but before Louver
+        if (IsSilencer(candidate, bbox)) return LegendType.Silencer;
 
-                var topFeature = AnalyzeZoneTop(contextEntities, bbox);
+        var topFeature = AnalyzeZoneTop(contextEntities, bbox);
                 if (topFeature == TopFeature.CircleM) return LegendType.ElectricIsolationValve;
                 if (topFeature == TopFeature.TShape) return LegendType.ManualIsolationValve;
                 if (topFeature == TopFeature.LShape) return LegendType.GravityReliefValve;
@@ -1337,17 +1430,36 @@ namespace ACadSharp.LegendAnalysis
 
         private bool IsSilencer(LegendCandidate candidate, BoundingBox anchor)
         {
+            // 1. Text Context Check
+            var context = candidate.ContextEntities;
+            bool hasText = context.OfType<TextEntity>().Any(t => t.Value.Contains("RP") || t.Value.Contains("消声器") || t.Value.Contains("SILENCER")) 
+                        || context.OfType<MText>().Any(t => t.Value.Contains("RP") || t.Value.Contains("消声器") || t.Value.Contains("SILENCER"));
+            
+            if (hasText) return true;
+
+            // 2. Geometric Check (Relaxed)
             double w = anchor.Max.X - anchor.Min.X;
             double h = anchor.Max.Y - anchor.Min.Y;
-            double margin = Math.Min(Math.Max(Math.Min(w, h) * 0.05, 1.0), 10.0);
+            
+            // Allow lines to be slightly outside (1.1x tolerance)
+            BoundingBox expanded = new BoundingBox(
+                new XYZ(anchor.Min.X - w*0.1, anchor.Min.Y - h*0.1, 0),
+                new XYZ(anchor.Max.X + w*0.1, anchor.Max.Y + h*0.1, 0)
+            );
+
             var verticals = candidate.Entities.OfType<Line>()
                 .Where(IsVertical)
-                .Where(l => IsInside(l.StartPoint, anchor) && IsInside(l.EndPoint, anchor))
+                .Where(l => IsInside(l.StartPoint, expanded) && IsInside(l.EndPoint, expanded))
                 .ToList();
-            int inner = verticals.Count(l =>
-                l.StartPoint.X > anchor.Min.X + margin &&
-                l.StartPoint.X < anchor.Max.X - margin);
-            return inner >= 3 && RatioWithin(w, h, 0.7, 3.0);
+
+            // Count distinct X positions (baffles) using standard LINQ
+            int baffles = verticals.Select(l => l.StartPoint.X)
+                                   .Select(x => Math.Round(x / 2.0))
+                                   .Distinct()
+                                   .Count();
+
+            // Relaxed from 3 to 2, and use distinct X count (handles segmented lines)
+            return baffles >= 2 && RatioWithin(w, h, 0.7, 4.0);
         }
 
         private bool IsSplitCabinet(LegendCandidate candidate)
@@ -1439,6 +1551,89 @@ namespace ACadSharp.LegendAnalysis
             }
 
             return result;
+        }
+
+        public void EnrichGroups(IEnumerable<Entity> allEntities)
+        {
+             // Build a spatial index or just brute force for now (N groups * M entities)
+             // Optimization: only consider entities not already in a group?
+             // Or simpler: Just find everything inside BBOX.
+             
+             // Gather all entities currently in groups to avoid duplicates
+             var processedEntities = new HashSet<Entity>();
+             foreach(var g in Groups)
+             {
+                 foreach(var m in g.Members)
+                 {
+                     foreach(var e in m.Entities) processedEntities.Add(e);
+                 }
+             }
+
+             // Iterate all entities
+             foreach(var entity in allEntities)
+             {
+                 if (processedEntities.Contains(entity)) continue;
+                 
+                 // Check bounding box
+                 var bbox = GetBoundingBox(entity);
+                 if (bbox.Min.X == 0 && bbox.Min.Y == 0 && bbox.Max.X == 0 && bbox.Max.Y == 0) continue; // Skip empty/invalid
+
+                 foreach(var g in Groups)
+                 {
+                     // Check if entity is strictly inside group BBOX (or close enough)
+                     if (IsBoxInside(g.BoundingBox, bbox, 0.1)) 
+                     {
+                         g.AdditionalEntities.Add(entity);
+                         processedEntities.Add(entity); 
+                         
+                         // Update Group BoundingBox to include this new entity
+                         double minX = Math.Min(g.BoundingBox.Min.X, bbox.Min.X);
+                         double minY = Math.Min(g.BoundingBox.Min.Y, bbox.Min.Y);
+                         double maxX = Math.Max(g.BoundingBox.Max.X, bbox.Max.X);
+                         double maxY = Math.Max(g.BoundingBox.Max.Y, bbox.Max.Y);
+                         g.BoundingBox = new BoundingBox(new XYZ(minX, minY, 0), new XYZ(maxX, maxY, 0));
+                         
+                         break; 
+                     }
+                 }
+             }
+        }
+
+        public static BoundingBox GetBoundingBox(Entity entity)
+        {
+            // Handle LwPolyline explicitly if ACadSharp doesn't do it right
+            if (entity is LwPolyline pl)
+            {
+                if (pl.Vertices.Count == 0) return new BoundingBox(XYZ.Zero, XYZ.Zero);
+                double minX = pl.Vertices.Min(v => v.Location.X);
+                double minY = pl.Vertices.Min(v => v.Location.Y);
+                double maxX = pl.Vertices.Max(v => v.Location.X);
+                double maxY = pl.Vertices.Max(v => v.Location.Y);
+                return new BoundingBox(new XYZ(minX, minY, 0), new XYZ(maxX, maxY, 0));
+            }
+            // Fallback to default
+            BoundingBox? bbox = null;
+            try { bbox = entity.GetBoundingBox(); } catch {}
+            
+            if (bbox.HasValue) return bbox.Value;
+            
+            // Try to calculate manually for common types if BoundingBox is null
+            if (entity is Line l)
+            {
+                 double minX = Math.Min(l.StartPoint.X, l.EndPoint.X);
+                 double minY = Math.Min(l.StartPoint.Y, l.EndPoint.Y);
+                 double maxX = Math.Max(l.StartPoint.X, l.EndPoint.X);
+                 double maxY = Math.Max(l.StartPoint.Y, l.EndPoint.Y);
+                 return new BoundingBox(new XYZ(minX, minY, 0), new XYZ(maxX, maxY, 0));
+            }
+            if (entity is Circle c)
+            {
+                 return new BoundingBox(
+                     new XYZ(c.Center.X - c.Radius, c.Center.Y - c.Radius, 0),
+                     new XYZ(c.Center.X + c.Radius, c.Center.Y + c.Radius, 0));
+            }
+
+            return bbox ?? new BoundingBox(XYZ.Zero, XYZ.Zero);
         }
 
         public class ArrowInfo
@@ -1780,26 +1975,7 @@ namespace ACadSharp.LegendAnalysis
             }
         }
 
-        private BoundingBox GetBoundingBox(Entity e)
-        {
-            try 
-            {
-                var bbox = e.GetBoundingBox();
-                if(bbox.Min.X <= bbox.Max.X) return bbox;
-            }
-            catch { }
 
-            if (e is LwPolyline pl)
-            {
-                if(pl.Vertices.Count == 0) return new BoundingBox(XYZ.Zero, XYZ.Zero);
-                double minx = pl.Vertices.Min(v => v.Location.X);
-                double miny = pl.Vertices.Min(v => v.Location.Y);
-                double maxx = pl.Vertices.Max(v => v.Location.X);
-                double maxy = pl.Vertices.Max(v => v.Location.Y);
-                return new BoundingBox(new XYZ(minx, miny, 0), new XYZ(maxx, maxy, 0));
-            }
-            return new BoundingBox(XYZ.Zero, XYZ.Zero);
-        }
 
         private BoundingBox GetBoundingBox(List<Entity> entities)
         {

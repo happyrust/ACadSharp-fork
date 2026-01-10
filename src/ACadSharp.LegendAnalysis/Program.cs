@@ -76,7 +76,34 @@ namespace ACadSharp.LegendAnalysis
             var recognizer = new LegendRecognizer();
             recognizer.Run(doc.Entities);
 
-            Console.WriteLine($"Analysis Complete. Found {recognizer.Candidates.Count} candidate clusters.");
+            // 5. Update Groups (with enrichment)
+            recognizer.EnrichGroups(doc.Entities);
+
+            // DEBUG: Extended scan for Group-31 area (X=1486, Y=-350 to -150)
+            Console.WriteLine("\n=== DEBUG: Extended Entity Scan for Group-31 Area ===");
+            Console.WriteLine("Searching X: 1480-1560, Y: -350 to -150");
+            foreach(var e in doc.Entities)
+            {
+                var b = ACadSharp.LegendAnalysis.LegendRecognizer.GetBoundingBox(e);
+                if (b.Min.X > 1480 && b.Max.X < 1560 && b.Min.Y > -350 && b.Max.Y < -150)
+                {
+                    Console.WriteLine($"  Found: {e.GetType().Name} Layer={e.Layer?.Name} BBOX=({b.Min.X:F1},{b.Min.Y:F1})->({b.Max.X:F1},{b.Max.Y:F1})");
+                    
+                    // If it's an Insert, print block details
+                    if (e is Insert ins)
+                    {
+                        Console.WriteLine($"    Block: {ins.Block?.Name}, InsertPoint: {ins.InsertPoint}, Scale: {ins.XScale}/{ins.YScale}");
+                        Console.WriteLine($"    Block Entities Count: {ins.Block?.Entities.Count()}");
+                        foreach(var be in ins.Block?.Entities.Take(5) ?? Enumerable.Empty<Entity>())
+                        {
+                            Console.WriteLine($"      -> {be.GetType().Name}");
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("=== END DEBUG ===\n");
+
+            Console.WriteLine("Analysis Complete. Found " + recognizer.Candidates.Count + " candidate clusters.");
 
             // Count by type
             var grouped = recognizer.Candidates.GroupBy(c => c.DetectedType).OrderByDescending(g => g.Count());
@@ -206,66 +233,73 @@ namespace ACadSharp.LegendAnalysis
             string mdReportPath = Path.Combine(Path.GetDirectoryName(file)!, 
                 Path.GetFileNameWithoutExtension(file) + "_图例识别报告.md");
             
-            GenerateMdReport(recognizer.Candidates, doc.Entities.ToList(), mdReportPath);
+            GenerateMdReport(recognizer.Groups, recognizer.Candidates, doc.Entities.ToList(), mdReportPath);
             Console.WriteLine($"Generated report: {mdReportPath}");
 
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine($"Summary: Identified {identified.Count} / {recognizer.Candidates.Count} legends across {recognizer.Groups.Count} groups.");
         }
 
-        static void GenerateMdReport(System.Collections.Generic.List<LegendCandidate> candidates, System.Collections.Generic.List<Entity> allEntities, string path)
+        static void GenerateMdReport(List<LegendGroup> groups, System.Collections.Generic.List<LegendCandidate> candidates, System.Collections.Generic.List<Entity> allEntities, string path)
         {
             using var sw = new StreamWriter(path, false, System.Text.Encoding.UTF8);
             sw.WriteLine("# 图例识别报告");
             sw.WriteLine($"\n生成时间: {DateTime.Now:yyyy-MM-dd HH:mm:ss}\n");
-            sw.WriteLine("---\n");
-
-            var identified = candidates.Where(c => c.DetectedType != LegendType.Unknown).ToList();
-            var unknowns = candidates.Where(c => c.DetectedType == LegendType.Unknown).ToList();
             
             // Collect all text entities (for label lookup)
             var allTexts = allEntities.OfType<TextEntity>().ToList();
             var allMTexts = allEntities.OfType<MText>().ToList();
+
+            sw.WriteLine("## 识别统计\n");
+            var identified = candidates.Where(c => c.DetectedType != LegendType.Unknown).ToList();
+            var unknowns = candidates.Where(c => c.DetectedType == LegendType.Unknown).ToList();
             
-            // Summary
-            sw.WriteLine("## 识别总览\n");
-            sw.WriteLine($"| 指标 | 数值 |");
-            sw.WriteLine($"| :--- | :--- |");
-            sw.WriteLine($"| 总集群数 | {candidates.Count} |");
-            sw.WriteLine($"| 已识别图例 | {identified.Count} |");
-            sw.WriteLine($"| 未识别集群 | {unknowns.Count} |");
-            sw.WriteLine();
-
-            // Type distribution
-            sw.WriteLine("### 类型分布\n");
-            sw.WriteLine("| 图例类型 | 数量 | 状态 |");
-            sw.WriteLine("| :--- | :--- | :--- |");
-            foreach (var g in candidates.GroupBy(c => c.DetectedType).OrderByDescending(g => g.Key != LegendType.Unknown).ThenByDescending(g => g.Count()))
+            // Stats
+            var allTypes = identified.Select(x => x.DetectedType).Distinct();
+            foreach(var t in allTypes)
             {
-                string status = g.Key == LegendType.Unknown ? "❓" : "✅";
-                sw.WriteLine($"| {g.Key} | {g.Count()} | {status} |");
+                int count = identified.Count(x => x.DetectedType == t);
+                sw.WriteLine($"- **{t}**: {count}");
             }
-            sw.WriteLine();
-
-            // Identified Legends with right-side label
+            sw.WriteLine($"- **Unknown**: {unknowns.Count}");
+            sw.WriteLine($"- **Groups**: {groups.Count}");
             sw.WriteLine("---\n");
-            sw.WriteLine("## 已识别图例清单\n");
-            sw.WriteLine("| # | 识别类型 | 图纸标签 | 位置 (X, Y) | 尺寸 (W x H) | 实体数 |");
+
+            // Groups Table
+            sw.WriteLine("## 图例分组清单\n");
+            sw.WriteLine("| # | 类型 | 详情 | 位置 (X, Y) | 尺寸 | 包含图元 |");
             sw.WriteLine("| :--- | :--- | :--- | :--- | :--- | :--- |");
-            
+
             int idx = 1;
-            foreach (var c in identified.OrderBy(c => c.DetectedType.ToString()))
+            foreach (var group in groups.OrderByDescending(g => g.BoundingBox.Min.Y).ThenBy(g => g.BoundingBox.Min.X))
             {
-                var box = c.BoundingBox;
-                double w = box.Max.X - box.Min.X;
-                double h = box.Max.Y - box.Min.Y;
+                var members = group.Members;
+                var prime = members.FirstOrDefault(m => m.DetectedType != LegendType.Unknown) ?? members.First();
+                string typeStr = prime.DetectedType.ToString();
                 
-                // Find nearest right-side label
-                string label = FindRightSideLabel(box, allTexts, allMTexts);
+                var details = new List<string>();
+                foreach(var m in members)
+                {
+                     if(m.DetectedType != LegendType.Unknown && m != prime)
+                         details.Add($"{m.DetectedType} (ID:{m.Index})");
+                }
                 
-                sw.WriteLine($"| {idx++} | {c.DetectedType} | {label} | ({box.Min.X:F0}, {box.Min.Y:F0}) | {w:F0} x {h:F0} | {c.Entities.Count} |");
+                if (group.AdditionalEntities.Any())
+                {
+                    details.Add($"Ext(+{group.AdditionalEntities.Count})"); // Enriched entities
+                }
+
+                string detailStr = details.Count > 0 ? string.Join(", ", details) : "-";
+                
+                // BBox
+                double w = group.BoundingBox.Max.X - group.BoundingBox.Min.X;
+                double h = group.BoundingBox.Max.Y - group.BoundingBox.Min.Y;
+                
+                int entityCount = members.Sum(m => m.Entities.Count) + group.AdditionalEntities.Count;
+
+                sw.WriteLine($"| {idx++} | {typeStr} | {detailStr} | ({group.BoundingBox.Min.X:F0}, {group.BoundingBox.Min.Y:F0}) | {w:F0} x {h:F0} | {entityCount} |");
             }
-            sw.WriteLine();
+
 
             // Text labels reference
             sw.WriteLine("---\n");

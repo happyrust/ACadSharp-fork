@@ -12,15 +12,27 @@ namespace ACadSharp.Examples
 
 		static void Main(string[] args)
 		{
+			string input = args.Length > 0 ? args[0] : _file;
+			string output = args.Length > 1 ? args[1] : null;
+
+			Console.WriteLine($"Reading file: {input}");
+
 			CadDocument doc;
-			DwgPreview preview;
-			using (DwgReader reader = new DwgReader(_file))
+			using (DwgReader reader = new DwgReader(input))
 			{
 				doc = reader.Read();
-				preview = reader.ReadPreview();
 			}
 
-			exploreDocument(doc);
+			if (!string.IsNullOrEmpty(output))
+			{
+				Console.WriteLine($"Writing file: {output}");
+				DxfWriter.Write(output, doc);
+				Console.WriteLine("Conversion completed.");
+			}
+			else
+			{
+				exploreDocument(doc);
+			}
 		}
 
 		/// <summary>
